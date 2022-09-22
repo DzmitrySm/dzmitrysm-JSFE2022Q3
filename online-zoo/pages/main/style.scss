@@ -214,4 +214,70 @@ $font-size48: 48px;
     justify-content: center;
   }
 
+  .testimonials {
+    position: relative;
+    .leaf-image {
+      position: absolute;
+      content: '';
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+
+  .flex-container-comments {
+    display: flex;
+    .comment-card {
+      display: flex;
+      flex-direction: column;
+      .wrapper-user-description {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .scroll {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer-background {
+    background-color: #000000;
+  }
+
+  .footer-flex-container {
+    display: flex;
+    justify-content: space-between;
+    .wrapper-logo-social-donate {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .wrapper-social {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .name-social {
+    color: #FFFFFF;
+  }
+
+  .text-designed {
+    color:#FFFFFF
+  }
+
+  .logo {
+    color:#FFFFFF;
+  }
+
+  .nav-bottom {
+    align-self: flex-end;
+  }
+
 
