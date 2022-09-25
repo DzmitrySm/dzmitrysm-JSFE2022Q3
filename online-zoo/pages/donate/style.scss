@@ -5,6 +5,7 @@ $yellow-color: #FFEE2E;
 $grey-email: #BDBDBD;
 $orange: #F9804B;
 $orange-hover: #E47209;
+$thumb-color: #FE9013;
 $green-color: #4B9200;
 $font-family: 'Roboto', 'Arial', sans-serif;
 $font-weigth100: 100;
@@ -18,6 +19,7 @@ $font-size16: 16px;
 $font-size24: 24px;
 $font-size36: 36px;
 $font-size48: 48px;
+$font-size72: 72px;
 $font-style-normal: normal;
 $line-heigth18: 18px;
 $line-heigth22: 22px;
@@ -151,21 +153,92 @@ padding: 40px 92px 62px 92px;
 }
 
 .donation-information {
+  padding-bottom: 180px;
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+}
+
+.subblock-title {
+  font-family: $font-family;
+font-style: $font-style-normal;
+font-weight: $font-weigth400;
+font-size: $font-size48;
+line-height: $line-heigth58;
+text-align: center;
+color: $thumb-color;
+margin: 0;
+padding-bottom: 20px;
+
+}
+
+.text-joy {
+  font-family: $font-family;
+font-style: $font-style-normal;
+font-weight: $font-weigth400;
+font-size: $font-size24;
+line-height: $line-heigth29;
+color: $grey-color;
+margin: 0;
+padding-bottom: 60px;
+
+}
+
+.number-style {
+  font-family: $font-family;
+font-style: $font-style-normal;
+font-weight: $font-weigth500;
+font-size: $font-size72;
+line-height: $line-heigth58;
+text-align: center;
+text-transform: uppercase;
+color: $black-color;
+margin: 0;
+padding-bottom: 11px;
+}
+
+.title-per-days {
+  margin: 0;
 }
 
 .title-donate {
   margin: 0;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-family: $font-family;
+font-style: $font-style-normal;
+font-weight: $font-weigth300;
+font-size: $font-size36;
+line-height: $line-heigth47;
+color: $white-color;
+
+}
+
+.paragraph-donate {
+  margin: 0;
+  padding-bottom: 40px;
+  font-family: $font-family;
+font-style: $font-style-normal;
+font-weight: $font-weigth500;
+font-size: $font-size16;
+line-height: $line-heigth22;
+color: $white-color
 }
 
 .subtitle-donate {
+  font-family: $font-family;
+font-style: $font-style-normal;
+font-weight: $font-weigth400;
+font-size: $font-size36;
+line-height: $line-heigth47;
+color: $thumb-color;
   margin: 0;
+  padding-bottom: 60px;
 }
 
 .flex-container-slider {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 48px;
 }
 
   .footer-background {
