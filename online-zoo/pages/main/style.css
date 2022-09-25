@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.7s;
 }
 .flex-container .wrapper-nav-logo .logo .logo-text {
   position: relative;
@@ -95,13 +96,21 @@
   line-height: 22px;
   color: #FFFFFF;
 }
-.nav-list .nav-item a {
+.nav-list .nav-item .nav-link {
   text-decoration: none;
   color: #FFFFFF;
+  transition: 0.7s;
+}
+.nav-list .nav-item .nav-link:hover {
+  color: #E47209;
+  transition: 0.7s;
 }
 
 .orange {
   color: #F9804B;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
 }
 
 .text-design {
@@ -112,6 +121,11 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  transition: 0.7s;
+}
+.text-design:hover {
+  color: #E47209;
+  transition: 0.7s;
 }
 
 .background-panda {
@@ -232,6 +246,91 @@
   top: 12px;
 }
 
+@-webkit-keyframes animation-cards {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.005);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  75% {
+    transform: scale(1.015);
+  }
+  100% {
+    transform: scale(1.027);
+  }
+}
+
+@keyframes animation-cards {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.005);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  75% {
+    transform: scale(1.015);
+  }
+  100% {
+    transform: scale(1.027);
+  }
+}
+@-webkit-keyframes animation-text {
+  0% {
+    transform: translateY(-45px);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+    background: #333B41;
+    color: white;
+  }
+}
+@keyframes animation-text {
+  0% {
+    transform: translateY(-45px);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+    background: #333B41;
+    color: white;
+  }
+}
+.card:hover img {
+  -webkit-animation: animation-cards 1s;
+          animation: animation-cards 1s;
+  cursor: pointer;
+}
+
+.card:hover p {
+  -webkit-animation: animation-text 1s;
+          animation: animation-text 1s;
+  cursor: pointer;
+}
+
 .section-animals-cards {
   position: relative;
   padding-bottom: 100px;
@@ -254,12 +353,26 @@
   height: 62px;
   border-radius: 50%;
   background-color: #F9804B;
+  border: none;
+  transition: 0.7s;
+}
+.flex-cards-arrows .button-lft:hover {
+  background: #E47209;
+  cursor: pointer;
+  transition: 0.7s;
 }
 .flex-cards-arrows .button-rgt {
   width: 62px;
   height: 62px;
   border-radius: 50%;
   background-color: #F9804B;
+  border: none;
+  transition: 0.7s;
+}
+.flex-cards-arrows .button-rgt:hover {
+  background: #E47209;
+  cursor: pointer;
+  transition: 0.7s;
 }
 
 .wrapper-title-card {
@@ -326,10 +439,12 @@
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+  transition: 0.7s;
 }
 .button-favourite:hover {
   background: #E47209;
   cursor: pointer;
+  transition: 0.7s;
 }
 
 .palm-image {
@@ -409,6 +524,17 @@
   padding-bottom: 60px;
 }
 
+.link-emergency {
+  text-decoration: none;
+  border-bottom: 1px solid #F9804B;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333B41;
+}
+
 .title-how-it-works {
   font-family: "Roboto", "Arial", sans-serif;
   font-style: normal;
@@ -474,10 +600,12 @@
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 59px;
+  transition: 0.7s;
 }
 .button-help-animals:hover {
   background-color: #E47209;
   cursor: pointer;
+  transition: 0.7s;
 }
 
 .testimonials {
@@ -592,9 +720,9 @@
 }
 
 input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 599px; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
+  -webkit-appearance: none;
+  width: 599px;
+  background: transparent;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -602,15 +730,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type=range]::-ms-track {
-  width: 599px;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
+  outline: none;
 }
 
 input[type=range] {
@@ -628,11 +748,11 @@ input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   background: transparent;
   border-radius: 5px;
-  border: 1px solid orange;
+  border: 1px solid #F9804B;
 }
 
 input[type=range]::-webkit-slider-thumb {
-  border: 1px solid orange;
+  border: 1px solid #F9804B;
   height: 6px;
   width: 115.9px;
   border-radius: 5px;
@@ -651,11 +771,11 @@ input[type=range]::-moz-range-track {
   cursor: pointer;
   background: transparent;
   border-radius: 5px;
-  border: 1px solid orange;
+  border: 1px solid #F9804B;
 }
 
 input[type=range]::-moz-range-thumb {
-  border: 1px solid orange;
+  border: 1px solid #F9804B;
   height: 6px;
   width: 115.9px;
   border-radius: 5px;
@@ -679,10 +799,12 @@ input[type=range]::-moz-range-thumb {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top: 31px;
+  transition: 0.7s;
 }
 .button-feedback:hover {
   background-color: #E47209;
   cursor: pointer;
+  transition: 0.7s;
 }
 
 .footer-background {
@@ -716,10 +838,12 @@ input[type=range]::-moz-range-thumb {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   border-radius: 5px;
   margin-bottom: 44px;
+  transition: 0.7s;
 }
 .footer-flex-container .wrapper-logo-social-donate .donate-btn:hover {
   background-color: #E47209;
   cursor: pointer;
+  transition: 0.7s;
 }
 .footer-flex-container .wrapper-logo-social-donate .logo-footer {
   position: relative;
@@ -777,6 +901,9 @@ input[type=range]::-moz-range-thumb {
 }
 .nav-bottom .item-down {
   padding: 0 58px 0 0;
+}
+.nav-bottom .item-down:last-child {
+  padding: 0 32px 0 0;
 }
 
 .padding-list {
@@ -840,4 +967,6 @@ input[type=range]::-moz-range-thumb {
   line-height: 22px;
   color: #BDBDBD;
   margin-right: 10px;
+  background: transparent;
+  border: 1px solid #F9804B;
 }/*# sourceMappingURL=style.css.map */

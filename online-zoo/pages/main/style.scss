@@ -89,6 +89,7 @@ $line-heigth47: 47px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: 0.7s;
       .logo-text {
         position: relative;
         width: 82px;
@@ -133,9 +134,14 @@ $line-heigth47: 47px;
     font-size: $font-size16;
     line-height: $line-heigth22;
     color: $white-color;
-    a {
+    .nav-link {
       text-decoration: none;
       color: $white-color;
+      transition: 0.7s;
+      &:hover {
+        color: $orange-hover;
+        transition: 0.7s;
+      }
     }
     
   }
@@ -143,6 +149,9 @@ $line-heigth47: 47px;
 
 .orange {
   color: $orange;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
 }
 
 .text-design {
@@ -153,6 +162,11 @@ $line-heigth47: 47px;
   font-weight: $font-weigth500;
   font-size: $font-size16;
   line-height: $line-heigth22;
+  transition: 0.7s;
+  &:hover {
+    color: $orange-hover;
+    transition: 0.7s;
+  }
 }
 
 
@@ -276,6 +290,58 @@ $line-heigth47: 47px;
   }
 }
 
+@keyframes animation-cards {
+  0%  {
+    transform: scale(1);
+  }
+
+  25%  {
+    transform: scale(1.005);
+  }
+
+  50%  {
+    transform: scale(1.010);
+  }
+  75%  {
+    transform: scale(1.015);
+  }
+  100% {
+    transform: scale(1.027);
+  }
+}
+
+@keyframes animation-text {
+  0%  {
+    transform: translateY(-45px);
+  }
+
+  25%  {
+    transform: translateY(-30px);
+  }
+
+  50%  {
+    transform: translateY(-20px);
+  }
+  75%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+    background: #333B41;
+    color: white;
+  }
+}
+
+.card:hover img {
+  animation: animation-cards 1s;
+  cursor: pointer;
+}
+
+.card:hover p {
+  animation: animation-text 1s;
+  cursor: pointer;
+}
+
 
 
 .section-animals-cards {
@@ -301,12 +367,26 @@ $line-heigth47: 47px;
     height: 62px;
     border-radius: 50%;
     background-color: $orange;
+    border: none;
+    transition: 0.7s;
+    &:hover {
+      background: $orange-hover;
+      cursor: pointer;
+      transition: 0.7s;
+    }
   }
   .button-rgt {
     width: 62px;
     height: 62px;
     border-radius: 50%;
     background-color: $orange;
+    border: none;
+    transition: 0.7s;
+    &:hover {
+      background: $orange-hover;
+      cursor: pointer;
+      transition: 0.7s;
+    }
   }
 }
 
@@ -343,6 +423,7 @@ padding-bottom: 14px;
     border: 1px solid $border-color;
     border-radius: 5px;
   }
+  
 
   .icon {
     padding-right: 12px;
@@ -374,9 +455,11 @@ line-height: $line-heigth22;
 text-align: center;
 text-transform: uppercase;
 color: $white-color;
+transition: 0.7s;
 &:hover {
   background: $orange-hover;
   cursor: pointer;
+  transition: 0.7s;
 }
   }
 
@@ -456,6 +539,17 @@ padding-bottom: 60px;
   }
  }
 
+ .link-emergency {
+  text-decoration: none;
+  border-bottom: 1px solid $orange;
+  font-family: $font-family;
+font-style: $font-style-normal;
+font-weight: $font-weigth400;
+font-size: $font-size16;
+line-height: $line-heigth21;
+color: $grey-color;
+ }
+
  .title-how-it-works {
   font-family: $font-family;
 font-style: $font-style-normal;
@@ -525,9 +619,11 @@ padding-bottom: 40px;
     text-transform: uppercase;
     color: $white-color;
     margin-bottom: 59px;
+    transition: 0.7s;
     &:hover {
       background-color: $orange-hover;
       cursor: pointer;
+      transition: 0.7s;
     }
   }
 
@@ -648,9 +744,9 @@ color: $grey-email;
 
 
   input[type=range] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 599px; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
+    -webkit-appearance: none;
+    width: 599px; 
+    background: transparent; 
   }
   
   input[type=range]::-webkit-slider-thumb {
@@ -658,17 +754,9 @@ color: $grey-email;
   }
   
   input[type=range]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    outline: none; 
   }
   
-  input[type=range]::-ms-track {
-    width: 599px;
-    cursor: pointer;
-    background: transparent; 
-    border-color: transparent;
-    color: transparent;
-  }
-
   input[type=range] {
     -webkit-appearance: none;
     width: 599px;
@@ -682,10 +770,10 @@ color: $grey-email;
     cursor: pointer;
     background: transparent;
     border-radius: 5px;
-    border: 1px solid orange;
+    border: 1px solid $orange;
   }
   input[type=range]::-webkit-slider-thumb {
-    border: 1px solid orange;
+    border: 1px solid $orange;
     height: 6px;
     width: 115.9px;
     border-radius: 5px;
@@ -702,10 +790,10 @@ color: $grey-email;
     cursor: pointer;
     background: transparent;
     border-radius: 5px;
-    border: 1px solid orange;
+    border: 1px solid $orange;
   }
   input[type=range]::-moz-range-thumb {
-    border: 1px solid orange;
+    border: 1px solid $orange;
     height: 6px;
     width: 115.9px;
     border-radius: 5px;
@@ -731,9 +819,11 @@ color: $grey-email;
     text-transform: uppercase;
     color: $white-color;
     margin-top: 31px;
+    transition: 0.7s;
     &:hover {
       background-color: $orange-hover;
       cursor: pointer;
+      transition: 0.7s;
     }
   }
 
@@ -766,9 +856,11 @@ color: $grey-email;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 5px;
     margin-bottom: 44px;
+    transition: 0.7s;
     &:hover {
       background-color: $orange-hover;
       cursor: pointer;
+      transition: 0.7s;
     }
 
     
@@ -824,15 +916,18 @@ color: $white-color;
   }
 
   .logo {
-    color:#FFFFFF;
+    color:$white-color;
   }
 
   .nav-bottom {
     align-self: flex-end;
     .item-down {
       padding: 0 58px 0 0;
+      &:last-child {
+        padding: 0 32px 0 0;
     }
   }
+}
 
   .padding-list {
     padding-left: 101px;
@@ -896,7 +991,10 @@ font-size: $font-size16;
 line-height: $line-heigth22;
 color: $grey-email;
 margin-right: 10px;
-
+background: transparent;
+border: 1px solid $orange;
   }
+
+  
 
 

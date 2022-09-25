@@ -1,10 +1,13 @@
 $white-color: #FFFFFF;
 $black-color: #000000;
 $grey-color: #333B41;
+$text-comment: #767474;
+$card-background: #F1F3F2;
 $yellow-color: #FFEE2E;
 $grey-email: #BDBDBD;
 $orange: #F9804B;
 $orange-hover: #E47209;
+$border-color: #FA6F32;
 $thumb-color: #FE9013;
 $green-color: #4B9200;
 $font-family: 'Roboto', 'Arial', sans-serif;
@@ -22,6 +25,7 @@ $font-size48: 48px;
 $font-size72: 72px;
 $font-style-normal: normal;
 $line-heigth18: 18px;
+$line-heigth19: 19px;
 $line-heigth22: 22px;
 $line-heigth58: 58px;
 $line-heigth21: 21px;
@@ -128,17 +132,24 @@ $line-heigth47: 47px;
     font-weight: $font-weigth500;
     font-size: $font-size16;
     line-height: $line-heigth22;
-    color: $white-color;
-    a {
+    color: $white-color; 
+    .nav-link {
       text-decoration: none;
       color: $white-color;
+      transition: 0.7s;
+      &:hover {
+        color: $orange-hover;
+        transition: 0.7s;
+      }
     }
-    
   }
 }
 
 .orange {
   color: $orange;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none; 
 }
 
 .text-design {
@@ -149,6 +160,10 @@ $line-heigth47: 47px;
   font-weight: $font-weigth500;
   font-size: $font-size16;
   line-height: $line-heigth22;
+  &:hover {
+    color: $orange-hover;
+    transition: 0.7s;
+  }
 }
 
 .panda-donate {
@@ -230,7 +245,7 @@ color: $black-color;
 .wrapper-radio-bar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 976px;
   height: 27px;
   margin-bottom: 6px;
@@ -260,6 +275,10 @@ color: $black-color;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+}
+
+.padding-right25 {
+  padding-right: 29px;
 }
 
 .wrapper-labels {
@@ -509,9 +528,11 @@ text-align: center;
 text-transform: uppercase;
 color: $white-color;
 margin-bottom: 30px;
+transition: 0.7s;
 &:hover {
 background: $orange-hover;
 cursor: pointer;
+transition: 0.7s;
 }
 }
 
@@ -555,9 +576,11 @@ text-align: center;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 5px;
     margin-bottom: 44px;
+    transition: 0.7s;
     &:hover {
       background-color: $orange-hover;
       cursor: pointer;
+      transition: 0.7s;
     }
 
       }
