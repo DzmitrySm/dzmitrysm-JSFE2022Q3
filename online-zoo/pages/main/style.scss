@@ -233,6 +233,9 @@ $line-heigth47: 47px;
       cursor: pointer;
       transition: 0.7s;
   }
+  &:active {
+    background-color: #4B9200;
+  }
 }
 
 .how-it-works {
@@ -374,6 +377,9 @@ $line-heigth47: 47px;
       cursor: pointer;
       transition: 0.7s;
     }
+    &:active {
+      background-color: #4B9200;
+    }
   }
   .button-rgt {
     width: 62px;
@@ -387,9 +393,11 @@ $line-heigth47: 47px;
       cursor: pointer;
       transition: 0.7s;
     }
+    &:active {
+      background-color: #4B9200;
+    }
   }
 }
-
 
   .wrapper-title-card {
     display: flex;
@@ -460,6 +468,9 @@ transition: 0.7s;
   background: $orange-hover;
   cursor: pointer;
   transition: 0.7s;
+}
+&:active {
+  background-color: #4B9200;
 }
   }
 
@@ -624,6 +635,9 @@ padding-bottom: 40px;
       background-color: $orange-hover;
       cursor: pointer;
       transition: 0.7s;
+    }
+    &:active {
+      background-color: #4B9200;
     }
   }
 
@@ -825,6 +839,9 @@ color: $grey-email;
       cursor: pointer;
       transition: 0.7s;
     }
+    &:active {
+      background-color: #4B9200;
+    }
   }
 
   .footer-background {
@@ -857,15 +874,17 @@ color: $grey-email;
     border-radius: 5px;
     margin-bottom: 44px;
     transition: 0.7s;
+    &:active {
+      background-color: #4B9200;
+    }
     &:hover {
       background-color: $orange-hover;
       cursor: pointer;
       transition: 0.7s;
     }
-
     
-
-      }
+    
+  }
       .logo-footer {
         position: relative;
         width: 82px;
@@ -888,6 +907,11 @@ color: $grey-email;
       }
     }
   }
+
+  .wrapper-social:active span{
+    color: #4B9200;
+    transition: 0.7s;
+    }
 
   .positioned-bamboo-footer {
     position: absolute;
@@ -913,6 +937,12 @@ font-size: $font-size16;
 line-height: $line-heigth21;
 color: $white-color;
     margin: 0;
+    transition: 0.7s;
+    cursor: pointer;
+    &:active {
+      color: #4B9200;
+      transition: 0.7s;
+    }
   }
 
   .logo {
@@ -924,7 +954,7 @@ color: $white-color;
     .item-down {
       padding: 0 58px 0 0;
       &:last-child {
-        padding: 0 32px 0 0;
+        padding: 0;
     }
   }
 }
@@ -979,6 +1009,8 @@ font-weight: 400;
 font-size: $font-size16;
 line-height: $line-heigth22;
 color: $green-color;
+cursor: pointer;
+transition: 0.7s;
   }
 
   .ínput-email {

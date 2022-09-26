@@ -192,6 +192,9 @@
   cursor: pointer;
   transition: 0.7s;
 }
+.button:active {
+  background-color: #4B9200;
+}
 
 .how-it-works {
   padding-top: 140px;
@@ -361,6 +364,9 @@
   cursor: pointer;
   transition: 0.7s;
 }
+.flex-cards-arrows .button-lft:active {
+  background-color: #4B9200;
+}
 .flex-cards-arrows .button-rgt {
   width: 62px;
   height: 62px;
@@ -373,6 +379,9 @@
   background: #E47209;
   cursor: pointer;
   transition: 0.7s;
+}
+.flex-cards-arrows .button-rgt:active {
+  background-color: #4B9200;
 }
 
 .wrapper-title-card {
@@ -445,6 +454,9 @@
   background: #E47209;
   cursor: pointer;
   transition: 0.7s;
+}
+.button-favourite:active {
+  background-color: #4B9200;
 }
 
 .palm-image {
@@ -606,6 +618,9 @@
   background-color: #E47209;
   cursor: pointer;
   transition: 0.7s;
+}
+.button-help-animals:active {
+  background-color: #4B9200;
 }
 
 .testimonials {
@@ -806,6 +821,9 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
   transition: 0.7s;
 }
+.button-feedback:active {
+  background-color: #4B9200;
+}
 
 .footer-background {
   background-color: #000000;
@@ -840,6 +858,9 @@ input[type=range]::-moz-range-thumb {
   margin-bottom: 44px;
   transition: 0.7s;
 }
+.footer-flex-container .wrapper-logo-social-donate .donate-btn:active {
+  background-color: #4B9200;
+}
 .footer-flex-container .wrapper-logo-social-donate .donate-btn:hover {
   background-color: #E47209;
   cursor: pointer;
@@ -866,6 +887,11 @@ input[type=range]::-moz-range-thumb {
   text-decoration: none;
 }
 
+.wrapper-social:active span {
+  color: #4B9200;
+  transition: 0.7s;
+}
+
 .positioned-bamboo-footer {
   position: absolute;
   content: "";
@@ -890,6 +916,12 @@ input[type=range]::-moz-range-thumb {
   line-height: 21px;
   color: #FFFFFF;
   margin: 0;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.text-designed:active {
+  color: #4B9200;
+  transition: 0.7s;
 }
 
 .logo {
@@ -903,7 +935,7 @@ input[type=range]::-moz-range-thumb {
   padding: 0 58px 0 0;
 }
 .nav-bottom .item-down:last-child {
-  padding: 0 32px 0 0;
+  padding: 0;
 }
 
 .padding-list {
@@ -955,6 +987,8 @@ input[type=range]::-moz-range-thumb {
   font-size: 16px;
   line-height: 22px;
   color: #4B9200;
+  cursor: pointer;
+  transition: 0.7s;
 }
 
 .ínput-email {

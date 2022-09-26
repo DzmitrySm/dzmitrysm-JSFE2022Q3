@@ -58,65 +58,69 @@
           <span class="amount">Amount</span>
           <form class="input-form">
             <div class="wrapper-radio-bar">
-              <div class="form-radio">
-                <input type="radio" class="radio-item1" id="radio-1" name="price-choice">
-                <label for="radio-1"></label>
-              </div>
-              <div class="form-radio">
-                <input type="radio" class="radio-item2" id="radio-2" name="price-choice">
-                <label for="radio-2"></label>
-              </div>
-              <div class="form-radio">
-                <input type="radio" class="radio-item3" id="radio-3" name="price-choice">
-                <label for="radio-3"></label>
-              </div>
-              <div class="form-radio">
-                <input type="radio" class="radio-item4" id="radio-4" name="price-choice">
-                <label for="radio-4"></label>
-              </div>
-              <div class="form-radio">
-                <input type="radio" class="radio-item5" id="radio-5" name="price-choice">
-                <label for="radio-5"></label>
-              </div>
-              <div class="form-radio">
-                <input type="radio" class="radio-item6" id="radio-6" name="price-choice">
-                <label for="radio-7"></label>
-              </div>
-              <div class="form-radio">
-                <input type="radio" class="radio-item7" id="radio-7" name="price-choice">
-                <label for="radio-7"></label>
-              </div>
-              <div class="form-radio">
-                <input type="radio" class="radio-item8" id="radio-8" name="price-choice">
-                <label for="radio-8"></label>
-              </div>
+                <input type="radio" class="invisible" id="radio-1" name="price-choice">
+                <input type="radio" class="invisible" id="radio-2" name="price-choice">
+                <input type="radio" class="invisible" id="radio-3" name="price-choice">
+                <input type="radio" class="invisible" id="radio-4" name="price-choice">
+                <input type="radio" class="invisible" id="radio-5" name="price-choice">
+                <input type="radio" class="invisible" id="radio-6" name="price-choice">
+                <input type="radio" class="invisible" id="radio-7" name="price-choice">
+                <input type="radio" class="invisible" id="radio-8" name="price-choice">
+                <div class="navigation-buttons">
+                  <label for="radio-1" class="nav-button btn1">
+                    <div class="button-slider click1"></div>
+                  </label>  
+                  <label for="radio-2" class="nav-button btn2">
+                    <div class="button-slider click2"></div>
+                  </label>  
+                  <label for="radio-3" class="nav-button btn3">
+                    <div class="button-slider click3  circle"></div>
+                  </label>
+                  <label for="radio-4" class="nav-button btn4">
+                    <div class="button-slider click4"></div>
+                  </label>
+                  <label for="radio-5" class="nav-button btn5">
+                    <div class="button-slider click5"></div>
+                  </label>
+                  <label for="radio-7" class="nav-button btn6">
+                    <div class="button-slider click6"></div>
+                  </label>
+                  <label for="radio-7" class="nav-button btn7">
+                    <div class="button-slider click7"></div>
+                  </label>      
+                  <label for="radio-8" class="nav-button btn8">
+                    <div class="button-slider click8"></div>
+                  </label>
+                </div>
+
+                
             </div>   
             <div class="wrapper-labels">
-              <div class="price-in-dollars">
+              <div class="price-in-dollars padding-right5000">
                 <img src="../../assets/images/svg/dollar-symbol.svg">
                 <label class="price-label">5000</label>
               </div>
-              <div class="price-in-dollars">
+              <div class="price-in-dollars padding-right2500">
                 <img src="../../assets/images/svg/dollar-symbol.svg">
                 <label class="price-label">2000</label>
               </div>
-              <div class="price-in-dollars">
-                <img src="../../assets/images/svg/dollar-symbol.svg">
-                <label class="price-label">1000</label>
+              <div class="price-in-dollars padding-right1000">
+                <img src="../../assets/images/svg/orange-dollar.svg">
+                <label class="price-label orange-label">1000</label>
               </div>
-              <div class="price-in-dollars">
+              <div class="price-in-dollars padding-right500">
                 <img src="../../assets/images/svg/dollar-symbol.svg">
                 <label class="price-label">500</label>
               </div>
-              <div class="price-in-dollars">
+              <div class="price-in-dollars padding-right250">
                 <img src="../../assets/images/svg/dollar-symbol.svg">
                 <label class="price-label">250</label>
               </div>
-              <div class="price-in-dollars">
+              <div class="price-in-dollars padding-right100">
                 <img src="../../assets/images/svg/dollar-symbol.svg">
                 <label class="price-label padding-price-5000">100</label>
               </div>
-              <div class="price-in-dollars">
+              <div class="price-in-dollars padding-right50">
                 <img src="../../assets/images/svg/dollar-symbol.svg">
                 <label class="price-label">50</label>
               </div>
@@ -130,9 +134,9 @@
             <form class="input-form-number">
             <input type="number" class="input-number" placeholder="Another amount"  max="9999">
             <div class="wrapper-radio">
-              <input type="radio" id="choice-monthly" name="choice" value="Monthly">
+              <input type="radio" id="choice-monthly" name="choice" value="Monthly" class="input-month-once">
               <label for="choice-monthly" class="monthly">Monthly</label>
-              <input type="radio" id="choice-once" name="choice" value="Once" checked>
+              <input type="radio" id="choice-once" name="choice" value="Once" checked class="input-month-once">
               <label for="choice-once" class="once">Once</label>
             </div>
             
@@ -152,10 +156,12 @@
         <div class="footer-flex-container">
           <div class="wrapper-logo-social-donate">
             <div class="logo-footer">
-              <a class="logo-link" href="../main/index.html">PetStory online</a>
+              <a class="logo-link" href="../../pages/main/index.html">PetStory online</a>
               <img src="../../assets/images/svg/bamboo.svg" alt="bamboo-img" class="positioned-bamboo-footer">
             </div>
+            
               <a href="../donate/index2.html" class="donate-btn">donate for volunteers</a>
+        
             <div class="social-icons">
               <a class="wrapper-social" href="https://www.facebook.com/">
                 <img src="../../assets/images/svg/icon-facebook.svg" alt="facebook-icon" class="soc-icon">
@@ -176,21 +182,21 @@
               
             </div>
             </div>
-            <nav class="navigation nav-bottom">
+            <nav class="navigation nav-bottom padding-list">
               <ul class="nav-list">
-                <li class="nav-item item-down"><a href="../main/index.html" class="nav-link">About</a></li>
+                <li class="nav-item item-down" ><a href="../main/index.html" class="nav-link">About</a></li>
                 <li class="nav-item item-down"><a href="" class="nav-link">Map</a></li>
                 <li class="nav-item item-down"><a href="" class="nav-link">Zoos</a></li>
-                <li class="nav-item item-down"><a href="" class="nav-link">Contact us</a></li>
+                <li class="nav-item item-down rigth-padding"><a href="" class="nav-link">Contact us</a></li>
               </ul>
             </nav>
 
             <div class="wrapper-form-email-designed">
               <div class="wrapper-form-email">
                 <p class="subscribe">Subscribe to our news</p>
-                <form>
+                <form class="input-container">
                   <input type="email" placeholder="Enter your email" class="ínput-email">
-                  <input type="submit" value=" Submit " class="input-submit">
+                  <input type="submit" value=" Submit " class="input-submit" required>
                 </form>
                   
                  
@@ -207,6 +213,6 @@
     </footer>
   
 </main>
-<script src="./index2.js"></script>
+<script src="../../pages/donate/index2.js"></script>
 </body>
 </html>
