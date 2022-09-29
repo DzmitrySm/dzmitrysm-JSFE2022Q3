@@ -884,6 +884,26 @@ input[type=range]::-moz-range-thumb {
 .footer-flex-container .wrapper-logo-social-donate .wrapper-social {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 0.5);
+  margin-right: 12px;
+  transition: 0.7s;
+}
+.footer-flex-container .wrapper-logo-social-donate .wrapper-social:hover {
+  background: #4B9200;
+  transition: 0.7s;
+}
+
+.wrapper-icon {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-span {
   text-decoration: none;
 }
 
@@ -906,6 +926,11 @@ input[type=range]::-moz-range-thumb {
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
+  transition: 0.7s;
+}
+.name-social:hover {
+  color: #4B9200;
+  transition: 0.7s;
 }
 
 .text-designed {
@@ -950,10 +975,9 @@ input[type=range]::-moz-range-thumb {
   display: flex;
 }
 
-.soc-icon {
+/*.soc-icon {
   padding-right: 17px;
-}
-
+}*/
 .social-icons {
   display: flex;
   flex-direction: column;
