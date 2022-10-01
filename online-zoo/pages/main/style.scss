@@ -22,14 +22,17 @@ $font-size16: 16px;
 $font-size24: 24px;
 $font-size36: 36px;
 $font-size48: 48px;
+$font-size85: 85px;
 $font-style-normal: normal;
 $line-heigth18: 18px;
 $line-heigth19: 19px;
 $line-heigth22: 22px;
+$line-heigth22-for-1000: 22.4px;
 $line-heigth58: 58px;
 $line-heigth21: 21px;
 $line-heigth29: 29px;
 $line-heigth47: 47px;
+$line-heigth63: 63.75px;
 
 
 
@@ -264,6 +267,7 @@ $line-heigth47: 47px;
     font-size: $font-size16;
     line-height: $line-heigth21;
     color: $grey-color;
+    margin: 0;
   }
   .section-subtitle {
     margin-top: 54px;
@@ -1054,6 +1058,155 @@ background: transparent;
 border: 1px solid $orange;
   }
 
+
+  @media screen and (max-width: 1000px) {
+
+    .header-background {
+      position: relative;
+      z-index: 15;
+    }
+
+    .container {
+      padding: 0 30px;
+    }
+
+
+    .background-panda {
+      height: 100%;
+      background-image: url(../../assets/images/img/giant-panda-1000.jpg);
+      background-repeat: no-repeat;
+      background-position: center -80px;
+      background-size: cover;
+    }
+
+  .nav-list {
+    .nav-item  {
+      padding-right: 48px;
+  }
+  }
+
+
+  .wrapper-lettering {
+    margin: 42.8px 55.75px 40.2px 0;
+  }
+
+  .lettering-background {
+    width: 367px;
+    height: 367px;
+    top: -53.8px;
+    left: -58px;
+    bottom: 6.8px;
+    right: 91.25px;
+  }
+
+
+  .wrapper-lettering {
+
+    .lettering-item {
+      font-size: $font-size85;
+      line-height: $line-heigth63;
+    }
+  }
+
+  .button {
+    width: 298px;
+  }
+
+
+  .how-it-works {
+    padding-top: 100px;
+    margin-bottom: 142px;
+  }
+
+
+  .wrapper-button {
+    padding-right: 99.31px;
+    margin-bottom: 47px;
+}
+
+.container-relative {
+  .positioned-img {
+    display: none;
+  }
+}
+
+.china-man-img {
+  display: block;
+  margin-top: 9px;
+  margin-bottom: 10px;
+  width: 455px;
+  height: 408px;
+  object-fit: cover;
+}
+
+
+.flex-container-img-text {
+  display: flex;
+  gap: 31px;
+}
+
+.card-image {
+  width: 292px;
+  height: 292px;
+  object-fit: cover;
+}
+
+.container-cards-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.wrapper-cards {
+  row-gap: 92px;
+  column-gap: 29px;
+}
+
+.wrapper-arrow-lft {
+  position: absolute;
+  top: 375px;
+  left: 353px;
+}
+
+.wrapper-arrow-rgt {
+  position: absolute;
+  top: 375px;
+  right: 353px;
+}
+
+
+.help-animals {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.content-area {
+  background-color: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  .title-section-pick {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .help-animals-subtitle {
+padding-left: 48px;
+padding-bottom: 20px;
+  }
+  .paragraph-COVID-19 {
+padding-left: 48px;
+padding-right: 78px;
+  }
+  .paragraph-gift {
+    padding-left: 48px;
+    padding-right: 68px;
+    padding-bottom: 40px;
+}
+}
+
+
+}
   
 
 

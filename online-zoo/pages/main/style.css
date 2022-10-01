@@ -222,6 +222,7 @@
   font-size: 16px;
   line-height: 21px;
   color: #333B41;
+  margin: 0;
 }
 .flex-container-img-text .section-subtitle {
   margin-top: 54px;
@@ -1027,4 +1028,121 @@ input[type=range]::-moz-range-thumb {
   margin-right: 10px;
   background: transparent;
   border: 1px solid #F9804B;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-background {
+    position: relative;
+    z-index: 15;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .background-panda {
+    height: 100%;
+    background-image: url(../../assets/images/img/giant-panda-1000.jpg);
+    background-repeat: no-repeat;
+    background-position: center -80px;
+    background-size: cover;
+  }
+  .nav-list .nav-item {
+    padding-right: 48px;
+  }
+  .wrapper-lettering {
+    margin: 42.8px 55.75px 40.2px 0;
+  }
+  .lettering-background {
+    width: 367px;
+    height: 367px;
+    top: -53.8px;
+    left: -58px;
+    bottom: 6.8px;
+    right: 91.25px;
+  }
+  .wrapper-lettering .lettering-item {
+    font-size: 85px;
+    line-height: 63.75px;
+  }
+  .button {
+    width: 298px;
+  }
+  .how-it-works {
+    padding-top: 100px;
+    margin-bottom: 142px;
+  }
+  .wrapper-button {
+    padding-right: 99.31px;
+    margin-bottom: 47px;
+  }
+  .container-relative .positioned-img {
+    display: none;
+  }
+  .china-man-img {
+    display: block;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    width: 455px;
+    height: 408px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .flex-container-img-text {
+    display: flex;
+    gap: 31px;
+  }
+  .card-image {
+    width: 292px;
+    height: 292px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container-cards-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+  }
+  .wrapper-cards {
+    row-gap: 92px;
+    -moz-column-gap: 29px;
+         column-gap: 29px;
+  }
+  .wrapper-arrow-lft {
+    position: absolute;
+    top: 375px;
+    left: 353px;
+  }
+  .wrapper-arrow-rgt {
+    position: absolute;
+    top: 375px;
+    right: 353px;
+  }
+  .help-animals {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .content-area {
+    background-color: rgba(253, 253, 255, 0.52);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    border-radius: 20px;
+  }
+  .content-area .title-section-pick {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .content-area .help-animals-subtitle {
+    padding-left: 48px;
+    padding-bottom: 20px;
+  }
+  .content-area .paragraph-COVID-19 {
+    padding-left: 48px;
+    padding-right: 78px;
+  }
+  .content-area .paragraph-gift {
+    padding-left: 48px;
+    padding-right: 68px;
+    padding-bottom: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
