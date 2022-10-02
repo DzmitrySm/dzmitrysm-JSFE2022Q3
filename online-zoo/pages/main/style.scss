@@ -24,6 +24,7 @@ $font-size36: 36px;
 $font-size48: 48px;
 $font-size85: 85px;
 $font-style-normal: normal;
+$line-heigth15: 15px;
 $line-heigth18: 18px;
 $line-heigth19: 19px;
 $line-heigth22: 22px;
@@ -31,7 +32,9 @@ $line-heigth22-for-1000: 22.4px;
 $line-heigth58: 58px;
 $line-heigth21: 21px;
 $line-heigth29: 29px;
+$line-heigth41: 41px;
 $line-heigth47: 47px;
+$line-heigth51: 51px;
 $line-heigth63: 63.75px;
 
 
@@ -172,6 +175,35 @@ $line-heigth63: 63.75px;
   }
 }
 
+.burger-menu {
+  display: none;
+  width: 18px;
+  height: 10px;
+  position: relative;
+  
+}
+
+  .burger-line {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $white-color;
+      left: 0;
+  }
+  
+  .burger-line-first {
+      top: 0;
+  }
+  
+  .burger-line-second {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  .burger-line-third {
+      bottom: 0;
+  }
+
 
 .background-panda {
   background-image: url(../../assets/images/img/image-giant-panda.jpg);
@@ -219,7 +251,7 @@ $line-heigth63: 63.75px;
 
 .wrapper-button {
   padding-right: 99.31px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .button {
@@ -432,7 +464,7 @@ padding-bottom: 14px;
   }
 
   .card {
-    border: 1px solid $border-color;
+    border: 0.78px solid $border-color;
     border-radius: 5px;
   }
   
@@ -448,6 +480,10 @@ padding-bottom: 14px;
     justify-content: center;
     row-gap: 20px;
     column-gap: 30px;
+  }
+
+  .card-alligators {
+    display: none;
   }
 
   .button-favourite {
@@ -501,6 +537,10 @@ transition: 0.7s;
     opacity: 0.9;
     padding-top: 69px;
     padding-bottom: 100px;
+  }
+
+  .arrow1, .arrow2 {
+    display: none;
   }
 
  .content-area {
@@ -1074,11 +1114,8 @@ border: 1px solid $orange;
 
 
     .background-panda {
-      height: 100%;
       background-image: url(../../assets/images/img/giant-panda-1000.jpg);
-      background-repeat: no-repeat;
       background-position: center -80px;
-      background-size: cover;
     }
 
   .nav-list {
@@ -1123,7 +1160,7 @@ border: 1px solid $orange;
 
   .wrapper-button {
     padding-right: 99.31px;
-    margin-bottom: 47px;
+    padding-bottom: 47px;
 }
 
 .container-relative {
@@ -1345,6 +1382,386 @@ input[type=range]::-webkit-slider-thumb {
 
 
 }
+
+
+
+@media screen and (max-width: 640px) {
+.container {
+    padding: 0 20px;
+}
+
+.flex-container .wrapper-nav-logo .logo .logo-text {
+  position: relative;
+  width: 46.86px;
+  font-size: 12.2899px;
+  line-height: $line-heigth15;
+}
+
+  .invisible-nav {
+  display: none;
+}
+
+.invisible-text-design {
+  display: none;
+}
+
+.flex-container .wrapper-nav-logo .logo .logo-text {
+  border: none;
+  padding: 2.29px 0 2.68px 0;
+}
+
+
+.burger-menu {
+  display: block;
+  
+}
+
+.flex-container .wrapper-nav-logo .logo .logo-text .positioned-bamboo {
+  top: 13.64px;
+  left: 6.13px;
+  width: 4.54px;
+  height: 13.56px;
+}
+
+
+.header-background {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.lettering-background {
+  width: 237.6px;
+  height: 237.6px;
+  top: -36.8px;
+  left: -26px;
+  bottom: 6.8px;
+  right: 91.25px;
+}
+
+.wrapper-lettering .lettering-item {
+  font-size: 54.2894px;
+  line-height: $line-heigth41;
+}
+
+.wrapper-lettering {
+  margin: 82.04px 0 0 0;
+}
+
+.flex-container-text-button {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.wrapper-button {
+  padding-right: 0;
+  padding-top: 279px;
+  padding-bottom: 40px;
+}
+
+.background-panda {
+  background-image: url(../../assets/images/img/giant-panda-640.jpg);
+  background-position: center 0;
+}
+
+.how-it-works {
+  padding-top: 60px;
+  margin-bottom: 80px;
+}
+
+.china-man-img {
+  display: none;
+  
+}
+
+.flex-container-img-text .section-subtitle {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+
+.flex-container-img-text {
+    gap: 0;
+    width: 495px;
+}
+
+.container-relative .positioned-img {
+ display: block;
+ width: 154px;
+ height: 476px;
+ object-fit: cover;
+}
+
+
+.container-cards-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20.24px;
+  position: relative;
+}
+
+
+.card-image {
+  width: 283.24px;
+  height: 283.24px;
+  object-fit: cover;
+}
+
+.wrapper-title-card .animal {
+  font-size: 12.4695px;
+  line-height: 17px;
+  padding-left: 12.47px;
+  padding-top: 6.24px;
+  margin: 0;
+}
+
+
+
+.wrapper-title-card .location {
+  font-size: 11.6901px;
+  line-height: 14px;
+  padding-left: 12.47px;
+  padding-bottom: 10.94px;
+}
+
+.banana {
+  width: 25.72px;
+  height: 28.84px;
+}
+
+.meat {
+  width: 37.41px;
+  height: 29.62px;
+}
+
+.icon {
+  padding-right: 0;
+  margin-right: 10.13px;
+  margin-top: 7.79px;
+}
+
+.card-sloth {
+  display: none;
+}
+
+.card-cheetahs {
+  display: none;
+}
+
+.card-penguins {
+  display: none;
+}
+
+.card-alligators {
+  display: block;
+}
+
+.wrapper-arrow-rgt {
+  position: absolute;
+  top: 353px;
+  right: 244px;
+}
+
+.wrapper-arrow-lft {
+  position: absolute;
+  top: 353px;
+  left: 244px;
+}
+
+.section-animals-cards {
+  padding-bottom: 60px;
+}
+
+
+.help-animals {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.content-area .title-section-pick {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 42px;
+    line-height: 50px;
+}
+
+.content-area .help-animals-subtitle {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  font-size: 22px;
+line-height: 26px;
+}
+
+.content-area .paragraph-COVID-19 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container-640 {
+  padding: 0;
+}
+
+.content-area .paragraph-gift {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
+.title-how-it-works {
+  padding-bottom: 20px;
+}
+
+.wrapper-arrow {
+  display: none;
+}
+
+.icons-help-animals {
+  gap: 42px;
+}
+
+
+.arrow1 {
+  display: block;
+  position: absolute;
+  top: -16px;
+  left: 137px;
+}
+
+.arrow2 {
+  display: block;
+  position: absolute;
+  top: -16px;
+  right: 152px;
+}
+
+.icons-help-animals {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.button-help-animals {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.flex-container-comments {
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.paragraph-comment {
+  margin: 0 0 0 16px;
+  padding-right: 0;
+  width: 553px;
+  height: 38px;
+  overflow-y: hidden;
+  
+}
+
+.flex-container-comments .comment-card {
+  padding-bottom: 8px;
+}
+
+
+input[type=range] {
+    display: none;
+}
+
+.button-feedback {
+  width: 240px;
+  margin: 0 auto;
+}
+
+.testimonials .leaf-image {
+  width: 58px;
+}
+
+.testimonials {
+  padding-bottom: 80px;
+}
+
+
+.container-640-foot {
+  padding: 12px 20px;
+}
+
+.wrapper-form-email {
+ display: none;
+}
+
+
+.footer-flex-container .wrapper-logo-social-donate {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.footer-flex-container .wrapper-logo-social-donate .donate-btn {
+  order: 3;
+  margin-bottom: 67px;
+}
+
+
+.nav-bottom .item-down:last-child {
+  padding-right: 0;
+}
+
+.nav-bottom .item-down:last-child {
+  padding-right: 0;
+}
+
+.name-social {
+  display: none;
+}
+
+.footer-flex-container {
+  flex-direction: column;
+}
+
+.padding-list {
+  order: 3;
+  position: relative;
+  bottom: 22px;
+}
+
+.footer-flex-container .wrapper-logo-social-donate .logo-footer {
+  margin-right: 490px;
+}
+
+.footer-flex-container .wrapper-logo-social-donate .wrapper-social {
+  margin-right: 0;
+}
+
+.nav-list .nav-item {
+  padding-right: 37px;
+}
+
+.nav-list {
+  margin-right: 301px;
+
+
+}
+
+.wrapper-form-email-designed {
+  margin-left: auto;
+}
+}
+
+
+
   
 
 
