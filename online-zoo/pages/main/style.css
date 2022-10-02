@@ -689,7 +689,9 @@
   font-size: 15px;
   line-height: 18px;
   color: #767474;
-  padding: 0 15px 19px 16px;
+  margin: 0 15px 19px 16px;
+  width: 237px;
+  height: 309px;
 }
 
 .positioned-element {
@@ -1144,5 +1146,96 @@ input[type=range]::-moz-range-thumb {
     padding-left: 48px;
     padding-right: 68px;
     padding-bottom: 40px;
+  }
+  .section-animals-cards {
+    padding-bottom: 140px;
+  }
+  .section-title {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+  .flex-container-comments .invisible-card {
+    display: none;
+  }
+  .paragraph-comment {
+    margin: 0 18px 19px 16px;
+    padding-right: 4px;
+    width: 255px;
+    height: 309px;
+  }
+  input[type=range] {
+    width: 390px;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 390px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    width: 75px;
+  }
+  .button-feedback {
+    margin-top: 53px;
+  }
+  .icons-help-animals {
+    margin-bottom: 70px;
+  }
+  .padding-list {
+    padding-left: 0;
+  }
+  .palm-image {
+    width: 130px;
+  }
+  .streitzia-image {
+    width: 240px;
+  }
+  .testimonials {
+    position: relative;
+    padding-bottom: 140px;
+  }
+  .testimonials .leaf-image {
+    width: 109px;
+  }
+  .container-1000 {
+    padding: 40px 31px 50px 30px;
+  }
+  .footer-background {
+    padding-bottom: 0;
+  }
+  .wrapper-form-email-designed .subscribe {
+    margin: 0 0 14px 0;
+  }
+  .wrapper-form-email {
+    position: relative;
+    right: 33px;
+  }
+  .footer-flex-container .wrapper-logo-social-donate .logo-footer {
+    margin-top: 0;
+  }
+  .wrapper-designed {
+    position: relative;
+    right: -2px;
+  }
+  .wrapper-form-email-designed {
+    position: relative;
+    right: 7px;
+    width: 228px;
+  }
+  .padding-design {
+    padding-bottom: 10px;
+  }
+  .input-submit {
+    padding: 10px 34px;
+  }
+  .nav-bottom .item-down:last-child {
+    padding-right: 88px;
+  }
+  .footer-flex-container {
+    display: flex;
+    justify-content: start;
+  }
+  .nav-list .nav-item .nav-link {
+    white-space: nowrap;
+  }
+  .button-help-animals {
+    margin-bottom: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
