@@ -127,7 +127,12 @@
 }
 
 .panda-donate {
-  display: block;
+  width: 100vw;
+  height: 390px;
+  background-image: url(../../assets/images/img/panda_bg-donate.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .block-amount {
@@ -802,4 +807,84 @@ input[type=number]::-webkit-inner-spin-button {
   margin-right: 10px;
   background: transparent;
   border: 1px solid #F9804B;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-background {
+    position: relative;
+    z-index: 15;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .nav-list .nav-item {
+    padding-right: 48px;
+  }
+  .title-donate {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .subtitle-donate {
+    padding-bottom: 40px;
+  }
+  .subblock-title {
+    padding-bottom: 10px;
+  }
+  .block-amount {
+    padding: 20px 44px 45.98px 47px;
+  }
+  .text-joy {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .wrapper-radio-bar {
+    width: 810px;
+  }
+  .container-1000 {
+    padding: 40px 31px 50px 30px;
+  }
+  .footer-background {
+    padding-bottom: 0;
+  }
+  .wrapper-form-email-designed .subscribe {
+    margin: 0 0 14px 0;
+  }
+  .padding-list {
+    padding-left: 0;
+  }
+  .wrapper-form-email {
+    position: relative;
+    right: 33px;
+  }
+  .footer-flex-container .wrapper-logo-social-donate .logo-footer {
+    margin-top: 0;
+  }
+  .wrapper-designed {
+    position: relative;
+    right: -2px;
+  }
+  .wrapper-form-email-designed {
+    position: relative;
+    right: 7px;
+    width: 228px;
+  }
+  .padding-design {
+    padding-bottom: 10px;
+  }
+  .input-submit {
+    padding: 10px 34px;
+  }
+  .nav-bottom .item-down:last-child {
+    padding-right: 88px;
+  }
+  .footer-flex-container {
+    display: flex;
+    justify-content: start;
+  }
+  .nav-list .nav-item .nav-link {
+    white-space: nowrap;
+  }
+  .button-help-animals {
+    margin-bottom: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */

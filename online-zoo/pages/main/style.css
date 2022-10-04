@@ -128,6 +128,35 @@
   transition: 0.7s;
 }
 
+.burger-menu {
+  display: none;
+  width: 18px;
+  height: 10px;
+  position: relative;
+}
+
+.burger-line {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  left: 0;
+}
+
+.burger-line-first {
+  top: 0;
+}
+
+.burger-line-second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-line-third {
+  bottom: 0;
+}
+
 .background-panda {
   background-image: url(../../assets/images/img/image-giant-panda.jpg);
   background-repeat: no-repeat;
@@ -174,7 +203,15 @@
 
 .wrapper-button {
   padding-right: 99.31px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+.invisible-wrapper-button {
+  display: none;
+}
+
+.invisible-flower-china {
+  display: none;
 }
 
 .button {
@@ -222,6 +259,7 @@
   font-size: 16px;
   line-height: 21px;
   color: #333B41;
+  margin: 0;
 }
 .flex-container-img-text .section-subtitle {
   margin-top: 54px;
@@ -413,7 +451,7 @@
 }
 
 .card {
-  border: 1px solid #FA6F32;
+  border: 0.78px solid #FA6F32;
   border-radius: 5px;
 }
 
@@ -429,6 +467,10 @@
   row-gap: 20px;
   -moz-column-gap: 30px;
        column-gap: 30px;
+}
+
+.card-alligators {
+  display: none;
 }
 
 .button-favourite {
@@ -482,6 +524,10 @@
   opacity: 0.9;
   padding-top: 69px;
   padding-bottom: 100px;
+}
+
+.arrow1, .arrow2 {
+  display: none;
 }
 
 .content-area {
@@ -688,7 +734,9 @@
   font-size: 15px;
   line-height: 18px;
   color: #767474;
-  padding: 0 15px 19px 16px;
+  margin: 0 15px 19px 16px;
+  width: 237px;
+  height: 309px;
 }
 
 .positioned-element {
@@ -1027,4 +1075,694 @@ input[type=range]::-moz-range-thumb {
   margin-right: 10px;
   background: transparent;
   border: 1px solid #F9804B;
+}
+
+@media screen and (max-width: 1000px) {
+  .header-background {
+    position: relative;
+    z-index: 15;
+  }
+  .container {
+    padding: 0 30px;
+  }
+  .background-panda {
+    background-image: url(../../assets/images/img/giant-panda-1000.jpg);
+    background-position: center -80px;
+  }
+  .nav-list .nav-item {
+    padding-right: 48px;
+  }
+  .wrapper-lettering {
+    margin: 42.8px 55.75px 40.2px 0;
+  }
+  .lettering-background {
+    width: 367px;
+    height: 367px;
+    top: -53.8px;
+    left: -58px;
+    bottom: 6.8px;
+    right: 91.25px;
+  }
+  .wrapper-lettering .lettering-item {
+    font-size: 85px;
+    line-height: 63.75px;
+  }
+  .button {
+    width: 298px;
+  }
+  .how-it-works {
+    padding-top: 100px;
+    margin-bottom: 142px;
+  }
+  .wrapper-button {
+    padding-right: 99.31px;
+    padding-bottom: 47px;
+  }
+  .container-relative .positioned-img {
+    display: none;
+  }
+  .china-man-img {
+    display: block;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    width: 455px;
+    height: 408px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .flex-container-img-text {
+    display: flex;
+    gap: 31px;
+  }
+  .card-image {
+    width: 292px;
+    height: 292px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container-cards-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+  }
+  .wrapper-cards {
+    row-gap: 92px;
+    -moz-column-gap: 29px;
+         column-gap: 29px;
+  }
+  .wrapper-arrow-lft {
+    position: absolute;
+    top: 375px;
+    left: 353px;
+  }
+  .wrapper-arrow-rgt {
+    position: absolute;
+    top: 375px;
+    right: 353px;
+  }
+  .help-animals {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .content-area {
+    background-color: rgba(253, 253, 255, 0.52);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    border-radius: 20px;
+  }
+  .content-area .title-section-pick {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .content-area .help-animals-subtitle {
+    padding-left: 48px;
+    padding-bottom: 20px;
+  }
+  .content-area .paragraph-COVID-19 {
+    padding-left: 48px;
+    padding-right: 78px;
+  }
+  .content-area .paragraph-gift {
+    padding-left: 48px;
+    padding-right: 68px;
+    padding-bottom: 40px;
+  }
+  .section-animals-cards {
+    padding-bottom: 140px;
+  }
+  .section-title {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+  .flex-container-comments .invisible-card {
+    display: none;
+  }
+  .paragraph-comment {
+    margin: 0 18px 19px 16px;
+    padding-right: 4px;
+    width: 255px;
+    height: 309px;
+  }
+  input[type=range] {
+    width: 390px;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 390px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    width: 75px;
+  }
+  .button-feedback {
+    margin-top: 53px;
+  }
+  .icons-help-animals {
+    margin-bottom: 70px;
+  }
+  .padding-list {
+    padding-left: 0;
+  }
+  .palm-image {
+    width: 130px;
+  }
+  .streitzia-image {
+    width: 240px;
+  }
+  .testimonials {
+    position: relative;
+    padding-bottom: 140px;
+  }
+  .testimonials .leaf-image {
+    width: 109px;
+  }
+  .container-1000 {
+    padding: 40px 31px 50px 30px;
+  }
+  .footer-background {
+    padding-bottom: 0;
+  }
+  .wrapper-form-email-designed .subscribe {
+    margin: 0 0 14px 0;
+  }
+  .wrapper-form-email {
+    position: relative;
+    right: 33px;
+  }
+  .footer-flex-container .wrapper-logo-social-donate .logo-footer {
+    margin-top: 0;
+  }
+  .wrapper-designed {
+    position: relative;
+    right: -2px;
+  }
+  .wrapper-form-email-designed {
+    position: relative;
+    right: 7px;
+    width: 228px;
+  }
+  .padding-design {
+    padding-bottom: 10px;
+  }
+  .input-submit {
+    padding: 10px 34px;
+  }
+  .nav-bottom .item-down:last-child {
+    padding-right: 88px;
+  }
+  .footer-flex-container {
+    display: flex;
+    justify-content: start;
+  }
+  .nav-list .nav-item .nav-link {
+    white-space: nowrap;
+  }
+  .button-help-animals {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+  .flex-container .wrapper-nav-logo .logo .logo-text {
+    position: relative;
+    width: 46.86px;
+    font-size: 12.2899px;
+    line-height: 15px;
+  }
+  .invisible-nav {
+    display: none;
+  }
+  .invisible-text-design {
+    display: none;
+  }
+  .flex-container .wrapper-nav-logo .logo .logo-text {
+    border: none;
+    padding: 2.29px 0 2.68px 0;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .flex-container .wrapper-nav-logo .logo .logo-text .positioned-bamboo {
+    top: 13.64px;
+    left: 6.13px;
+    width: 4.54px;
+    height: 13.56px;
+  }
+  .header-background {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .lettering-background {
+    width: 237.6px;
+    height: 237.6px;
+    top: -36.8px;
+    left: -26px;
+    bottom: 6.8px;
+    right: 91.25px;
+  }
+  .wrapper-lettering .lettering-item {
+    font-size: 54.2894px;
+    line-height: 41px;
+  }
+  .wrapper-lettering {
+    margin: 82.04px 0 0 0;
+  }
+  .flex-container-text-button {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .wrapper-button {
+    padding-right: 0;
+    padding-top: 279px;
+    padding-bottom: 40px;
+  }
+  .background-panda {
+    background-image: url(../../assets/images/img/giant-panda-640.jpg);
+    background-position: center 0;
+  }
+  .how-it-works {
+    padding-top: 60px;
+    margin-bottom: 80px;
+  }
+  .china-man-img {
+    display: none;
+  }
+  .flex-container-img-text .section-subtitle {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .flex-container-img-text {
+    gap: 0;
+    width: 495px;
+  }
+  .container-relative .positioned-img {
+    display: block;
+    width: 154px;
+    height: 476px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container-cards-section {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20.24px;
+    position: relative;
+  }
+  .card-image {
+    width: 283.24px;
+    height: 283.24px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .wrapper-title-card .animal {
+    font-size: 12.4695px;
+    line-height: 17px;
+    padding-left: 12.47px;
+    padding-top: 6.24px;
+    margin: 0;
+  }
+  .wrapper-title-card .location {
+    font-size: 11.6901px;
+    line-height: 14px;
+    padding-left: 12.47px;
+    padding-bottom: 10.94px;
+  }
+  .banana {
+    width: 25.72px;
+    height: 28.84px;
+  }
+  .meat {
+    width: 37.41px;
+    height: 29.62px;
+  }
+  .icon {
+    padding-right: 0;
+    margin-right: 10.13px;
+    margin-top: 7.79px;
+  }
+  .card-sloth {
+    display: none;
+  }
+  .card-cheetahs {
+    display: none;
+  }
+  .card-penguins {
+    display: none;
+  }
+  .card-alligators {
+    display: block;
+  }
+  .wrapper-arrow-rgt {
+    position: absolute;
+    top: 353px;
+    right: 244px;
+  }
+  .wrapper-arrow-lft {
+    position: absolute;
+    top: 353px;
+    left: 244px;
+  }
+  .section-animals-cards {
+    padding-bottom: 100px;
+  }
+  .streitzia-image {
+    width: 175px;
+  }
+  .help-animals {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .content-area .title-section-pick {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .content-area .help-animals-subtitle {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .content-area .paragraph-COVID-19 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container-640 {
+    padding: 0;
+  }
+  .content-area .paragraph-gift {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .title-how-it-works {
+    padding-bottom: 20px;
+  }
+  .wrapper-arrow {
+    display: none;
+  }
+  .icons-help-animals {
+    gap: 42px;
+  }
+  .arrow1 {
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 137px;
+  }
+  .arrow2 {
+    display: block;
+    position: absolute;
+    top: -16px;
+    right: 152px;
+  }
+  .icons-help-animals {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .button-help-animals {
+    margin-bottom: 60px;
+  }
+  .section-title {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  .flex-container-comments {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  .paragraph-comment {
+    margin: 0 0 0 16px;
+    padding-right: 0;
+    width: 553px;
+    height: 38px;
+    overflow-y: hidden;
+  }
+  .flex-container-comments .comment-card {
+    padding-bottom: 8px;
+  }
+  input[type=range] {
+    display: none;
+  }
+  .button-feedback {
+    width: 240px;
+    margin: 0 auto;
+  }
+  .testimonials .leaf-image {
+    width: 58px;
+  }
+  .testimonials {
+    padding-bottom: 80px;
+  }
+  .container-640-foot {
+    padding: 12px 20px 0 20px;
+  }
+  .wrapper-form-email {
+    display: none;
+  }
+  .footer-flex-container .wrapper-logo-social-donate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer-flex-container .wrapper-logo-social-donate .donate-btn {
+    order: 3;
+    transform: translateY(-75px);
+    margin-bottom: 0;
+  }
+  .nav-bottom .item-down:last-child {
+    padding-right: 0;
+  }
+  .nav-bottom .item-down:last-child {
+    padding-right: 0;
+  }
+  .name-social {
+    display: none;
+  }
+  .footer-flex-container {
+    flex-direction: column;
+  }
+  .padding-list {
+    order: 3;
+    position: relative;
+    bottom: 22px;
+  }
+  .footer-flex-container .wrapper-logo-social-donate .logo-footer {
+    margin-right: 490px;
+  }
+  .footer-flex-container .wrapper-logo-social-donate .wrapper-social {
+    margin-right: 0;
+  }
+  .nav-list .nav-item {
+    padding-right: 37px;
+  }
+  .nav-list {
+    margin-right: 301px;
+  }
+  .wrapper-form-email-designed {
+    margin-left: auto;
+  }
+  .button-favourite {
+    margin-top: 60px;
+  }
+  .social-icons {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .background-panda {
+    background-image: url(../../assets/images/img/mobile-giant-panda.jpg);
+    background-position: center 34px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .wrapper-button {
+    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .flex-container-img-text .section-title-how {
+    font-size: 24px;
+    line-height: 29px;
+    width: 300px;
+    margin: 0 0 10px 0;
+  }
+  .wrapper-lettering .lettering-item {
+    font-size: 28px;
+    line-height: 21px;
+  }
+  .lettering-background {
+    width: 119.09px;
+    height: 119.09px;
+    top: -18.95px;
+    left: -18.7px;
+    bottom: 6.8px;
+    right: 91.25px;
+  }
+  .wrapper-lettering {
+    margin: 75.12px 0 43.39px 0;
+  }
+  .invisible-wrapper-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .flex-container-img-text .paragraph {
+    width: 297px;
+  }
+  .how-it-works {
+    padding-top: 30px;
+    margin-bottom: 40px;
+  }
+  .container-relative .positioned-img {
+    display: none;
+  }
+  .container-relative .invisible-flower-china {
+    display: block;
+    width: 27px;
+    height: 217px;
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -35px;
+  }
+  .flex-container-img-text .section-subtitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .wrapper-arrow-rgt, .wrapper-arrow-lft {
+    display: none;
+  }
+  .wrapper-cards {
+    row-gap: 20px;
+  }
+  .container-cards-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20.24px;
+    position: relative;
+  }
+  .container-cards-section {
+    max-width: 320px;
+    padding-left: 17px;
+    padding-right: 18px;
+  }
+  .button-favourite {
+    margin-top: 20px;
+  }
+  .section-animals-cards {
+    padding-bottom: 60px;
+  }
+  .palm-image {
+    width: 50px;
+  }
+  .streitzia-image {
+    width: 86px;
+  }
+  .content-area .title-section-pick {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .content-area .help-animals-subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 3px;
+  }
+  .content-area .paragraph-COVID-19 {
+    display: none;
+  }
+  .content-area .paragraph-gift {
+    display: none;
+  }
+  .title-how-it-works {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .icons-help-animals {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .arrow1 {
+    display: block;
+    position: absolute;
+    top: 160px;
+    left: 142px;
+    transform: rotate(90deg);
+  }
+  .arrow2 {
+    display: block;
+    position: absolute;
+    top: 402px;
+    right: -65px;
+    transform: rotate(90deg);
+  }
+  .icon-title {
+    padding-top: 10px;
+  }
+  .button-help-animals {
+    margin-bottom: 40px;
+  }
+  .section-title {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .paragraph-comment {
+    margin: 0 0 0 16px;
+    padding-right: 0;
+    width: 252px;
+    height: 38px;
+    overflow-y: hidden;
+  }
+  .flex-container-comments {
+    margin-bottom: 30px;
+  }
+  .testimonials {
+    padding-bottom: 60px;
+  }
+  .testimonials .leaf-image {
+    width: 32px;
+  }
+  .flex-container .wrapper-nav-logo .logo .logo-text {
+    margin: 0;
+  }
+  .social-icons {
+    flex-direction: row;
+  }
+  .footer-flex-container .wrapper-logo-social-donate .logo-footer {
+    margin-right: 0;
+    border: none;
+    margin-bottom: 0;
+  }
+  .footer-flex-container .wrapper-logo-social-donate .donate-btn {
+    transform: translateY(3px);
+  }
+  .footer-flex-container .wrapper-logo-social-donate .logo-footer {
+    width: 128px;
+  }
+  .positioned-bamboo-footer {
+    top: 0;
+    left: 74px;
+  }
+  .wrapper-form-email-designed {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
