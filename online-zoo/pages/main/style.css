@@ -161,7 +161,6 @@
   background-image: url(../../assets/images/img/image-giant-panda.jpg);
   background-repeat: no-repeat;
   background-position: center -80px;
-  background-size: cover;
 }
 
 .flex-container-text-button {
@@ -1077,6 +1076,64 @@ input[type=range]::-moz-range-thumb {
   border: 1px solid #F9804B;
 }
 
+@media screen and (max-width: 1585px) {
+  .palm-image {
+    width: 15%;
+  }
+  .streitzia-image {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .container {
+    padding: 0 100px;
+  }
+  .container-relative .positioned-img {
+    display: block;
+    width: 6%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .flex-container-img-text {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1230px) {
+  .container-cards-section {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .flex-container-comments {
+    flex-wrap: wrap;
+  }
+  .flex-container-comments .comment-card {
+    width: 50%;
+  }
+  .paragraph-comment {
+    width: 90%;
+    height: 90%;
+  }
+  .padding-list {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .container {
+    padding: 0 10px;
+  }
+  .container-relative .positioned-img {
+    top: -73px;
+    width: 4%;
+  }
+  .nav-bottom .item-down {
+    padding: 0 48px 0 0;
+  }
+}
 @media screen and (max-width: 1000px) {
   .header-background {
     position: relative;
@@ -1199,6 +1256,9 @@ input[type=range]::-moz-range-thumb {
   .flex-container-comments .invisible-card {
     display: none;
   }
+  .flex-container-comments .comment-card {
+    width: auto;
+  }
   .paragraph-comment {
     margin: 0 18px 19px 16px;
     padding-right: 4px;
@@ -1281,9 +1341,71 @@ input[type=range]::-moz-range-thumb {
     margin-bottom: 50px;
   }
 }
+@media screen and (max-width: 975px) {
+  .text-designed {
+    position: relative;
+    bottom: 82px;
+  }
+  .wrapper-form-email-designed {
+    right: 250px;
+  }
+  .footer-flex-container {
+    justify-content: start;
+  }
+}
+@media screen and (max-width: 860px) {
+  .nav-list .nav-item {
+    padding-right: 15px;
+  }
+  .wrapper-arrow-lft {
+    left: 220px;
+  }
+  .wrapper-arrow-rgt {
+    right: 220px;
+  }
+  .icons-help-animals {
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .arrow-help-animal {
+    transform: rotate(90deg);
+  }
+  .wrapper-arrow {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .flex-container-img-text {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .nav-bottom .item-down:last-child {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 740px) {
+  .wrapper-form-email-designed {
+    right: 200px;
+  }
+}
 @media screen and (max-width: 640px) {
   .container {
     padding: 0 20px;
+  }
+  .wrapper-designed {
+    bottom: -83px;
+    position: absolute;
+    right: -205px;
+  }
+  .container-relative .positioned-img {
+    display: block;
+    width: 154px;
+    height: 439px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    top: 0;
   }
   .flex-container .wrapper-nav-logo .logo .logo-text {
     position: relative;
@@ -1346,6 +1468,7 @@ input[type=range]::-moz-range-thumb {
   .background-panda {
     background-image: url(../../assets/images/img/giant-panda-640.jpg);
     background-position: center 0;
+    height: 373px;
   }
   .how-it-works {
     padding-top: 60px;
@@ -1361,13 +1484,6 @@ input[type=range]::-moz-range-thumb {
   .flex-container-img-text {
     gap: 0;
     width: 495px;
-  }
-  .container-relative .positioned-img {
-    display: block;
-    width: 154px;
-    height: 476px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   .container-cards-section {
     max-width: 640px;
@@ -1473,6 +1589,7 @@ input[type=range]::-moz-range-thumb {
   }
   .icons-help-animals {
     gap: 42px;
+    flex-direction: row;
   }
   .arrow1 {
     display: block;
@@ -1541,6 +1658,8 @@ input[type=range]::-moz-range-thumb {
     order: 3;
     transform: translateY(-75px);
     margin-bottom: 0;
+    width: 298px;
+    height: 54px;
   }
   .nav-bottom .item-down:last-child {
     padding-right: 0;
@@ -1579,6 +1698,27 @@ input[type=range]::-moz-range-thumb {
   }
   .social-icons {
     gap: 20px;
+  }
+}
+@media screen and (max-width: 638px) {
+  .footer-flex-container .wrapper-logo-social-donate .donate-btn {
+    order: 3;
+    transform: translateY(-75px);
+    margin-bottom: 0;
+    width: 50%;
+    height: 54px;
+  }
+  .social-icons {
+    width: 50%;
+  }
+  .padding-list {
+    order: 3;
+    position: relative;
+    bottom: 22px;
+    padding-top: 45px;
+  }
+  .nav-list .nav-item {
+    padding-right: 10px;
   }
 }
 @media screen and (max-width: 320px) {
