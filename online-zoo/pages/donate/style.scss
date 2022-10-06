@@ -24,6 +24,7 @@ $font-size36: 36px;
 $font-size48: 48px;
 $font-size72: 72px;
 $font-style-normal: normal;
+$line-heigth15: 15px;
 $line-heigth18: 18px;
 $line-heigth19: 19px;
 $line-heigth22: 22px;
@@ -166,13 +167,41 @@ $line-heigth47: 47px;
   }
 }
 
+.burger-menu {
+  display: none;
+  width: 18px;
+  height: 10px;
+  position: relative;
+  
+}
+
+  .burger-line {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $white-color;
+      left: 0;
+  }
+  
+  .burger-line-first {
+      top: 0;
+  }
+  
+  .burger-line-second {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  .burger-line-third {
+      bottom: 0;
+  }
+
 .panda-donate {
   width: 100vw;
   height: 390px;
   background-image: url(../../assets/images/img/panda_bg-donate.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 
 .block-amount {
@@ -267,6 +296,7 @@ color: $black-color;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  align-items: center;
 }
 
 .input-form-number {
@@ -858,8 +888,38 @@ background: transparent;
 border: 1px solid $orange;
 }
 
+@media screen and (max-width: 1440px) {
+  .container {
+    padding: 0 80px;
+}
+.padding-list {
+  padding-left: 0;
+}
+
+}
+
+@media screen and (max-width: 1195px) {
+  .container {
+    padding: 0 10px;
+}
+
+.nav-bottom .item-down {
+  padding: 0 48px 0 0;
+}
+
+}
+
 
 @media screen and (max-width: 1000px) {
+
+
+  .panda-donate {
+    width: 100vw;
+    height: 390px;
+    background-image: url(../../assets/images/img/panda_bg-donate-1000.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   .header-background {
     position: relative;
@@ -881,8 +941,14 @@ border: 1px solid $orange;
 .title-donate {
   padding-top: 40px;
   padding-bottom: 30px;
+  width: 778px;
  
 }
+
+.donation-information {
+  padding-bottom: 30px;
+}
+
 
 .subtitle-donate {
   padding-bottom: 40px;
@@ -903,10 +969,30 @@ white-space: nowrap;
 
 .wrapper-radio-bar {
   width: 810px;
+    overflow-x: clip;
+}
+
+.navigation-buttons {
+  transform: translateX(-63px);
+}
+
+.click1::after {
+  visibility: hidden;
+}
+
+.wrapper-labels {
+  width: 830px;
+  transform: translateX(-126px);
+}
+
+.padding-right5000 {
+  padding-right: 60px;
+  visibility: hidden;
 }
 
 .container-1000 {
   padding: 40px 31px 50px 30px;
+  
 }
 
 
@@ -974,8 +1060,418 @@ white-space: nowrap;
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 975px) {
+  .text-joy {
+    white-space: normal;
+}
+  
+  
+  .text-designed {
+    position: relative;
+    bottom: 82px;
+  }
+  
+  .wrapper-form-email-designed {
+    right: 250px;
+  }
+  
+  
+  .footer-flex-container {
+    justify-content: start;
+  }
+  
+  }
+
 
 
 
 
 }
+
+
+@media screen and (max-width: 880px) {
+  .wrapper-radio-bar {
+    width: 600px;
+}
+
+.navigation-buttons {
+    transform: translateX(-195px);
+}
+
+.click3::after {
+  display: none;
+}
+
+.wrapper-labels {
+  width: 570px;
+  transform: translateX(-389px);
+}
+
+.padding-right2500 {
+  padding-right: 60px;
+  visibility: hidden;
+}
+
+.padding-right1000 {
+  padding-right: 60px;
+  visibility: hidden;
+}
+
+.title-donate {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  width: 600px;
+}
+
+.title-donate {
+font-size: 24px;
+line-height: 29px;
+}
+
+}
+
+@media screen and (max-width: 800px) {
+
+.nav-bottom .item-down:last-child {
+  padding-right: 0;
+}
+
+.nav-list .nav-item {
+  padding-right: 10px;
+}
+
+.container {
+  padding: 0 10px;
+}
+.container-1000 {
+  padding: 40px 31px 50px 30px;
+}
+
+}
+
+@media screen and (max-width: 640px) {
+  .panda-donate {
+
+    height: 369px;
+    background-image: url(../../assets/images/img/panda_bg-donate-640.jpg);
+    background-position: center 34px;
+    
+  }
+
+  .flex-container .wrapper-nav-logo .logo .logo-text .positioned-bamboo {
+    top: 13.64px;
+    left: 6.13px;
+    width: 4.54px;
+    height: 13.56px;
+}
+
+.text-designed {
+  position: relative;
+  bottom: 82px;
+}
+
+.wrapper-designed {
+  bottom: -83px;
+  position: absolute;
+  right: -256px;
+}
+
+  .flex-container .wrapper-nav-logo .logo .logo-text {
+    position: relative;
+    width: 46.86px;
+    font-size: 12.2899px;
+    line-height: $line-heigth15;
+  }
+
+  .header-background {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .burger-menu {
+    display: block;
+    
+  }
+
+  .flex-container .wrapper-nav-logo .logo .logo-text {
+    border: none;
+    padding: 2.29px 0 2.68px 0;
+  }
+
+  .invisible-nav {
+    display: none;
+  }
+  
+  .invisible-text-design {
+    display: none;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+  .container-1000 {
+    padding: 40px 31px 50px 30px;
+  }
+
+  .title-donate {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 600px;
+}
+
+.paragraph-donate {
+  padding-bottom: 30px;
+}
+
+.block-amount {
+  padding: 30px 44px 30.98px 47px;
+}
+
+.flex-container-slider {
+  margin-bottom: 41px;
+}
+
+.text-joy {
+  padding-bottom: 50px;
+}
+
+.input-number {
+  width: 180px;
+  height: 42px;
+  background-color: transparent;
+  color: #929699;
+  padding-left: 6px;
+  padding-right: 11px;
+  border: 1px solid #929699;
+}
+
+.input-form-number {
+  margin-top: 0; 
+}
+
+.container-640-foot {
+  padding: 12px 20px 0 20px;
+}
+
+.wrapper-form-email {
+ display: none;
+}
+
+.footer-flex-container .wrapper-logo-social-donate {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.footer-flex-container .wrapper-logo-social-donate .donate-btn {
+  order: 3;
+  transform: translateY(-75px);
+  margin-bottom: 0;
+  width: 298px;
+height: 54px;
+}
+
+
+.nav-bottom .item-down:last-child {
+  padding-right: 0;
+}
+
+.nav-bottom .item-down:last-child {
+  padding-right: 0;
+}
+
+.name-social {
+  display: none;
+}
+
+.footer-flex-container {
+  flex-direction: column;
+}
+
+.padding-list {
+  order: 3;
+  position: relative;
+  bottom: 22px;
+}
+
+.footer-flex-container .wrapper-logo-social-donate .logo-footer {
+  margin-right: 490px;
+}
+
+.footer-flex-container .wrapper-logo-social-donate .wrapper-social {
+  margin-right: 0;
+}
+
+.nav-list .nav-item {
+  padding-right: 37px;
+}
+
+.nav-list {
+  margin-right: 301px;
+
+
+}
+
+.wrapper-form-email-designed {
+  margin-left: auto;
+}
+
+.button-favourite {
+  margin-top: 60px;
+}
+
+.social-icons {
+  gap: 20px;
+}
+
+
+
+}
+
+@media screen and (max-width: 638px) {
+  .footer-flex-container .wrapper-logo-social-donate .donate-btn {
+    order: 3;
+    transform: translateY(-75px);
+    margin-bottom: 0;
+    width: 50%;
+    height: 54px;
+}
+
+.footer-flex-container .wrapper-logo-social-donate .logo-footer {
+  margin-right: 80%;
+}
+
+.social-icons {
+  width: 50%;
+}
+
+.padding-list {
+  order: 3;
+  position: relative;
+  bottom: 22px;
+  padding-top: 45px;
+}
+
+.nav-list .nav-item {
+  padding-right: 10px;
+}
+
+.wrapper-arrow-lft {
+  position: absolute;
+  top: 353px;
+  left: 130px;
+}
+.wrapper-arrow-rgt {
+  position: absolute;
+  top: 353px;
+  right: 130px;
+}
+  }
+
+
+  @media screen and (max-width: 320px) {
+
+    .panda-donate {
+
+      height: 221px;
+      background-image: url(../../assets/images/img/panda_bg-320.jpg);
+      background-position: center 34px;
+      
+    }
+
+    .subtitle-donate {
+      font-size: 24px;
+      line-height: 29px;
+      padding-bottom: 30px;
+  }
+
+  .subblock-title {
+    font-size:24px;
+    line-height: 29px;
+}
+
+.panda-widj {
+  display: block;
+  width: 160.15px;
+height: 138.72px;
+}
+
+.number-style {
+  font-size: 40.6015px;
+  line-height: 32px;
+}
+
+.title-per-days {
+  font-size: 9.02255px;
+  line-height: 13px;
+}
+
+.flex-container .wrapper-nav-logo .logo .logo-text {
+  margin: 0;
+}
+
+.social-icons {
+  width: 100%;
+    justify-content: center;
+    gap: 30px;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
+
+.footer-flex-container .wrapper-logo-social-donate .logo-footer {
+  margin-right: 0;
+  border: none;
+  margin-bottom: 0;
+}
+
+.footer-flex-container .wrapper-logo-social-donate .donate-btn {
+  transform: translateY(0);
+  margin-bottom: 109px;
+  
+}
+
+.footer-flex-container .wrapper-logo-social-donate {
+  padding: 20px 3px 20px 0;
+}
+
+.footer-flex-container .wrapper-logo-social-donate .logo-footer {
+  width: 100%;
+  height: 23px;
+  padding-bottom: 30px;
+}
+
+.positioned-bamboo-footer {
+  top: 0;
+  left: 160px;
+}
+
+.wrapper-form-email-designed {
+  text-align: center;
+}
+
+.wrapper-designed {
+  bottom: 50px;
+  position: absolute;
+  right: -198px;
+}
+
+.text-designed {
+  position: relative;
+  bottom: 0;
+}
+
+.nav-list .nav-item {
+  padding-right: 30px;
+}
+
+.padding-list {
+  padding-top: 0;
+  margin: 0 auto;
+}
+
+  }
