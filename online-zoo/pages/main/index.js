@@ -11,8 +11,8 @@
       navItems.classList.toggle('navigation-active')
       burgerMenu.classList.toggle('burger-menu-active')
       overlay.classList.toggle('overlay-blackout-active')
-      designeVisible.classList.add('text-design-burger-active')
-      logoVisible.classList.add('logo-burger-menu-active')
+      designeVisible.classList.toggle('text-design-burger-active')
+      logoVisible.classList.toggle('logo-burger-menu-active')
       let paddingOfset = window.innerWidth - document.body.offsetWidth + 'px'
       document.body.style.paddingRight = paddingOfset
       scrollBehaviour.classList.toggle('overlay')
@@ -30,3 +30,67 @@
   } )
 
 }());
+
+
+//Pop-up
+const scrollBehaviour = document.querySelector('.body')
+const overlay = document.querySelector('.overlay-blackout')
+const CardOscar = document.querySelector('.card-Oscar')
+const CardUser = document.querySelector('.card-user')
+const CardFrederica = document.querySelector('.card-Frederica')
+const VisiblePopUpUser = document.querySelector('.comment-card-modal')
+const cross = document.querySelector('.cross')
+CardUser.addEventListener('click', () => {
+  VisiblePopUpUser.classList.add('comment-card-modal-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+})
+
+cross.addEventListener('click', () => {
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+  overlay.classList.remove('overlay-blackout-active')
+  scrollBehaviour.classList.remove('overlay')
+})
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('overlay-blackout-active')
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+
+})
+
+CardOscar.addEventListener('click', () => {
+  VisiblePopUpUser.classList.add('comment-card-modal-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+})
+
+cross.addEventListener('click', () => {
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+  overlay.classList.remove('overlay-blackout-active')
+  scrollBehaviour.classList.remove('overlay')
+})
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('overlay-blackout-active')
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+
+})
+
+CardFrederica.addEventListener('click', () => {
+  VisiblePopUpUser.classList.add('comment-card-modal-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+})
+
+cross.addEventListener('click', () => {
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+  overlay.classList.remove('overlay-blackout-active')
+  scrollBehaviour.classList.remove('overlay')
+})
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('overlay-blackout-active')
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+
+})
+
