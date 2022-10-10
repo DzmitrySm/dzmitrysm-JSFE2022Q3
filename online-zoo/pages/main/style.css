@@ -780,9 +780,9 @@
 
 .flex-container-comments {
   display: flex;
-  justify-content: center;
   gap: 30px;
   margin-bottom: 21px;
+  overflow: hidden;
 }
 .flex-container-comments .comment-card {
   display: flex;
@@ -823,6 +823,12 @@
   padding-bottom: 10px;
   position: relative;
   z-index: 3;
+}
+
+.carousel {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 21px;
 }
 
 .comment-card-modal {
@@ -901,7 +907,7 @@
   line-height: 18px;
   color: #767474;
   margin: 0 15px 19px 16px;
-  width: 237px;
+  width: 235px;
   height: 309px;
   position: relative;
   z-index: 3;
@@ -1013,7 +1019,7 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
   border: 1px solid #F9804B;
   height: 6px;
-  width: 115.9px;
+  width: 12.5%;
   border-radius: 5px;
   background: #FE9013;
   cursor: pointer;
@@ -1036,7 +1042,7 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
   border: 1px solid #F9804B;
   height: 6px;
-  width: 115.9px;
+  width: 12.5%;
   border-radius: 5px;
   background: #FE9013;
   cursor: pointer;
@@ -1306,10 +1312,6 @@ input[type=range]::-moz-range-thumb {
   .flex-container-comments .comment-card {
     width: 50%;
   }
-  .paragraph-comment {
-    width: 90%;
-    height: 90%;
-  }
   .padding-list {
     padding-left: 0;
   }
@@ -1469,7 +1471,7 @@ input[type=range]::-moz-range-thumb {
     width: 390px;
   }
   input[type=range]::-webkit-slider-thumb {
-    width: 75px;
+    width: 12.5% px;
   }
   .button-feedback {
     margin-top: 53px;
@@ -1595,6 +1597,13 @@ input[type=range]::-moz-range-thumb {
     bottom: 0;
     position: absolute;
     right: -205px;
+  }
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 0;
+    height: 390px;
   }
   .container-relative .positioned-img {
     display: block;

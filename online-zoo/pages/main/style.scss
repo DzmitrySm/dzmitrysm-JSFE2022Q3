@@ -807,9 +807,9 @@ color: #333B41;
 
   .flex-container-comments {
     display: flex;
-    justify-content: center;
     gap: 30px;
     margin-bottom: 21px;
+    overflow: hidden;
     .comment-card {
       display: flex;
       flex-direction: column;
@@ -850,6 +850,12 @@ color: #333B41;
         z-index: 3;
       }
     }
+  }
+
+  .carousel {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 21px;
   }
 
   .comment-card-modal {
@@ -929,7 +935,7 @@ font-size: $font-size15;
 line-height: $line-heigth18;
 color: $text-comment;
 margin: 0 15px 19px 16px;
-width: 237px;
+width: 235px;
 height: 309px;
 position: relative;
 z-index: 3;
@@ -1040,7 +1046,7 @@ color: $grey-email;
   input[type=range]::-webkit-slider-thumb {
     border: 1px solid $orange;
     height: 6px;
-    width: 115.9px;
+    width: 12.5%;
     border-radius: 5px;
     background: $thumb-color;
     cursor: pointer;
@@ -1060,7 +1066,7 @@ color: $grey-email;
   input[type=range]::-moz-range-thumb {
     border: 1px solid $orange;
     height: 6px;
-    width: 115.9px;
+    width: 12.5%;
     border-radius: 5px;
     background: $thumb-color;
     cursor: pointer;
@@ -1349,10 +1355,10 @@ border: 1px solid $orange;
       width: 50%;
   }
 
-  .paragraph-comment {
-    width: 90%;
-    height: 90%;
-}
+ // .paragraph-comment {
+  //  width: 90%;
+//    height: 90%;
+//}
 
 .padding-list {
   padding-left: 0;
@@ -1565,7 +1571,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]::-webkit-slider-thumb {
-  width: 75px;
+  width: 12.5%px;
   
 }
 
@@ -1747,6 +1753,14 @@ input[type=range]::-webkit-slider-thumb {
   bottom: 0;
   position: absolute;
   right: -205px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 0;
+  height: 390px;
 }
 
 .container-relative .positioned-img {

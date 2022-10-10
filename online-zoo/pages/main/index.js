@@ -94,3 +94,17 @@ overlay.addEventListener('click', () => {
 
 })
 
+
+
+
+//Testimonials carousel
+const range = document.querySelector('.scroll')
+const firstCard = document.querySelector('.carousel')
+const commentCard = document.querySelector('.comment-card')
+const mediaQuery = window.matchMedia('(max-width: 1000px)')
+range.addEventListener('input', () => {
+  firstCard.style.transform = `translateX(${range.value * (-296)}px)`
+  if (mediaQuery.matches) {
+    firstCard.style.transform = `translateX(${range.value * (-317)}px)`
+  }
+})
