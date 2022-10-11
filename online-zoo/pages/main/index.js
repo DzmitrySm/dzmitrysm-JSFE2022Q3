@@ -104,6 +104,7 @@ const commentCard = document.querySelector('.comment-card')
 const mediaQuery = window.matchMedia('(max-width: 1000px)')
 range.addEventListener('input', () => {
   firstCard.style.transform = `translateX(${range.value * (-296)}px)`
+  firstCard.style.transition = '2s ease-in-out'
   if (mediaQuery.matches) {
     firstCard.style.transform = `translateX(${range.value * (-317)}px)`
   }

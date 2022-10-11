@@ -405,7 +405,111 @@ color: $black-color;
   transition: 0.7s;
 }
 
+.btn1::before {
+  display: none;
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid $orange;
+  margin: 0 auto;
+  bottom: -2px;
+  left: -2px;
+
+}
+
+.btn2::before {
+  display: none;
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid $orange;
+  margin: 0 auto;
+  bottom: -2px;
+  left: -2px;
+
+}
+
 .btn3::before {
+  display: none;
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid $orange;
+  margin: 0 auto;
+  bottom: -2px;
+  left: -2px;
+
+}
+
+.btn4::before {
+  display: none;
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid $orange;
+  margin: 0 auto;
+  bottom: -2px;
+  left: -2px;
+
+}
+
+.btn5::before {
+  display: none;
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid $orange;
+  margin: 0 auto;
+  bottom: -2px;
+  left: -2px;
+
+}
+
+.btn6::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid $orange;
+  margin: 0 auto;
+  bottom: -2px;
+  left: -2px;
+
+}
+.btn7::before {
+  display: none;
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid $orange;
+  margin: 0 auto;
+  bottom: -2px;
+  left: -2px;
+
+}
+
+.btn8::before {
+  display: none;
   position: absolute;
   content: '';
   width: 40px;
@@ -494,7 +598,6 @@ color: $black-color;
 
 .click3  {
   position: relative;
-  outline: 1px solid #E47209;
 }
 
 .click4  {
