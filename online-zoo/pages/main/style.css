@@ -548,6 +548,16 @@
        column-gap: 30px;
 }
 
+.wrapper-new-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
 .card-alligators {
   display: none;
 }
@@ -1404,6 +1414,11 @@ input[type=range]::-moz-range-thumb {
     position: relative;
   }
   .wrapper-cards {
+    row-gap: 92px;
+    -moz-column-gap: 29px;
+         column-gap: 29px;
+  }
+  .wrapper-new-cards {
     row-gap: 92px;
     -moz-column-gap: 29px;
          column-gap: 29px;

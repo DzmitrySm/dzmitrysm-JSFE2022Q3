@@ -109,3 +109,33 @@ range.addEventListener('input', () => {
     firstCard.style.transform = `translateX(${range.value * (-317)}px)`
   }
 })
+
+//Carousel pets
+
+const btnLeft = document.querySelector('.button-lft')
+const btnRight = document.querySelector('.button-rgt')
+const AllPets = document.querySelectorAll('.card')
+const wrapperCards = document.querySelector('.wrapper-cards')
+
+
+
+function newContainer() {
+ let arr = [0, 1, 2, 3, 4, 5, 6]
+let shufleArr = arr.sort(() => Math.random() - 0.5)
+  let div = document.createElement('div')
+  div.className = ('wrapper-new-cards')
+  wrapperCards.append(div)
+  const wrapperNewCards = document.querySelector('.wrapper-new-cards')
+  for (let i = 0; i < shufleArr.length; i++)
+  wrapperNewCards.append(AllPets[shufleArr[i]])
+}
+
+
+btnRight.addEventListener('click', () => {
+  newContainer()
+})
+
+btnLeft.addEventListener('click', () => {
+  newContainer()
+})
+
