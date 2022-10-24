@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 400px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper-play-area {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  position: relative;
+  border: 1px solid black;
+  
+}
+
+.puzzle-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 25%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  font-size: 32px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  user-select: none;
+}
+
+.span-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  border: 1px solid purple;
+}
+
+.shuffle-button {
+  margin-top: 5px;
+  display: block;
+  background: red;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.wrapper-buttons {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+}
+
+.won-class {
+  background: yellow;
+}
