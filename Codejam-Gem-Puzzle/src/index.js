@@ -20,6 +20,19 @@ const countMoveGame = document.createElement('span')
 countMoveGame.className = 'count-move';
 countMoveGame.textContent = 0;
 wrapperButtons.append(countMoveGame);
+const textTimer = document.createElement('span')
+textTimer.className = 'timer'
+textTimer.textContent = 'Time: ';
+wrapperButtons.append(textTimer);
+const watchDiv = document.createElement('div')
+watchDiv.className = 'watch'
+watchDiv.textContent = '00:00';
+wrapperButtons.append(watchDiv);
+const voiceOFMove = document.createElement('audio');
+voiceOFMove.src = '../src/assets/audio/beep-7.mp3';
+body.append(voiceOFMove);
+
+
 
 function addItems() {
   for (let i = 0; i < 16; i++) {
@@ -82,11 +95,22 @@ function shuffleArr() {
   return arr.sort(() => Math.random() - 0.5);
 }
 
+function addShuffleItemsOnLoad(matrix) {
+  const shuffledArr = shuffleArr(matrix.flat());
+  matrix = addMatrix(shuffledArr);
+  setPositionItems(matrix);
+}
+addShuffleItemsOnLoad(matrix)
+
+
 buttonShuffle.addEventListener('click', () => {
   const shuffledArr = shuffleArr(matrix.flat());
   matrix = addMatrix(shuffledArr);
   setPositionItems(matrix);
   countMoveGame.textContent = 0;
+  reset();
+  startTimer();
+  body.classList.remove('won-class')
 });
 
 
@@ -104,6 +128,8 @@ playArea.addEventListener('click', (event) => {
     movePuzzle(itemPosition, emptyItemPosition, matrix);
     setPositionItems(matrix);
     countMoveGame.textContent = +countMoveGame.textContent + 1;
+    playAudio()
+    win(matrix)
   }
 })
 
@@ -136,3 +162,59 @@ function movePuzzle(coord1, coord2, matrix) {
   matrix[coord1.y][[coord1.x]] = matrix[coord2.y][[coord2.x]];
   matrix[coord2.y][[coord2.x]] = coord1Number;
 }
+
+let seconds = 0;
+let interval = null;
+
+function timer() {
+  seconds++
+  
+  let secs = seconds % 60
+  let minutes = Math.floor(seconds/60)
+  if(secs < 10) {
+    secs = '0' + secs
+  }
+  if(minutes < 10) {
+    minutes = '0' + minutes
+  }
+
+  watchDiv.textContent = `${minutes}:${secs}`
+}
+
+function startTimer() {
+  if(interval) {
+    return
+  }
+  interval = setInterval(timer, 1000)
+}
+
+function stopTimer() {
+  clearInterval(interval);
+  interval = null;
+}
+function reset() {
+  stopTimer()
+  seconds = 0;
+  watchDiv.textContent = '00:00';
+
+}
+
+function playAudio() {
+  voiceOFMove.currentTime = 0;
+  voiceOFMove.play()
+}
+
+function win(matrix) {
+  const winArr = []
+  for (let i = 1; i < 17; i++) {
+    winArr.push(i)
+  }
+  for (let j = 0; j < winArr.length; j++) {
+    if (winArr[j] !== matrix.flat()[j]) {
+      return false
+    }
+  }
+  body.classList.add('won-class')
+
+}
+
