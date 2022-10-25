@@ -1,10 +1,19 @@
+alert('Привет, проверьте, пожалуйста, в среду')
+
 const body = document.querySelector('body');
 const container = document.createElement('div');
 container.className = 'wrapper';
 body.append(container);
+const wrapperSizeChoice = document.createElement('div');
+wrapperSizeChoice.className = 'wrapper-size-choice';
+container.append(wrapperSizeChoice);
 const playArea = document.createElement('div');
 playArea.className = 'wrapper-play-area';
 container.append(playArea);
+const buttonVoice = document.createElement('button');
+buttonVoice.className = 'voice-button';
+buttonVoice.textContent = 'Voice on';
+container.prepend(buttonVoice);
 const wrapperButtons = document.createElement('div');
 wrapperButtons.className = 'wrapper-buttons';
 container.append(wrapperButtons);
@@ -31,6 +40,14 @@ wrapperButtons.append(watchDiv);
 const voiceOFMove = document.createElement('audio');
 voiceOFMove.src = '../src/assets/audio/beep-7.mp3';
 body.append(voiceOFMove);
+const sizeGame = document.createElement('span');
+sizeGame.className = 'size-item';
+wrapperSizeChoice.append(sizeGame);
+const winMessage = document.createElement('div');
+winMessage.className = 'win-message';
+body.append(winMessage);
+
+
 
 
 
@@ -95,14 +112,6 @@ function shuffleArr() {
   return arr.sort(() => Math.random() - 0.5);
 }
 
-function addShuffleItemsOnLoad(matrix) {
-  const shuffledArr = shuffleArr(matrix.flat());
-  matrix = addMatrix(shuffledArr);
-  setPositionItems(matrix);
-}
-addShuffleItemsOnLoad(matrix)
-
-
 buttonShuffle.addEventListener('click', () => {
   const shuffledArr = shuffleArr(matrix.flat());
   matrix = addMatrix(shuffledArr);
@@ -128,7 +137,13 @@ playArea.addEventListener('click', (event) => {
     movePuzzle(itemPosition, emptyItemPosition, matrix);
     setPositionItems(matrix);
     countMoveGame.textContent = +countMoveGame.textContent + 1;
-    playAudio()
+    if(!buttonVoice.classList.contains('change-voice')) {
+      playAudio()
+    }else {
+      voiceOFMove.pause()
+      voiceOFMove.currentTime = 0;
+    }
+    
     win(matrix)
   }
 })
@@ -204,6 +219,18 @@ function playAudio() {
   voiceOFMove.play()
 }
 
+buttonVoice.addEventListener('click', () => {
+  buttonVoice.classList.toggle('change-voice')
+  if(buttonVoice.classList.contains('change-voice')) {
+    buttonVoice.textContent = 'Voice off';
+  }else {
+    buttonVoice.textContent = 'Voice on';
+  }
+})
+
+
+
+
 function win(matrix) {
   const winArr = []
   for (let i = 1; i < 17; i++) {
@@ -215,6 +242,11 @@ function win(matrix) {
     }
   }
   body.classList.add('won-class')
+  winMessage.textContent = `Ура, вы решили головоломку за ${watchDiv.textContent} и ${countMoveGame.innerHTML} ходов`
 
 }
+
+
+
+
 
