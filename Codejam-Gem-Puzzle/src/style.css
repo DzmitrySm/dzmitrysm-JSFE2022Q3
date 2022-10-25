@@ -64,10 +64,19 @@
 .wrapper-buttons {
   display: flex;
   align-items: center;
-  align-self: flex-start;
   gap: 10px;
 }
 
 .won-class {
   background: yellow;
+}
+
+.voice-button {
+  margin-bottom: 10px;
+  background-color: greenyellow;
+  cursor: pointer;
+}
+
+.change-voice {
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
