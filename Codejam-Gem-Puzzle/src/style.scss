@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-  max-width: 400px;
+  max-width: 320px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -15,11 +15,12 @@
 .wrapper-play-area {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-  height: 400px;
+  width: 320px;
+  height: 320px;
   background-color: white;
   position: relative;
   border: 1px solid black;
+  pointer-events: none;
   
 }
 
@@ -36,7 +37,7 @@
   background: white;
   font-size: 32px;
   cursor: pointer;
-  transition: all 1s ease-in-out;
+  transition: all 0.4s ease-in-out;
   user-select: none;
 }
 
@@ -48,6 +49,34 @@
   height: 90%;
   border: 1px solid purple;
 }
+
+.span-item9 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  border: 1px solid purple;
+}
+
+.puzzle-item9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 25%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  font-size: 32px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  user-select: none;
+}
+
+
 
 .shuffle-button {
   margin-top: 5px;
@@ -69,6 +98,16 @@
   background: yellow;
 }
 
+.win-message {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) ;
+  z-index: 100;
+  text-align: center;
+}
+
 .voice-button {
   margin-bottom: 10px;
   background-color: greenyellow;
@@ -79,3 +118,19 @@
   background-color: red;
 }
 
+.wrapper-size-choice {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.size-item {
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.active-size-item{
+  background: red;
+}
