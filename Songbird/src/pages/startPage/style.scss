@@ -1,0 +1,155 @@
+@font-face {
+  font-family: Philosopher;
+  src: url(../../assets/fonts/Philosopher/Philosopher-Bold.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../../assets/fonts/Inter/static/Inter-Medium.ttf);
+}
+
+.body {
+  height: 100vh;
+}
+
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 30px;
+  .wrapper-logo {
+    padding: 7px 0;
+    .logo-img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-header {
+  display: flex;
+  background: #485E47;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navigation {
+  padding-left: 345px;
+  .list-items {
+    display: flex;
+    gap: 100px;
+    .list-item{
+      list-style: none;
+      .nav-link {
+        text-decoration: none;
+        color: #F5F5F5;
+      }
+    }
+  }
+}
+
+
+.span-lang {
+  color: #F5F5F5;
+}
+
+.header {
+  height: 10%;
+}
+
+main {
+  padding-top: 100px;
+  height: 80%;
+  background: #F5F5F5;;
+}
+
+footer {
+  background: #485E47;;
+  height: 10%;
+}
+
+.flex-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.wrapper-title-rules {
+  width: 50%;
+  .title-game {
+    margin: 0;
+    font-family: Philosopher;
+    font-size: 72px;
+  }
+  .subtitle-game {
+    font-family: Inter;
+  }
+  .rules {
+    width: 100%;
+    font-family: Inter;
+  }
+}
+
+.wrapper-bird-img {
+  width: 50%;
+  .main-bird-img {
+    display: block;
+    width: 80%;
+    height: 80%;
+  }
+}
+
+
+.link-play {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Inter;
+  text-decoration: none;
+  color: black;
+}
+
+.flex-container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  .footer-text-items {
+    .footer-item {
+      color: white;
+      padding-right: 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+.container-footer {
+  height: 100%;
+}
+
+.logo-footer {
+  height: 50px;
+  transition: .3s;
+  &:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(
+      7deg
+      ) brightness(92%) contrast(87%);
+  }
+}
+
+.link-footer {
+  text-decoration: none;
+  color: white;
+  transition: .3s;
+  &:hover {
+    color: #BDAE82;
+  }
+}
+
+

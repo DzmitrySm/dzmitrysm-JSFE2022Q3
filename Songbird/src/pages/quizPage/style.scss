@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Philosopher;
+  src: url(../../assets/fonts/Philosopher/Philosopher-Bold.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../../assets/fonts/Inter/static/Inter-Medium.ttf);
+}
+
+.header {
+  background: #485E47;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 30px;
+  .wrapper-logo-score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .list-groups-birds {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    .group-birds {
+      list-style: none;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.audio-player {
+  background: #485E47;
+}
+
+.flex-quiz-section {
+  display: flex;
+  width: 100%;
+
+}
+
+.flex-wrapper {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  background: violet;
+  .container-player {
+    width: 70%;
+    .audio-pl {
+      width: 100%;
+    }
+  }
+}
+
+.answers {
+  width: 50%;
+  .list-answers {
+    margin: 0;
+    .answer {
+      list-style: none;
+      background: yellow;
+    }
+  }
+}
+
+.clear-answer-info-bird {
+  width: 50%;
+  background: green;
+}
+
+.btn-next-level {
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
