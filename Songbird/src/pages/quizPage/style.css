@@ -6,8 +6,12 @@
   font-family: Inter;
   src: url(../../assets/fonts/Inter/static/Inter-Medium.ttf);
 }
-.header {
+.body {
   background: #485E47;
+}
+
+.header {
+  padding-bottom: 20px;
 }
 
 .container {
@@ -28,6 +32,13 @@
 }
 .container .list-groups-birds .group-birds {
   list-style: none;
+  background: #b5beb5;
+  cursor: pointer;
+}
+
+.question-bird {
+  display: block;
+  padding-left: 10px;
 }
 
 * {
@@ -35,20 +46,23 @@
 }
 
 .audio-player {
-  background: #485E47;
+  padding-bottom: 20px;
 }
 
-.flex-quiz-section {
+.quiz-section .flex-quiz-section {
   display: flex;
   width: 100%;
+  gap: 30px;
+  padding: 20px 0;
 }
 
 .flex-wrapper {
-  padding-top: 40px;
+  padding: 20px 0;
   width: 100%;
   display: flex;
-  gap: 50px;
-  background: violet;
+  justify-content: space-between;
+  border-radius: 5px;
+  background: #b5beb5;
 }
 .flex-wrapper .container-player {
   width: 70%;
@@ -62,15 +76,30 @@
 }
 .answers .list-answers {
   margin: 0;
+  padding: 0;
 }
 .answers .list-answers .answer {
   list-style: none;
-  background: yellow;
+  background: #b5beb5;
+  border: 1px solid black;
+  padding: 15px 40px;
+  cursor: pointer;
+  position: relative;
+}
+.answers .list-answers .answer::before {
+  position: absolute;
+  content: "";
+  top: calc(50% - 5px);
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
 }
 
 .clear-answer-info-bird {
   width: 50%;
-  background: green;
+  background: #b5beb5;
 }
 
 .btn-next-level {
@@ -78,5 +107,172 @@
 }
 
 p {
+  padding-left: 10px;
+  padding-top: 20px;
   margin: 0;
+}
+
+.circle-btn-play {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #485E47;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-btn-play .btn-play-img {
+  display: block;
+}
+
+.wrapper-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrapper-player .wrapper-range-duration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+}
+.wrapper-player .wrapper-range-duration .inp-range {
+  width: 100%;
+}
+
+.wrapper-volume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-volume .volume-icon {
+  width: 30px;
+}
+
+.inp-range {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+.inp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.inp-range:focus {
+  outline: none;
+}
+
+.inp-range {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.inp-range:focus {
+  outline: none;
+}
+
+.inp-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #485E47;
+}
+
+.inp-range::-webkit-slider-thumb {
+  border: 1px solid #485E47;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #485E47;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.inp-range:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.inp-range::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #485E47;
+}
+
+.inp-range::-moz-range-thumb {
+  border: 1px solid #485E47;
+  height: 6px;
+  width: 12.5%;
+  border-radius: 5px;
+  background: #485E47;
+  cursor: pointer;
+}
+
+.inp-vol-range {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+.inp-vol-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.inp-vol-range:focus {
+  outline: none;
+}
+
+.inp-vol-range {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.inp-vol-range:focus {
+  outline: none;
+}
+
+.inp-vol-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #485E47;
+}
+
+.inp-vol-range::-webkit-slider-thumb {
+  border: 1px solid #485E47;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #485E47;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.inp-vol-range:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.inp-vol-range::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #485E47;
+}
+
+.inp-vol-range::-moz-range-thumb {
+  border: 1px solid #485E47;
+  height: 6px;
+  width: 12.5%;
+  border-radius: 5px;
+  background: #485E47;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

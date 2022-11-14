@@ -62,6 +62,66 @@
   height: 10%;
 }
 
+.logo-burger-menu {
+  display: flex;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  .text-burger-logo {
+    position: relative;
+    width: 82px;
+    font-size: 32px;
+    text-align: center;
+    font-family: Philosopher;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    color: white;
+    margin:0 63px 0 0;
+  }
+    .positioned-birs {
+      position: absolute;
+      content: '';
+      top: 24.64px;
+      left: 13.13px;
+    }
+}
+
+.logo-burger-menu-active {
+  display: block;
+}
+
+.burger-menu {
+  display: none;
+  width: 18px;
+  height: 10px;
+  position: relative;
+  cursor: pointer;
+  z-index: 5000;
+  
+}
+
+  .burger-line {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      left: 0;
+  }
+  
+  .burger-line-first {
+      top: 0;
+  }
+  
+  .burger-line-second {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  .burger-line-third {
+      bottom: 0;
+  }
+
 main {
   padding-top: 100px;
   height: 80%;
@@ -152,4 +212,30 @@ footer {
   }
 }
 
+
+@media screen and (max-width: 900px) {
+  .navigation {
+      padding-left: 100px;
+  }
+  }
+
+
+@media screen and (max-width: 640px) {
+.navigation {
+    //display: none;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+    //transform: translateX(100%);
+    transition: 0.3s all linear;
+    .list-items {
+      flex-direction: column;
+    }
+}
+}
 
