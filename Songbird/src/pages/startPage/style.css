@@ -19,6 +19,8 @@
   padding: 7px 0;
 }
 .container .wrapper-logo .logo-img {
+  position: relative;
+  z-index: 10000;
   width: 40px;
   height: 40px;
 }
@@ -57,35 +59,6 @@
   height: 10%;
 }
 
-.logo-burger-menu {
-  display: flex;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-}
-.logo-burger-menu .text-burger-logo {
-  position: relative;
-  width: 82px;
-  font-size: 32px;
-  text-align: center;
-  font-family: Philosopher;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23px;
-  color: white;
-  margin: 0 63px 0 0;
-}
-.logo-burger-menu .positioned-birs {
-  position: absolute;
-  content: "";
-  top: 24.64px;
-  left: 13.13px;
-}
-
-.logo-burger-menu-active {
-  display: block;
-}
-
 .burger-menu {
   display: none;
   width: 18px;
@@ -115,6 +88,32 @@
 
 .burger-line-third {
   bottom: 0;
+}
+
+.overlay {
+  position: fixed;
+  overflow: hidden;
+}
+
+.overlay-blackout {
+  transform: translateX(100%);
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: rgba(41, 41, 41, 0.6);
+  cursor: pointer;
+}
+
+.overlay-blackout-active {
+  transform: translateX(0);
 }
 
 main {
@@ -209,17 +208,35 @@ footer {
 }
 @media screen and (max-width: 640px) {
   .navigation {
-    flex-direction: column;
     position: fixed;
     right: 0;
     bottom: 0;
-    width: 320px;
+    width: 360px;
     height: 100%;
     background-color: black;
     z-index: 1000;
-    transition: 0.3s all linear;
+    transform: translateX(100%);
+    transition: 0.5s;
   }
   .navigation .list-items {
     flex-direction: column;
+  }
+  .flex-container-footer .footer-text-items .footer-item {
+    padding-right: 10px;
+    font-size: 20px;
+  }
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .burger-menu-active {
+    transform: rotate(90deg);
+    transition: 1s;
+  }
+  .navigation-active {
+    display: block;
+    transform: translateX(0);
+    transition: 0.5s;
   }
 }/*# sourceMappingURL=style.css.map */
