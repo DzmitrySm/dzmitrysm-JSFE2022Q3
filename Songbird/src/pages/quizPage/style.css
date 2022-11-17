@@ -29,10 +29,10 @@
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  background: #b5beb5;
 }
 .container .list-groups-birds .group-birds {
   list-style: none;
-  background: #b5beb5;
   cursor: pointer;
 }
 
@@ -95,6 +95,10 @@
   height: 10px;
   border: 1px solid black;
   border-radius: 50%;
+}
+
+.group-birds-active {
+  background: red !important;
 }
 
 .clear-answer-info-bird {
