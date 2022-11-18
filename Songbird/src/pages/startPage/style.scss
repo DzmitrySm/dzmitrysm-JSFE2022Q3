@@ -265,5 +265,29 @@ footer {
 
 }
 
+main {
+  padding-top: 30px;
+}
+
+.wrapper-title-rules {
+  width: 100%;
+  .title-game {
+    margin: 0;
+    font-family: Philosopher;
+    font-size: 36px;
+  }
+  .subtitle-game {
+    font-family: Inter;
+  }
+  .rules {
+    width: 100%;
+    font-family: Inter;
+  }
+}
+
+.wrapper-bird-img {
+  display: none;
+}
+
 }
 

@@ -18,6 +18,10 @@ const btnNextLevel = document.querySelector('.btn-next-level');
 const voiceOFMove = document.createElement('audio');
 voiceOFMove.src = '../../assets/sounds/zvuk-pobedyi-vyiigryisha.mp3';
 body.append(voiceOFMove);
+const voiceOFMoveLose = document.createElement('audio');
+voiceOFMoveLose.src = '../../assets/sounds/opoveschenie-o-proigryishe.mp3';
+body.append(voiceOFMoveLose);
+const scoreGame = document.querySelector('.score-game');
 
 //btnNextLevel.disabled = true;
 
@@ -324,7 +328,9 @@ const birdsData = [
   ],
 ];
 
+let score = 0;
 listGroupBirds.addEventListener('click', (event) => {
+  
   if (event.target.textContent === 'Warm up') {
     for (let i = 0; i < 6; i++) {
       birdName.textContent = '*********';
@@ -336,6 +342,17 @@ listGroupBirds.addEventListener('click', (event) => {
       birdItem.forEach((y) => y.classList.remove('group-birds-active'));
       event.target.classList.add('group-birds-active');
       birdItem[i].textContent = birdsData[0][i].name;
+      listAnswers.addEventListener('click', (event) => {
+        if (event.target.textContent === birdsData[0][i].name && birdsData[0][i].audio === audioPl.src) {
+          event.target.classList.add('group-birds-active');
+          birdName.textContent = birdsData[0][i].name;
+          sucsessAnswerImg.src = birdsData[0][i].image;
+          playAudioWin();
+        }
+         if(event.target.textContent === birdsData[0][i].name && birdsData[0][i].audio !== audioPl.src) {
+         playAudioLose()
+         }
+      });
     }}
     
   if (event.target.textContent === 'Sparrows') {
@@ -355,7 +372,13 @@ listGroupBirds.addEventListener('click', (event) => {
           birdName.textContent = birdsData[1][i].name;
           sucsessAnswerImg.src = birdsData[1][i].image;
           playAudioWin();
+          score = score + 5
+          scoreGame.textContent = score;
         }
+         if(event.target.textContent === birdsData[1][i].name && birdsData[1][i].audio !== audioPl.src) {
+         playAudioLose()
+         score = score - 1;
+         }
       });
     }
   } if (event.target.textContent === 'Forest birds') {
@@ -375,7 +398,13 @@ listGroupBirds.addEventListener('click', (event) => {
           birdName.textContent = birdsData[2][i].name;
           sucsessAnswerImg.src = birdsData[2][i].image;
           playAudioWin();
+          score = score + 5
+          scoreGame.textContent = score;
         }
+        if(event.target.textContent === birdsData[2][i].name && birdsData[2][i].audio !== audioPl.src) {
+          playAudioLose()
+          score = score - 1;
+          }
       });
     }
   } if (event.target.textContent === 'Songbirds') {
@@ -395,7 +424,13 @@ listGroupBirds.addEventListener('click', (event) => {
           birdName.textContent = birdsData[3][i].name;
           sucsessAnswerImg.src = birdsData[3][i].image;
           playAudioWin();
+          score = score + 5
+          scoreGame.textContent = score;
         }
+        if(event.target.textContent === birdsData[3][i].name && birdsData[3][i].audio !== audioPl.src) {
+          playAudioLose()
+          score = score - 1;
+          }
       });
     }
   } if (event.target.textContent === 'Predator birds') {
@@ -415,7 +450,13 @@ listGroupBirds.addEventListener('click', (event) => {
           birdName.textContent = birdsData[4][i].name;
           sucsessAnswerImg.src = birdsData[4][i].image;
           playAudioWin();
+          score = score + 5
+          scoreGame.textContent = score;
         }
+        if(event.target.textContent === birdsData[4][i].name && birdsData[4][i].audio !== audioPl.src) {
+          playAudioLose()
+          score = score - 1;
+          }
       });
     }
   } if (event.target.textContent === 'Sea birds') {
@@ -435,11 +476,19 @@ listGroupBirds.addEventListener('click', (event) => {
           birdName.textContent = birdsData[5][i].name;
           sucsessAnswerImg.src = birdsData[5][i].image;
           playAudioWin();
+          score = score + 5
+          scoreGame.textContent = score;
         }
+        if(event.target.textContent === birdsData[5][i].name && birdsData[5][i].audio !== audioPl.src) {
+          playAudioLose()
+          score = score - 1;
+          }
       });
     }
   }
+  
 });
+
 
 body.onload = randomSong();
 
@@ -539,4 +588,9 @@ function playAudioWin() {
   audioPl.pause();
   imgPlay.src = '../../assets/images/play-btn.png';
   voiceOFMove.play();
+}
+
+function playAudioLose() {
+  voiceOFMoveLose.currentTime = 0;
+  voiceOFMoveLose.play();
 }
