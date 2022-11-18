@@ -12,6 +12,14 @@ const birdGroupItem = Array.from(document.querySelectorAll('.group-birds'));
 const birdItem = Array.from(document.querySelectorAll('.answer'));
 const listAnswers = document.querySelector('.list-answers');
 const wholeDuration = document.querySelector('.whole-duration');
+const birdName = document.querySelector('.bird-name');
+const sucsessAnswerImg = document.querySelector('.question-bird');
+const btnNextLevel = document.querySelector('.btn-next-level');
+const voiceOFMove = document.createElement('audio');
+voiceOFMove.src = '../../assets/sounds/zvuk-pobedyi-vyiigryisha.mp3';
+body.append(voiceOFMove);
+
+//btnNextLevel.disabled = true;
 
 const birdsData = [
   [
@@ -319,6 +327,8 @@ const birdsData = [
 listGroupBirds.addEventListener('click', (event) => {
   if (event.target.textContent === 'Warm up') {
     for (let i = 0; i < 6; i++) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
       randomSong();
       audioPl.currentTime = 0;
       imgPlay.src = '../../assets/images/play-btn.png';
@@ -326,9 +336,12 @@ listGroupBirds.addEventListener('click', (event) => {
       birdItem.forEach((y) => y.classList.remove('group-birds-active'));
       event.target.classList.add('group-birds-active');
       birdItem[i].textContent = birdsData[0][i].name;
-    }
-  } if (event.target.textContent === 'Sparrows') {
+    }}
+    
+  if (event.target.textContent === 'Sparrows') {
     for (let i = 0; i < 6; i++) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
       randomSong();
       audioPl.currentTime = 0;
       imgPlay.src = '../../assets/images/play-btn.png';
@@ -339,11 +352,16 @@ listGroupBirds.addEventListener('click', (event) => {
       listAnswers.addEventListener('click', (event) => {
         if (event.target.textContent === birdsData[1][i].name && birdsData[1][i].audio === audioPl.src) {
           event.target.classList.add('group-birds-active');
+          birdName.textContent = birdsData[1][i].name;
+          sucsessAnswerImg.src = birdsData[1][i].image;
+          playAudioWin();
         }
       });
     }
   } if (event.target.textContent === 'Forest birds') {
     for (let i = 0; i < 6; i++) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
       randomSong();
       audioPl.currentTime = 0;
       imgPlay.src = '../../assets/images/play-btn.png';
@@ -354,11 +372,16 @@ listGroupBirds.addEventListener('click', (event) => {
       listAnswers.addEventListener('click', (event) => {
         if (event.target.textContent === birdsData[2][i].name && birdsData[2][i].audio === audioPl.src) {
           event.target.classList.add('group-birds-active');
+          birdName.textContent = birdsData[2][i].name;
+          sucsessAnswerImg.src = birdsData[2][i].image;
+          playAudioWin();
         }
       });
     }
   } if (event.target.textContent === 'Songbirds') {
     for (let i = 0; i < 6; i++) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
       randomSong();
       audioPl.currentTime = 0;
       imgPlay.src = '../../assets/images/play-btn.png';
@@ -369,11 +392,16 @@ listGroupBirds.addEventListener('click', (event) => {
       listAnswers.addEventListener('click', (event) => {
         if (event.target.textContent === birdsData[3][i].name && birdsData[3][i].audio === audioPl.src) {
           event.target.classList.add('group-birds-active');
+          birdName.textContent = birdsData[3][i].name;
+          sucsessAnswerImg.src = birdsData[3][i].image;
+          playAudioWin();
         }
       });
     }
   } if (event.target.textContent === 'Predator birds') {
     for (let i = 0; i < 6; i++) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
       randomSong();
       audioPl.currentTime = 0;
       imgPlay.src = '../../assets/images/play-btn.png';
@@ -384,11 +412,16 @@ listGroupBirds.addEventListener('click', (event) => {
       listAnswers.addEventListener('click', (event) => {
         if (event.target.textContent === birdsData[4][i].name && birdsData[4][i].audio === audioPl.src) {
           event.target.classList.add('group-birds-active');
+          birdName.textContent = birdsData[4][i].name;
+          sucsessAnswerImg.src = birdsData[4][i].image;
+          playAudioWin();
         }
       });
     }
   } if (event.target.textContent === 'Sea birds') {
     for (let i = 0; i < 6; i++) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
       randomSong();
       audioPl.currentTime = 0;
       imgPlay.src = '../../assets/images/play-btn.png';
@@ -399,6 +432,9 @@ listGroupBirds.addEventListener('click', (event) => {
       listAnswers.addEventListener('click', (event) => {
         if (event.target.textContent === birdsData[5][i].name && birdsData[5][i].audio === audioPl.src) {
           event.target.classList.add('group-birds-active');
+          birdName.textContent = birdsData[5][i].name;
+          sucsessAnswerImg.src = birdsData[5][i].image;
+          playAudioWin();
         }
       });
     }
@@ -495,3 +531,12 @@ function randomSong() {
 /* function clearAnswer() {
   if (audio.src === )
 } */
+
+
+function playAudioWin() {
+  voiceOFMove.currentTime = 0;
+  audioPl.currentTime = 0;
+  audioPl.pause();
+  imgPlay.src = '../../assets/images/play-btn.png';
+  voiceOFMove.play();
+}
