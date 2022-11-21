@@ -176,8 +176,8 @@ p {
 
 }
 
-.wrapper-player {
-  display: flex;
+.wrapper-player-add {
+  display: none;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
@@ -505,7 +505,7 @@ p {
   }
 }
 
-.wrapper-player {
+.wrapper-player-add {
   .wrapper-range-duration {
     width: 35%;
     .inp-range-add {
@@ -565,6 +565,7 @@ p {
 }
 
 .wrapper-player {
+  display: flex;
   width: 100%;
   justify-content: space-between;
   .wrapper-range-duration {
@@ -575,7 +576,8 @@ p {
 
 }
 
-.wrapper-player {
+.wrapper-player-add {
+  display: none;
   width: 100%;
   justify-content: space-between;
   .wrapper-range-duration {
@@ -640,7 +642,8 @@ p {
   
   }
 
-  .wrapper-player {
+  .wrapper-player-add {
+    display: none;
     width: 100%;
     justify-content: start;
     flex-wrap: wrap;
