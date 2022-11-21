@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songbird</title>
+  <link rel="stylesheet" href="../../assets/styles/normalize.css">
+  <link rel="stylesheet" href="../quizPage/style.css">
+</head>
+<body class="body">
+  <header class="header">
+    <div class="container">
+      <div class="wrapper-logo-score">
+        <h1>Songbird</h1>
+        <div>
+          <span>Score:</span>
+          <span class="score-game">0</span>
+        </div>
+      </div>
+      <ul class="list-groups-birds">
+        <li class="group-birds group-birds-active">Warm up</li>
+        <li class="group-birds">Sparrows</li>
+        <li class="group-birds">Forest birds</li>
+        <li class="group-birds">Songbirds</li>
+        <li class="group-birds">Predator birds</li>
+        <li class="group-birds">Sea birds</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="audio-player">
+      <div class="container">
+        <div class="flex-wrapper">
+          <div class="wrapper-img">
+            <img  class="question-bird" src="../../assets/images/question-bird1.jpg">
+          </div>
+          <div class="container-player">
+            <h2 class="bird-name">*********</h2>
+            <div class="wrapper-player">
+              <audio class="audio-pl"></audio>
+              <div class="circle-btn-play">
+                <img class="btn-play-img" src="../../assets/images/play-btn.png">
+              </div>
+              <span class="current-song-duration">0:00</span>
+              <div class="wrapper-range-duration">
+                <input type="range"class="inp-range" step="1" min="0" max="100" value="0">
+             </div>
+             <span class="whole-duration">1:46</span>
+             <div class="wrapper-volume">
+              <input type="range" class="inp-vol-range" step="0.1" min="0" max="1" value="0.5">
+              <img src="../../assets/images/volume-on.png" class="volume-icon">
+           </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+<section class="quiz-section">
+  <div class="container">
+    <div class="flex-quiz-section">
+      <article class="answers">
+        <ul class="list-answers">
+          <li class="answer">Ворон</li>
+          <li class="answer">Журавль</li>
+          <li class="answer">Ласточка</li>
+          <li class="answer">Козодой</li>
+          <li class="answer">Кукушка</li>
+          <li class="answer">Синица</li>
+        </ul>
+      </article>
+      <article class="clear-answer-info-bird">
+        <div class="wrapper-img-art">
+          <img src="" class="any-bird-answer">
+        </div>
+        <div class="wrapper-about-bird-player">
+          <p class="name-bird">Please, listen to the bird</p>
+          <p class="species-bird">Make your choice</p>
+          <div class="wrapper-player">
+            <audio class="audio-pl-add"></audio>
+            <div class="circle-btn-play-add">
+              <img class="btn-play-img-add" src="../../assets/images/play-btn.png">
+            </div>
+            <span class="current-song-duration-add">0:00</span>
+            <div class="wrapper-range-duration">
+              <input type="range"class="inp-range-add" step="1" min="0" max="100" value="0">
+           </div>
+           <span class="whole-duration-add">1:46</span>
+           <div class="wrapper-volume">
+            <input type="range" class="inp-vol-range-add" step="0.1" min="0" max="1" value="0.5">
+            <img src="../../assets/images/volume-on.png" class="volume-icon-add">
+         </div>
+          </div>
+        </div>
+        <p class="description-bird"></p>
+      </article>
+    </div>
+    
+  
+  </section>
+    </div>
+    
+<div class="container wrapper-btn-link">
+  <button class="btn-next-level">Next Level</button>
+</div>
+
+   
+  </main>
+  <script src="../quizPage/index.js"></script>
+</body>
+</html>

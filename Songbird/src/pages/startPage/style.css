@@ -1,0 +1,263 @@
+@font-face {
+  font-family: Philosopher;
+  src: url(../../assets/fonts/Philosopher/Philosopher-Bold.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../../assets/fonts/Inter/static/Inter-Medium.ttf);
+}
+.body {
+  height: 100vh;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.container .wrapper-logo {
+  padding: 7px 0;
+}
+.container .wrapper-logo .logo-img {
+  position: relative;
+  z-index: 10000;
+  width: 40px;
+  height: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-header {
+  display: flex;
+  background: #485E47;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  padding-left: 345px;
+}
+.navigation .list-items {
+  display: flex;
+  gap: 100px;
+}
+.navigation .list-items .list-item {
+  list-style: none;
+}
+.navigation .list-items .list-item .nav-link {
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+.span-lang {
+  color: #F5F5F5;
+}
+
+.header {
+  height: 10%;
+}
+
+.burger-menu {
+  display: none;
+  width: 18px;
+  height: 10px;
+  position: relative;
+  cursor: pointer;
+  z-index: 5000;
+}
+
+.burger-line {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+}
+
+.burger-line-first {
+  top: 0;
+}
+
+.burger-line-second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-line-third {
+  bottom: 0;
+}
+
+.overlay {
+  position: fixed;
+  overflow: hidden;
+}
+
+.overlay-blackout {
+  transform: translateX(100%);
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: rgba(41, 41, 41, 0.6);
+  cursor: pointer;
+}
+
+.overlay-blackout-active {
+  transform: translateX(0);
+}
+
+main {
+  padding-top: 100px;
+  height: 80%;
+  background: #F5F5F5;
+}
+
+footer {
+  background: #485E47;
+  height: 10%;
+}
+
+.flex-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.wrapper-title-rules {
+  width: 50%;
+}
+.wrapper-title-rules .title-game {
+  margin: 0;
+  font-family: Philosopher;
+  font-size: 72px;
+}
+.wrapper-title-rules .subtitle-game {
+  font-family: Inter;
+}
+.wrapper-title-rules .rules {
+  width: 100%;
+  font-family: Inter;
+}
+
+.wrapper-bird-img {
+  width: 50%;
+}
+.wrapper-bird-img .main-bird-img {
+  display: block;
+  width: 80%;
+  height: 80%;
+}
+
+.link-play {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Inter;
+  text-decoration: none;
+  color: black;
+}
+
+.flex-container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.flex-container-footer .footer-text-items .footer-item {
+  color: white;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+.container-footer {
+  height: 100%;
+}
+
+.logo-footer {
+  height: 50px;
+  transition: 0.3s;
+}
+.logo-footer:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.link-footer {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+.link-footer:hover {
+  color: #BDAE82;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation {
+    padding-left: 100px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navigation {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 360px;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+  .navigation .list-items {
+    flex-direction: column;
+  }
+  .flex-container-footer .footer-text-items .footer-item {
+    padding-right: 10px;
+    font-size: 20px;
+  }
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .burger-menu-active {
+    transform: rotate(90deg);
+    transition: 1s;
+  }
+  .navigation-active {
+    display: block;
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+  main {
+    padding-top: 30px;
+  }
+  .wrapper-title-rules {
+    width: 100%;
+  }
+  .wrapper-title-rules .title-game {
+    margin: 0;
+    font-family: Philosopher;
+    font-size: 36px;
+  }
+  .wrapper-title-rules .subtitle-game {
+    font-family: Inter;
+  }
+  .wrapper-title-rules .rules {
+    width: 100%;
+    font-family: Inter;
+  }
+  .wrapper-bird-img {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
