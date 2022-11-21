@@ -676,12 +676,14 @@ listAnswers.addEventListener('click', (event) => {
         nameBird.textContent = birdsData[5][i].name;
         speciesBird.textContent = birdsData[5][i].species;
         descriptionBird.textContent = birdsData[5][i].description;
-        btnNextLevel.addEventListener('click', () => {
-          birdGroupItem[5].classList.remove('group-birds-active');
-          const linkResultGame = document.createElement('a');
+        const linkResultGame = document.createElement('a');
           reSultWrapper.appendChild(linkResultGame);
           linkResultGame.appendChild(btnNextLevel);
           linkResultGame.href = '../resultsPage/index.html';
+          let finalScore = scoreGame.textContent;
+          localStorage.setItem('finaly',finalScore);
+        btnNextLevel.addEventListener('click', () => {
+          birdGroupItem[5].classList.remove('group-birds-active');
           birdItem.forEach((x) => x.classList.remove('group-birds-active'));
           randomSong();
           birdName.textContent = '*********';

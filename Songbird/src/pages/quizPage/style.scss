@@ -38,6 +38,12 @@
   }
 }
 
+.link-to-start-pg {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 
 .question-bird {
@@ -122,9 +128,8 @@ background: #98b68d !important ;
 }
 
 p {
-  padding-left: 10px;
-  padding-top: 20px;
   margin: 0;
+  padding: 10px 10px;
 }
 
 .circle-btn-play {
@@ -171,11 +176,37 @@ p {
 
 }
 
+.wrapper-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  .wrapper-range-duration {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    width: 55%;
+    .inp-range-add {
+      width: 100%;
+    }
+  }
+
+}
+
 .wrapper-volume {
   display: flex;
   align-items: center;
   justify-content: center;
   .volume-icon {
+    width: 30px;
+  }
+}
+
+.wrapper-volume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .volume-icon-add {
     width: 30px;
   }
 }
@@ -186,7 +217,17 @@ p {
   background: transparent; 
 }
 
+.inp-range-add  {
+  -webkit-appearance: none;
+  width: 100%; 
+  background: transparent; 
+}
+
 .inp-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.inp-range-add::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
@@ -194,13 +235,27 @@ p {
   outline: none; 
 }
 
+.inp-range-add:focus {
+  outline: none; 
+}
+
 .inp-range {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.inp-range-add {
   -webkit-appearance: none;
   width: 100%;
 }
 .inp-range:focus {
   outline: none;
 }
+
+.inp-range-add:focus {
+  outline: none;
+}
+
 .inp-range::-webkit-slider-runnable-track {
   width: 100%;
   height: 12px;
@@ -209,6 +264,16 @@ p {
   border-radius: 5px;
   border: 1px solid #485E47;
 }
+
+.inp-range-add::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #485E47;
+}
+
 .inp-range::-webkit-slider-thumb {
   border: 1px solid #485E47;
   height: 10px;
@@ -218,9 +283,25 @@ p {
   cursor: pointer;
   -webkit-appearance: none;
 }
+
+.inp-range-add::-webkit-slider-thumb {
+  border: 1px solid #485E47;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #485E47;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
 .inp-range:focus::-webkit-slider-runnable-track {
   background: transparent;
 }
+
+.inp-range-add:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
 .inp-range::-moz-range-track {
   width: 100%;
   height: 8px;
@@ -229,7 +310,26 @@ p {
   border-radius: 5px;
   border: 1px solid #485E47;
 }
+
+.inp-range-add::-moz-range-track{
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #485E47;
+}
+
 .inp-range::-moz-range-thumb {
+  border: 1px solid #485E47;
+  height: 6px;
+  width: 12.5%;
+  border-radius: 5px;
+  background: #485E47;
+  cursor: pointer;
+}
+
+.inp-range-add::-moz-range-thumb {
   border: 1px solid #485E47;
   height: 6px;
   width: 12.5%;
@@ -244,7 +344,17 @@ p {
   background: transparent; 
 }
 
+.inp-vol-range-add {
+  -webkit-appearance: none;
+  width: 100%; 
+  background: transparent; 
+}
+
 .inp-vol-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.inp-vol-range-add::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
@@ -252,11 +362,24 @@ p {
   outline: none; 
 }
 
+.inp-vol-range-add:focus {
+  outline: none; 
+}
+
 .inp-vol-range {
   -webkit-appearance: none;
   width: 100%;
 }
+
+.inp-vol-range-add {
+  -webkit-appearance: none;
+  width: 100%;
+}
 .inp-vol-range:focus {
+  outline: none;
+}
+
+.inp-vol-range-add:focus {
   outline: none;
 }
 .inp-vol-range::-webkit-slider-runnable-track {
@@ -267,7 +390,27 @@ p {
   border-radius: 5px;
   border: 1px solid #485E47;
 }
+
+.inp-vol-range-add::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #485E47;
+}
+
 .inp-vol-range::-webkit-slider-thumb {
+  border: 1px solid #485E47;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #485E47;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.inp-vol-range-add::-webkit-slider-thumb {
   border: 1px solid #485E47;
   height: 10px;
   width: 10px;
@@ -279,6 +422,10 @@ p {
 .inp-vol-range:focus::-webkit-slider-runnable-track {
   background: transparent;
 }
+
+.inp-vol-range-add:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
 .inp-vol-range::-moz-range-track {
   width: 100%;
   height: 8px;
@@ -287,7 +434,26 @@ p {
   border-radius: 5px;
   border: 1px solid #485E47;
 }
+
+.inp-vol-range-add::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #485E47;
+}
+
 .inp-vol-range::-moz-range-thumb {
+  border: 1px solid #485E47;
+  height: 6px;
+  width: 12.5%;
+  border-radius: 5px;
+  background: #485E47;
+  cursor: pointer;
+}
+
+.inp-vol-range-add::-moz-range-thumb {
   border: 1px solid #485E47;
   height: 6px;
   width: 12.5%;
@@ -299,6 +465,10 @@ p {
 .any-bird-answer {
   display: block;
   width: 100%;
+}
+
+.wrapper-about-bird-player {
+  padding: 0 10px;
 }
 
 
@@ -334,7 +504,18 @@ p {
     }
   }
 }
+
+.wrapper-player {
+  .wrapper-range-duration {
+    width: 35%;
+    .inp-range-add {
+      width: 100%;
+    }
+  }
 }
+}
+
+
 
 @media screen and (max-width: 780px) {
   
@@ -359,7 +540,7 @@ p {
   }
   .list-groups-birds {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
     padding: 0;
@@ -394,6 +575,34 @@ p {
 
 }
 
+.wrapper-player {
+  width: 100%;
+  justify-content: space-between;
+  .wrapper-range-duration {
+    .inp-range-add {
+      width: 100%;
+    }
+  }
+
+}
+
+.quiz-section {
+  .flex-quiz-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    padding: 20px 0;
+  }
+}
+
+.answers {
+  width: 100%;
+}
+
+.clear-answer-info-bird {
+  width: 100%;
+}
 
 }
 
@@ -409,6 +618,15 @@ p {
     }
   }
 
+  .wrapper-volume {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    .volume-icon-add {
+      width: 30px;
+    }
+  }
+
   .wrapper-player {
     width: 100%;
     justify-content: start;
@@ -416,6 +634,19 @@ p {
     .wrapper-range-duration {
       width: 50%;
       .inp-range {
+        width: 100%;
+      }
+    }
+  
+  }
+
+  .wrapper-player {
+    width: 100%;
+    justify-content: start;
+    flex-wrap: wrap;
+    .wrapper-range-duration {
+      width: 50%;
+      .inp-range-add {
         width: 100%;
       }
     }
