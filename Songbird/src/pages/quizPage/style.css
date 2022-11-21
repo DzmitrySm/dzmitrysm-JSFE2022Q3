@@ -164,19 +164,19 @@ p {
   width: 100%;
 }
 
-.wrapper-player {
-  display: flex;
+.wrapper-player-add {
+  display: none;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
 }
-.wrapper-player .wrapper-range-duration {
+.wrapper-player-add .wrapper-range-duration {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 55%;
 }
-.wrapper-player .wrapper-range-duration .inp-range-add {
+.wrapper-player-add .wrapper-range-duration .inp-range-add {
   width: 100%;
 }
 
@@ -489,10 +489,10 @@ p {
   .wrapper-player .wrapper-range-duration .inp-range {
     width: 100%;
   }
-  .wrapper-player .wrapper-range-duration {
+  .wrapper-player-add .wrapper-range-duration {
     width: 35%;
   }
-  .wrapper-player .wrapper-range-duration .inp-range-add {
+  .wrapper-player-add .wrapper-range-duration .inp-range-add {
     width: 100%;
   }
 }
@@ -539,17 +539,19 @@ p {
     width: 100%;
   }
   .wrapper-player {
+    display: flex;
     width: 100%;
     justify-content: space-between;
   }
   .wrapper-player .wrapper-range-duration .inp-range {
     width: 100%;
   }
-  .wrapper-player {
+  .wrapper-player-add {
+    display: none;
     width: 100%;
     justify-content: space-between;
   }
-  .wrapper-player .wrapper-range-duration .inp-range-add {
+  .wrapper-player-add .wrapper-range-duration .inp-range-add {
     width: 100%;
   }
   .quiz-section .flex-quiz-section {
@@ -594,15 +596,16 @@ p {
   .wrapper-player .wrapper-range-duration .inp-range {
     width: 100%;
   }
-  .wrapper-player {
+  .wrapper-player-add {
+    display: none;
     width: 100%;
     justify-content: start;
     flex-wrap: wrap;
   }
-  .wrapper-player .wrapper-range-duration {
+  .wrapper-player-add .wrapper-range-duration {
     width: 50%;
   }
-  .wrapper-player .wrapper-range-duration .inp-range-add {
+  .wrapper-player-add .wrapper-range-duration .inp-range-add {
     width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -7,14 +7,18 @@ const btnPlayAdd = document.querySelector('.circle-btn-play-add');
 const imgPlay = document.querySelector('.btn-play-img');
 const imgPlayAdd = document.querySelector('.btn-play-img-add'); 
 const currSongDur = document.querySelector('.current-song-duration');
+const currSongDurAdd = document.querySelector('.current-song-duration-add');
 const durationRange = document.querySelector('.inp-range');
 const volumeInput = document.querySelector('.inp-vol-range');
+const volumeInputAdd = document.querySelector('.inp-vol-range-add');
 const volumeImg = document.querySelector('.volume-icon');
+const volumeImgAdd = document.querySelector('.volume-icon-add');
 const listGroupBirds = document.querySelector('.list-groups-birds');
 const birdGroupItem = Array.from(document.querySelectorAll('.group-birds'));
 const birdItem = Array.from(document.querySelectorAll('.answer'));
 const listAnswers = document.querySelector('.list-answers');
 const wholeDuration = document.querySelector('.whole-duration');
+const wholeDurationAdd = document.querySelector('.whole-duration-add');
 const birdName = document.querySelector('.bird-name');
 const sucsessAnswerImg = document.querySelector('.question-bird');
 const btnNextLevel = document.querySelector('.btn-next-level');
@@ -30,6 +34,7 @@ const nameBird = document.querySelector('.name-bird');
 const speciesBird = document.querySelector('.species-bird');
 const descriptionBird = document.querySelector('.description-bird');
 const reSultWrapper = document.querySelector('.wrapper-btn-link');
+const wrapperPlayerAdd = document.querySelector('.wrapper-player-add');
 
 btnNextLevel.disabled = true;
 
@@ -350,6 +355,7 @@ let flagWin5 = false;
 let count5 = 0;
 let score = 0;
 listAnswers.addEventListener('click', (event) => {
+  wrapperPlayerAdd.style.display = 'flex';
   for (let i = 0; i < 6; i++) {
     if (event.target.textContent === birdsData[0][i].name && birdGroupItem[0].classList.contains('group-birds-active')) {
       audioPl.currentTime = 0;
@@ -716,6 +722,14 @@ audioPl.onloadeddata = () => {
   }
 };
 
+audioPlAdd.onloadeddata = () => {
+  if (Math.round(audioPlAdd.duration % 60) < 10) {
+    wholeDurationAdd.textContent = `${Math.floor(audioPlAdd.duration / 60)}:0${Math.round(audioPlAdd.duration % 60)}`;
+  } else {
+    wholeDurationAdd.textContent = `${Math.floor(audioPlAdd.duration / 60)}:${Math.round(audioPlAdd.duration % 60)}`;
+  }
+};
+
 /* audioPl.onloadeddata = () => {
     const duration = audioPl.duration;
     console.log(duration);
@@ -763,6 +777,10 @@ audioPl.addEventListener('timeupdate', () => {
   currSongDur.innerHTML = currentDuration(audioPl.currentTime);
 }, false);
 
+audioPlAdd.addEventListener('timeupdate', () => {
+  currSongDurAdd.innerHTML = currentDuration(audioPlAdd.currentTime);
+}, false);
+
 function currentDuration(time) {
   let min = Math.floor(time % 60);
   min = 0;
@@ -786,9 +804,26 @@ volumeInput.addEventListener('input', () => {
   }
 }, false);
 
+
+volumeInputAdd.addEventListener('input', () => {
+  audioPlAdd.volume = volumeInputAdd.value;
+  if (volumeInputAdd.value === '0') {
+    volumeImgAdd.src = '../../assets/images/volume-off.png';
+  } else {
+    volumeImgAdd.src = '../../assets/images/volume-on.png';
+  }
+}, false);
+
+
+
 audioPl.addEventListener('ended', () => {
   audioPl.currentTime = 0;
   imgPlay.src = '../../assets/images/play-btn.png';
+}, false);
+
+audioPlAdd.addEventListener('ended', () => {
+  audioPlAdd.currentTime = 0;
+  imgPlayAdd.src = '../../assets/images/play-btn.png';
 }, false);
 
 durationRange.addEventListener('input', () => {
@@ -819,5 +854,10 @@ function playAudioWin() {
 function playAudioLose() {
   voiceOFMoveLose.currentTime = 0;
   voiceOFMoveLose.play();
-  //imgPlay.src = '../../assets/images/pause-btn.png';
-}
+  console.log(imgPlay.src)
+    imgPlay.src = '../../assets/images/pause-btn.png';
+    if (currSongDur.textContent === '0:00') {
+      imgPlay.src = '../../assets/images/play-btn.png';
+    }
+  }
+   
