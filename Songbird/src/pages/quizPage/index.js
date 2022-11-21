@@ -336,6 +336,18 @@ const birdsData = [
   ],
 ];
 
+let flagWin = false;
+let count = 0;
+let flagWin1 = false;
+let count1 = 0;
+let flagWin2 = false;
+let count2 = 0;
+let flagWin3 = false;
+let count3 = 0;
+let flagWin4 = false;
+let count4 = 0;
+let flagWin5 = false;
+let count5 = 0;
 let score = 0;
 listAnswers.addEventListener('click', (event) => {
   for (let i = 0; i < 6; i++) {
@@ -351,9 +363,13 @@ listAnswers.addEventListener('click', (event) => {
         birdName.textContent = birdsData[0][i].name;
         sucsessAnswerImg.src = birdsData[0][i].image;
         audioPlAdd.src = birdsData[0][i].audio;
-        score += 5;
+        if(!flagWin) {
+          score += 5;
+        }
+        flagWin = true;
         scoreGame.textContent = score;
         playAudioWin();
+        count = 6;
         console.log(1);
         btnNextLevel.disabled = false;
         elseBirdImg.src = birdsData[0][i].image;
@@ -376,9 +392,13 @@ listAnswers.addEventListener('click', (event) => {
           audioPlAdd.src = '';
         });
       }
+      
       if (event.target.textContent !== birdsData[0][i].name || birdsData[0][i].audio !== audioPl.src) {
         playAudioLose();
-        score -= 1;
+        count = count + 1;
+        if (count < 6) {
+          score -= 1;
+        }
         elseBirdImg.src = birdsData[0][i].image;
         nameBird.textContent = birdsData[0][i].name;
         speciesBird.textContent = birdsData[0][i].species;
@@ -388,7 +408,6 @@ listAnswers.addEventListener('click', (event) => {
       }
     }
   }
-
   for (let i = 0; i < 6; i++) {
     if (event.target.textContent === birdsData[1][i].name && birdGroupItem[1].classList.contains('group-birds-active')) {
       birdName.textContent = '*********';
@@ -404,9 +423,14 @@ listAnswers.addEventListener('click', (event) => {
         birdName.textContent = birdsData[1][i].name;
         sucsessAnswerImg.src = birdsData[1][i].image;
         audioPlAdd.src = birdsData[1][i].audio;
-        score += 5;
+       
+        if(!flagWin1) {
+          score += 5;
+        }
+        flagWin1 = true;
         scoreGame.textContent = score;
         playAudioWin();
+        count1 = 6;
         console.log(1);
         btnNextLevel.disabled = false;
         elseBirdImg.src = birdsData[1][i].image;
@@ -431,7 +455,10 @@ listAnswers.addEventListener('click', (event) => {
       }
       if (event.target.textContent !== birdsData[1][i].name || birdsData[1][i].audio !== audioPl.src) {
         playAudioLose();
-        score -= 1;
+        count1 = count1 + 1;
+        if (count1 < 6) {
+          score -= 1;
+        }
         console.log(1);
         elseBirdImg.src = birdsData[1][i].image;
         nameBird.textContent = birdsData[1][i].name;
@@ -457,9 +484,13 @@ listAnswers.addEventListener('click', (event) => {
         birdName.textContent = birdsData[2][i].name;
         sucsessAnswerImg.src = birdsData[2][i].image;
         audioPlAdd.src = birdsData[2][i].audio;
-        score += 5;
+        if(!flagWin2) {
+          score += 5;
+        }
+        flagWin2 = true;
         scoreGame.textContent = score;
         playAudioWin();
+        count2 = 6;
         console.log(1);
         btnNextLevel.disabled = false;
         elseBirdImg.src = birdsData[2][i].image;
@@ -484,7 +515,10 @@ listAnswers.addEventListener('click', (event) => {
       }
       if (event.target.textContent !== birdsData[2][i].name || birdsData[2][i].audio !== audioPl.src) {
         playAudioLose();
-        score -= 1;
+        count2 = count2 + 1;
+        if (count2 < 6) {
+          score -= 1;
+        }
         console.log(1);
         elseBirdImg.src = birdsData[2][i].image;
         nameBird.textContent = birdsData[2][i].name;
@@ -510,9 +544,13 @@ listAnswers.addEventListener('click', (event) => {
         birdName.textContent = birdsData[3][i].name;
         sucsessAnswerImg.src = birdsData[3][i].image;
         audioPlAdd.src = birdsData[3][i].audio;
-        score += 5;
+        if(!flagWin3) {
+          score += 5;
+        }
+        flagWin3 = true;
         scoreGame.textContent = score;
         playAudioWin();
+        count3 = 6;
         console.log(1);
         btnNextLevel.disabled = false;
         elseBirdImg.src = birdsData[3][i].image;
@@ -537,7 +575,10 @@ listAnswers.addEventListener('click', (event) => {
       }
       if (event.target.textContent !== birdsData[3][i].name || birdsData[3][i].audio !== audioPl.src) {
         playAudioLose();
-        score -= 1;
+        count3 = count3 + 1;
+        if (count3 < 6) {
+          score -= 1;
+        }
         console.log(1);
         elseBirdImg.src = birdsData[3][i].image;
         nameBird.textContent = birdsData[3][i].name;
@@ -562,9 +603,13 @@ listAnswers.addEventListener('click', (event) => {
         birdName.textContent = birdsData[4][i].name;
         sucsessAnswerImg.src = birdsData[4][i].image;
         audioPlAdd.src = birdsData[4][i].audio;
-        score += 5;
+        if(!flagWin4) {
+          score += 5;
+        }
+        flagWin4 = true;
         scoreGame.textContent = score;
         playAudioWin();
+        count4 = 6;
         console.log(1);
         btnNextLevel.disabled = false;
         elseBirdImg.src = birdsData[4][i].image;
@@ -589,7 +634,10 @@ listAnswers.addEventListener('click', (event) => {
       }
       if (event.target.textContent !== birdsData[4][i].name || birdsData[4][i].audio !== audioPl.src) {
         playAudioLose();
-        score -= 1;
+        count4 = count4 + 1;
+        if (count4 < 6) {
+          score -= 1;
+        }
         console.log(1);
         elseBirdImg.src = birdsData[4][i].image;
         nameBird.textContent = birdsData[4][i].name;
@@ -614,9 +662,14 @@ listAnswers.addEventListener('click', (event) => {
         birdName.textContent = birdsData[5][i].name;
         sucsessAnswerImg.src = birdsData[5][i].image;
         audioPlAdd.src = birdsData[5][i].audio;
-        score += 5;
+        flagWin = false;
+        if(!flagWin5) {
+          score += 5;
+        }
+        flagWin5 = true;
         scoreGame.textContent = score;
         playAudioWin();
+        count5 = 6;
         console.log(1);
         btnNextLevel.disabled = false;
         elseBirdImg.src = birdsData[5][i].image;
@@ -637,7 +690,10 @@ listAnswers.addEventListener('click', (event) => {
       }
       if (event.target.textContent !== birdsData[5][i].name || birdsData[5][i].audio !== audioPl.src) {
         playAudioLose();
-        score -= 1;
+        count5 = count5 + 1;
+        if (count5 < 6) {
+          score -= 1;
+        }
         console.log(1);
         elseBirdImg.src = birdsData[5][i].image;
         nameBird.textContent = birdsData[5][i].name;
@@ -761,5 +817,5 @@ function playAudioWin() {
 function playAudioLose() {
   voiceOFMoveLose.currentTime = 0;
   voiceOFMoveLose.play();
-  imgPlay.src = '../../assets/images/pause-btn.png';
+  //imgPlay.src = '../../assets/images/pause-btn.png';
 }
