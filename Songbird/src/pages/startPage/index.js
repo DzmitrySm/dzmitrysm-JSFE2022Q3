@@ -1,3 +1,4 @@
+/* global document */
 (function () {
   const burgerMenu = document.querySelector('.burger-menu');
   const navItems = document.querySelector('.navigation');

@@ -1,8 +1,11 @@
 /* global document */
 const body = document.querySelector('.body');
 const audioPl = document.querySelector('.audio-pl');
+const audioPlAdd = document.querySelector('.audio-pl-add');
 const btnPlay = document.querySelector('.circle-btn-play');
+const btnPlayAdd = document.querySelector('.circle-btn-play-add');
 const imgPlay = document.querySelector('.btn-play-img');
+const imgPlayAdd = document.querySelector('.btn-play-img-add'); 
 const currSongDur = document.querySelector('.current-song-duration');
 const durationRange = document.querySelector('.inp-range');
 const volumeInput = document.querySelector('.inp-vol-range');
@@ -22,8 +25,13 @@ const voiceOFMoveLose = document.createElement('audio');
 voiceOFMoveLose.src = '../../assets/sounds/opoveschenie-o-proigryishe.mp3';
 body.append(voiceOFMoveLose);
 const scoreGame = document.querySelector('.score-game');
+const elseBirdImg = document.querySelector('.any-bird-answer');
+const nameBird = document.querySelector('.name-bird');
+const speciesBird = document.querySelector('.species-bird');
+const descriptionBird = document.querySelector('.description-bird');
+const reSultWrapper = document.querySelector('.wrapper-btn-link');
 
-//btnNextLevel.disabled = true;
+btnNextLevel.disabled = true;
 
 const birdsData = [
   [
@@ -329,166 +337,316 @@ const birdsData = [
 ];
 
 let score = 0;
-listGroupBirds.addEventListener('click', (event) => {
-  
-  if (event.target.textContent === 'Warm up') {
-    for (let i = 0; i < 6; i++) {
-      birdName.textContent = '*********';
-      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
-      randomSong();
+listAnswers.addEventListener('click', (event) => {
+  for (let i = 0; i < 6; i++) {
+    if (event.target.textContent === birdsData[0][i].name && birdGroupItem[0].classList.contains('group-birds-active')) {
       audioPl.currentTime = 0;
       imgPlay.src = '../../assets/images/play-btn.png';
       birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
       birdItem.forEach((y) => y.classList.remove('group-birds-active'));
-      event.target.classList.add('group-birds-active');
+      birdGroupItem[0].classList.add('group-birds-active');
       birdItem[i].textContent = birdsData[0][i].name;
-      listAnswers.addEventListener('click', (event) => {
-        if (event.target.textContent === birdsData[0][i].name && birdsData[0][i].audio === audioPl.src) {
-          event.target.classList.add('group-birds-active');
-          birdName.textContent = birdsData[0][i].name;
-          sucsessAnswerImg.src = birdsData[0][i].image;
-          playAudioWin();
-        }
-         if(event.target.textContent === birdsData[0][i].name && birdsData[0][i].audio !== audioPl.src) {
-         playAudioLose()
-         }
-      });
-    }}
-    
-  if (event.target.textContent === 'Sparrows') {
-    for (let i = 0; i < 6; i++) {
-      birdName.textContent = '*********';
-      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
-      randomSong();
-      audioPl.currentTime = 0;
-      imgPlay.src = '../../assets/images/play-btn.png';
-      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
-      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
-      event.target.classList.add('group-birds-active');
-      birdItem[i].textContent = birdsData[1][i].name;
-      listAnswers.addEventListener('click', (event) => {
-        if (event.target.textContent === birdsData[1][i].name && birdsData[1][i].audio === audioPl.src) {
-          event.target.classList.add('group-birds-active');
-          birdName.textContent = birdsData[1][i].name;
-          sucsessAnswerImg.src = birdsData[1][i].image;
-          playAudioWin();
-          score = score + 5
-          scoreGame.textContent = score;
-        }
-         if(event.target.textContent === birdsData[1][i].name && birdsData[1][i].audio !== audioPl.src) {
-         playAudioLose()
-         score = score - 1;
-         }
-      });
-    }
-  } if (event.target.textContent === 'Forest birds') {
-    for (let i = 0; i < 6; i++) {
-      birdName.textContent = '*********';
-      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
-      randomSong();
-      audioPl.currentTime = 0;
-      imgPlay.src = '../../assets/images/play-btn.png';
-      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
-      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
-      event.target.classList.add('group-birds-active');
-      birdItem[i].textContent = birdsData[2][i].name;
-      listAnswers.addEventListener('click', (event) => {
-        if (event.target.textContent === birdsData[2][i].name && birdsData[2][i].audio === audioPl.src) {
-          event.target.classList.add('group-birds-active');
-          birdName.textContent = birdsData[2][i].name;
-          sucsessAnswerImg.src = birdsData[2][i].image;
-          playAudioWin();
-          score = score + 5
-          scoreGame.textContent = score;
-        }
-        if(event.target.textContent === birdsData[2][i].name && birdsData[2][i].audio !== audioPl.src) {
-          playAudioLose()
-          score = score - 1;
-          }
-      });
-    }
-  } if (event.target.textContent === 'Songbirds') {
-    for (let i = 0; i < 6; i++) {
-      birdName.textContent = '*********';
-      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
-      randomSong();
-      audioPl.currentTime = 0;
-      imgPlay.src = '../../assets/images/play-btn.png';
-      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
-      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
-      event.target.classList.add('group-birds-active');
-      birdItem[i].textContent = birdsData[3][i].name;
-      listAnswers.addEventListener('click', (event) => {
-        if (event.target.textContent === birdsData[3][i].name && birdsData[3][i].audio === audioPl.src) {
-          event.target.classList.add('group-birds-active');
-          birdName.textContent = birdsData[3][i].name;
-          sucsessAnswerImg.src = birdsData[3][i].image;
-          playAudioWin();
-          score = score + 5
-          scoreGame.textContent = score;
-        }
-        if(event.target.textContent === birdsData[3][i].name && birdsData[3][i].audio !== audioPl.src) {
-          playAudioLose()
-          score = score - 1;
-          }
-      });
-    }
-  } if (event.target.textContent === 'Predator birds') {
-    for (let i = 0; i < 6; i++) {
-      birdName.textContent = '*********';
-      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
-      randomSong();
-      audioPl.currentTime = 0;
-      imgPlay.src = '../../assets/images/play-btn.png';
-      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
-      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
-      event.target.classList.add('group-birds-active');
-      birdItem[i].textContent = birdsData[4][i].name;
-      listAnswers.addEventListener('click', (event) => {
-        if (event.target.textContent === birdsData[4][i].name && birdsData[4][i].audio === audioPl.src) {
-          event.target.classList.add('group-birds-active');
-          birdName.textContent = birdsData[4][i].name;
-          sucsessAnswerImg.src = birdsData[4][i].image;
-          playAudioWin();
-          score = score + 5
-          scoreGame.textContent = score;
-        }
-        if(event.target.textContent === birdsData[4][i].name && birdsData[4][i].audio !== audioPl.src) {
-          playAudioLose()
-          score = score - 1;
-          }
-      });
-    }
-  } if (event.target.textContent === 'Sea birds') {
-    for (let i = 0; i < 6; i++) {
-      birdName.textContent = '*********';
-      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
-      randomSong();
-      audioPl.currentTime = 0;
-      imgPlay.src = '../../assets/images/play-btn.png';
-      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
-      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
-      event.target.classList.add('group-birds-active');
-      birdItem[i].textContent = birdsData[5][i].name;
-      listAnswers.addEventListener('click', (event) => {
-        if (event.target.textContent === birdsData[5][i].name && birdsData[5][i].audio === audioPl.src) {
-          event.target.classList.add('group-birds-active');
-          birdName.textContent = birdsData[5][i].name;
-          sucsessAnswerImg.src = birdsData[5][i].image;
-          playAudioWin();
-          score = score + 5
-          scoreGame.textContent = score;
-        }
-        if(event.target.textContent === birdsData[5][i].name && birdsData[5][i].audio !== audioPl.src) {
-          playAudioLose()
-          score = score - 1;
-          }
-      });
+      if (event.target.textContent === birdsData[0][i].name && birdsData[0][i].audio === audioPl.src) {
+        event.target.classList.add('group-birds-active');
+        birdName.textContent = birdsData[0][i].name;
+        sucsessAnswerImg.src = birdsData[0][i].image;
+        audioPlAdd.src = birdsData[0][i].audio;
+        score += 5;
+        scoreGame.textContent = score;
+        playAudioWin();
+        console.log(1);
+        btnNextLevel.disabled = false;
+        elseBirdImg.src = birdsData[0][i].image;
+        nameBird.textContent = birdsData[0][i].name;
+        speciesBird.textContent = birdsData[0][i].species;
+        descriptionBird.textContent = birdsData[0][i].description;
+        btnNextLevel.addEventListener('click', () => {
+          birdGroupItem[0].classList.remove('group-birds-active');
+          birdGroupItem[1].classList.add('group-birds-active');
+          btnNextLevel.disabled = true;
+          birdItem.forEach((x) => x.textContent = `${birdsData[1][birdItem.indexOf(x)].name}`);
+          birdItem.forEach((x) => x.classList.remove('group-birds-active'));
+          randomSong();
+          birdName.textContent = '*********';
+          sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+          elseBirdImg.src = '';
+          nameBird.textContent = 'Please, listen to the bird';
+          speciesBird.textContent = 'Make your choice';
+          descriptionBird.textContent = '';
+          audioPlAdd.src = '';
+        });
+      }
+      if (event.target.textContent !== birdsData[0][i].name || birdsData[0][i].audio !== audioPl.src) {
+        playAudioLose();
+        score -= 1;
+        elseBirdImg.src = birdsData[0][i].image;
+        nameBird.textContent = birdsData[0][i].name;
+        speciesBird.textContent = birdsData[0][i].species;
+        descriptionBird.textContent = birdsData[0][i].description;
+        console.log(1);
+        audioPlAdd.src = birdsData[0][i].audio;
+      }
     }
   }
-  
-});
 
+  for (let i = 0; i < 6; i++) {
+    if (event.target.textContent === birdsData[1][i].name && birdGroupItem[1].classList.contains('group-birds-active')) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+      audioPl.currentTime = 0;
+      imgPlay.src = '../../assets/images/play-btn.png';
+      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
+      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
+      birdGroupItem[1].classList.add('group-birds-active');
+      birdItem[i].textContent = birdsData[1][i].name;
+      if (event.target.textContent === birdsData[1][i].name && birdsData[1][i].audio === audioPl.src) {
+        event.target.classList.add('group-birds-active');
+        birdName.textContent = birdsData[1][i].name;
+        sucsessAnswerImg.src = birdsData[1][i].image;
+        audioPlAdd.src = birdsData[1][i].audio;
+        score += 5;
+        scoreGame.textContent = score;
+        playAudioWin();
+        console.log(1);
+        btnNextLevel.disabled = false;
+        elseBirdImg.src = birdsData[1][i].image;
+        nameBird.textContent = birdsData[1][i].name;
+        speciesBird.textContent = birdsData[1][i].species;
+        descriptionBird.textContent = birdsData[1][i].description;
+        btnNextLevel.addEventListener('click', () => {
+          birdGroupItem[1].classList.remove('group-birds-active');
+          birdGroupItem[2].classList.add('group-birds-active');
+          btnNextLevel.disabled = true;
+          birdItem.forEach((x) => x.textContent = `${birdsData[2][birdItem.indexOf(x)].name}`);
+          birdItem.forEach((x) => x.classList.remove('group-birds-active'));
+          randomSong();
+          birdName.textContent = '*********';
+          sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+          elseBirdImg.src = '';
+          nameBird.textContent = 'Please, listen to the bird';
+          speciesBird.textContent = 'Make your choice';
+          descriptionBird.textContent = '';
+          audioPlAdd.src = '';
+        });
+      }
+      if (event.target.textContent !== birdsData[1][i].name || birdsData[1][i].audio !== audioPl.src) {
+        playAudioLose();
+        score -= 1;
+        console.log(1);
+        elseBirdImg.src = birdsData[1][i].image;
+        nameBird.textContent = birdsData[1][i].name;
+        speciesBird.textContent = birdsData[1][i].species;
+        descriptionBird.textContent = birdsData[1][i].description;
+        audioPlAdd.src = birdsData[1][i].audio;
+      }
+    }
+  }
+
+  for (let i = 0; i < 6; i++) {
+    if (event.target.textContent === birdsData[2][i].name && birdGroupItem[2].classList.contains('group-birds-active')) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+      audioPl.currentTime = 0;
+      imgPlay.src = '../../assets/images/play-btn.png';
+      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
+      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
+      birdGroupItem[2].classList.add('group-birds-active');
+      birdItem[i].textContent = birdsData[2][i].name;
+      if (event.target.textContent === birdsData[2][i].name && birdsData[2][i].audio === audioPl.src) {
+        event.target.classList.add('group-birds-active');
+        birdName.textContent = birdsData[2][i].name;
+        sucsessAnswerImg.src = birdsData[2][i].image;
+        audioPlAdd.src = birdsData[2][i].audio;
+        score += 5;
+        scoreGame.textContent = score;
+        playAudioWin();
+        console.log(1);
+        btnNextLevel.disabled = false;
+        elseBirdImg.src = birdsData[2][i].image;
+        nameBird.textContent = birdsData[2][i].name;
+        speciesBird.textContent = birdsData[2][i].species;
+        descriptionBird.textContent = birdsData[2][i].description;
+        btnNextLevel.addEventListener('click', () => {
+          birdGroupItem[2].classList.remove('group-birds-active');
+          birdGroupItem[3].classList.add('group-birds-active');
+          btnNextLevel.disabled = true;
+          birdItem.forEach((x) => x.textContent = `${birdsData[3][birdItem.indexOf(x)].name}`);
+          birdItem.forEach((x) => x.classList.remove('group-birds-active'));
+          randomSong();
+          birdName.textContent = '*********';
+          sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+          elseBirdImg.src = '';
+          nameBird.textContent = 'Please, listen to the bird';
+          speciesBird.textContent = 'Make your choice';
+          descriptionBird.textContent = '';
+          audioPlAdd.src = '';
+        });
+      }
+      if (event.target.textContent !== birdsData[2][i].name || birdsData[2][i].audio !== audioPl.src) {
+        playAudioLose();
+        score -= 1;
+        console.log(1);
+        elseBirdImg.src = birdsData[2][i].image;
+        nameBird.textContent = birdsData[2][i].name;
+        speciesBird.textContent = birdsData[2][i].species;
+        descriptionBird.textContent = birdsData[2][i].description;
+        audioPlAdd.src = birdsData[2][i].audio;
+      }
+    }
+  }
+
+  for (let i = 0; i < 6; i++) {
+    if (event.target.textContent === birdsData[3][i].name && birdGroupItem[3].classList.contains('group-birds-active')) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+      audioPl.currentTime = 0;
+      imgPlay.src = '../../assets/images/play-btn.png';
+      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
+      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
+      birdGroupItem[3].classList.add('group-birds-active');
+      birdItem[i].textContent = birdsData[3][i].name;
+      if (event.target.textContent === birdsData[3][i].name && birdsData[3][i].audio === audioPl.src) {
+        event.target.classList.add('group-birds-active');
+        birdName.textContent = birdsData[3][i].name;
+        sucsessAnswerImg.src = birdsData[3][i].image;
+        audioPlAdd.src = birdsData[3][i].audio;
+        score += 5;
+        scoreGame.textContent = score;
+        playAudioWin();
+        console.log(1);
+        btnNextLevel.disabled = false;
+        elseBirdImg.src = birdsData[3][i].image;
+        nameBird.textContent = birdsData[3][i].name;
+        speciesBird.textContent = birdsData[3][i].species;
+        descriptionBird.textContent = birdsData[3][i].description;
+        btnNextLevel.addEventListener('click', () => {
+          birdGroupItem[3].classList.remove('group-birds-active');
+          birdGroupItem[4].classList.add('group-birds-active');
+          btnNextLevel.disabled = true;
+          birdItem.forEach((x) => x.textContent = `${birdsData[4][birdItem.indexOf(x)].name}`);
+          birdItem.forEach((x) => x.classList.remove('group-birds-active'));
+          randomSong();
+          birdName.textContent = '*********';
+          sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+          elseBirdImg.src = '';
+          nameBird.textContent = 'Please, listen to the bird';
+          speciesBird.textContent = 'Make your choice';
+          descriptionBird.textContent = '';
+          audioPlAdd.src = '';
+        });
+      }
+      if (event.target.textContent !== birdsData[3][i].name || birdsData[3][i].audio !== audioPl.src) {
+        playAudioLose();
+        score -= 1;
+        console.log(1);
+        elseBirdImg.src = birdsData[3][i].image;
+        nameBird.textContent = birdsData[3][i].name;
+        speciesBird.textContent = birdsData[3][i].species;
+        descriptionBird.textContent = birdsData[3][i].description;
+        audioPlAdd.src = birdsData[3][i].audio;
+      }
+    }
+  }
+  for (let i = 0; i < 6; i++) {
+    if (event.target.textContent === birdsData[4][i].name && birdGroupItem[4].classList.contains('group-birds-active')) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+      audioPl.currentTime = 0;
+      imgPlay.src = '../../assets/images/play-btn.png';
+      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
+      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
+      birdGroupItem[4].classList.add('group-birds-active');
+      birdItem[i].textContent = birdsData[4][i].name;
+      if (event.target.textContent === birdsData[4][i].name && birdsData[4][i].audio === audioPl.src) {
+        event.target.classList.add('group-birds-active');
+        birdName.textContent = birdsData[4][i].name;
+        sucsessAnswerImg.src = birdsData[4][i].image;
+        audioPlAdd.src = birdsData[4][i].audio;
+        score += 5;
+        scoreGame.textContent = score;
+        playAudioWin();
+        console.log(1);
+        btnNextLevel.disabled = false;
+        elseBirdImg.src = birdsData[4][i].image;
+        nameBird.textContent = birdsData[4][i].name;
+        speciesBird.textContent = birdsData[4][i].species;
+        descriptionBird.textContent = birdsData[4][i].description;
+        btnNextLevel.addEventListener('click', () => {
+          birdGroupItem[4].classList.remove('group-birds-active');
+          birdGroupItem[5].classList.add('group-birds-active');
+          btnNextLevel.disabled = true;
+          birdItem.forEach((x) => x.textContent = `${birdsData[5][birdItem.indexOf(x)].name}`);
+          birdItem.forEach((x) => x.classList.remove('group-birds-active'));
+          randomSong();
+          birdName.textContent = '*********';
+          sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+          elseBirdImg.src = '';
+          nameBird.textContent = 'Please, listen to the bird';
+          speciesBird.textContent = 'Make your choice';
+          descriptionBird.textContent = '';
+          audioPlAdd.src = '';
+        });
+      }
+      if (event.target.textContent !== birdsData[4][i].name || birdsData[4][i].audio !== audioPl.src) {
+        playAudioLose();
+        score -= 1;
+        console.log(1);
+        elseBirdImg.src = birdsData[4][i].image;
+        nameBird.textContent = birdsData[4][i].name;
+        speciesBird.textContent = birdsData[4][i].species;
+        descriptionBird.textContent = birdsData[4][i].description;
+        audioPlAdd.src = birdsData[4][i].audio;
+      }
+    }
+  }
+  for (let i = 0; i < 6; i++) {
+    if (event.target.textContent === birdsData[5][i].name && birdGroupItem[5].classList.contains('group-birds-active')) {
+      birdName.textContent = '*********';
+      sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+      audioPl.currentTime = 0;
+      imgPlay.src = '../../assets/images/play-btn.png';
+      birdGroupItem.forEach((x) => x.classList.remove('group-birds-active'));
+      birdItem.forEach((y) => y.classList.remove('group-birds-active'));
+      birdGroupItem[5].classList.add('group-birds-active');
+      birdItem[i].textContent = birdsData[5][i].name;
+      if (event.target.textContent === birdsData[5][i].name && birdsData[5][i].audio === audioPl.src) {
+        event.target.classList.add('group-birds-active');
+        birdName.textContent = birdsData[5][i].name;
+        sucsessAnswerImg.src = birdsData[5][i].image;
+        audioPlAdd.src = birdsData[5][i].audio;
+        score += 5;
+        scoreGame.textContent = score;
+        playAudioWin();
+        console.log(1);
+        btnNextLevel.disabled = false;
+        elseBirdImg.src = birdsData[5][i].image;
+        nameBird.textContent = birdsData[5][i].name;
+        speciesBird.textContent = birdsData[5][i].species;
+        descriptionBird.textContent = birdsData[5][i].description;
+        btnNextLevel.addEventListener('click', () => {
+          birdGroupItem[5].classList.remove('group-birds-active');
+          const linkResultGame = document.createElement('a');
+          reSultWrapper.appendChild(linkResultGame);
+          linkResultGame.appendChild(btnNextLevel);
+          linkResultGame.href = '../resultsPage/index.html';
+          birdItem.forEach((x) => x.classList.remove('group-birds-active'));
+          randomSong();
+          birdName.textContent = '*********';
+          sucsessAnswerImg.src = '../../assets/images/question-bird1.jpg';
+        });
+      }
+      if (event.target.textContent !== birdsData[5][i].name || birdsData[5][i].audio !== audioPl.src) {
+        playAudioLose();
+        score -= 1;
+        console.log(1);
+        elseBirdImg.src = birdsData[5][i].image;
+        nameBird.textContent = birdsData[5][i].name;
+        speciesBird.textContent = birdsData[5][i].species;
+        descriptionBird.textContent = birdsData[5][i].description;
+      }
+    }
+  }
+});
 
 body.onload = randomSong();
 
@@ -500,32 +658,46 @@ audioPl.onloadeddata = () => {
   }
 };
 
-function progressSong() {
-  const durationS = audioPl.onloadeddata = () => {
-    const dur = `${Math.floor(audioPl.duration / 60)}:${Math.round(audioPl.duration % 60)}`;
-    console.log(dur);
+/* audioPl.onloadeddata = () => {
+    const duration = audioPl.duration;
+    console.log(duration);
     const currentPoint = audioPl.currentTime;
     console.log(currentPoint);
-    durationRange.value = currentPoint * 100 / dur;
-    console.log(currentPoint * 100 / dur);
-  };
-}
+    durationRange.value = currentPoint * 100 / duration;
+    console.log(currentPoint * 100 / duration);
+  }; */
 
 btnPlay.addEventListener('click', () => {
   imgPlay.src = '../../assets/images/pause-btn.png';
   playAudio();
 });
 
+btnPlayAdd.addEventListener('click', () => {
+  imgPlayAdd.src = '../../assets/images/pause-btn.png';
+  playAudioAdd()
+})
+
 let isPlay = false;
 function playAudio() {
   if (!isPlay) {
-    // audioPl.currentTime = 0;
     audioPl.play();
     isPlay = true;
   } else if (isPlay) {
     audioPl.pause();
     isPlay = false;
     imgPlay.src = '../../assets/images/play-btn.png';
+  }
+}
+
+let isPlayAdd = false;
+function playAudioAdd() {
+  if (!isPlayAdd) {
+    audioPlAdd.play();
+    isPlayAdd = true;
+  } else if (isPlayAdd) {
+    audioPlAdd.pause();
+    isPlayAdd = false;
+    imgPlayAdd.src = '../../assets/images/play-btn.png';
   }
 }
 
@@ -563,6 +735,7 @@ audioPl.addEventListener('ended', () => {
 
 durationRange.addEventListener('input', () => {
   audioPl.duration = durationRange.value;
+  console.log(durationRange.value);
 });
 
 function randomSong() {
@@ -577,11 +750,6 @@ function randomSong() {
   }
 }
 
-/* function clearAnswer() {
-  if (audio.src === )
-} */
-
-
 function playAudioWin() {
   voiceOFMove.currentTime = 0;
   audioPl.currentTime = 0;
@@ -593,4 +761,5 @@ function playAudioWin() {
 function playAudioLose() {
   voiceOFMoveLose.currentTime = 0;
   voiceOFMoveLose.play();
+  imgPlay.src = '../../assets/images/pause-btn.png';
 }

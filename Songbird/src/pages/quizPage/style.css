@@ -131,6 +131,19 @@ p {
   display: block;
 }
 
+.circle-btn-play-add {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #485E47;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-btn-play-add .btn-play-img-add {
+  display: block;
+}
+
 .wrapper-player {
   display: flex;
   align-items: center;
@@ -283,6 +296,11 @@ p {
   cursor: pointer;
 }
 
+.any-bird-answer {
+  display: block;
+  width: 100%;
+}
+
 @media screen and (max-width: 1100px) {
   .container {
     padding: 0 10px;
@@ -292,6 +310,14 @@ p {
     height: 50px;
   }
   .circle-btn-play .btn-play-img {
+    width: 30px;
+    height: 30px;
+  }
+  .circle-btn-play-add {
+    width: 50px;
+    height: 50px;
+  }
+  .circle-btn-play-add .btn-play-img-add {
     width: 30px;
     height: 30px;
   }
