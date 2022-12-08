@@ -1,8 +1,8 @@
-export interface Inews extends ISources {
+export interface IDataSources extends ISources {
     sources: ISources[];
 }
 
-export interface ISources {
+export interface INews {
     author: string;
     title: string;
     description: string;
@@ -14,11 +14,18 @@ export interface ISources {
 
 export interface ISource {
     source: {
-        id: null | string;
+        id: string | null;
         name: string;
     };
 }
 
-export interface IArticles extends ISources, ISource {
-    articles: [ISources, ISource];
+export interface IArticles extends INews, ISource {
+    articles: [INews, ISource];
+}
+
+export interface ISources {
+    id: string;
+    name: string;
+    description: string;
+    url: string;
 }

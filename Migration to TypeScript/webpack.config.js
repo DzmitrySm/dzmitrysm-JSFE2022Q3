@@ -1,11 +1,11 @@
-import { resolve as _resolve } from 'path';
-import { merge } from 'webpack-merge';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import EslingPlugin from 'eslint-webpack-plugin';
+const path = require('path');
+const { merge } = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const EslingPlugin = require('eslint-webpack-plugin');
 
 const baseConfig = {
-    entry: _resolve(__dirname, './src/index'),
+    entry: path.resolve(__dirname, './src/index'),
     mode: 'development',
     module: {
         rules: [
@@ -13,19 +13,23 @@ const baseConfig = {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
-            { test: /\.ts$/i, use: 'ts-loader' },
+            {
+                test: /\.ts$/i,
+                use: ['ts-loader'],
+                exclude: /node_modules/,
+            },
         ],
     },
     resolve: {
-        extensions: ['.ts', '.js'],
+        extensions: ['.js', '.ts'],
     },
     output: {
         filename: 'index.js',
-        path: _resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, './dist'),
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: _resolve(__dirname, './src/index.html'),
+            template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),
@@ -33,7 +37,7 @@ const baseConfig = {
     ],
 };
 
-export default ({ mode }) => {
+module.exports = ({ mode }) => {
     const isProductionMode = mode === 'prod';
     const envConfig = isProductionMode ? require('./webpack.prod.config') : require('./webpack.dev.config');
 
