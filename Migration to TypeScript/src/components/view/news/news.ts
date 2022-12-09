@@ -1,8 +1,8 @@
 import './news.css';
-import { IArticles } from '../../../types/index';
+import { INews } from '../../../types/index';
 
 class News {
-    draw(data: IArticles[]): void {
+    draw(data: INews[]): void {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment = document.createDocumentFragment();
