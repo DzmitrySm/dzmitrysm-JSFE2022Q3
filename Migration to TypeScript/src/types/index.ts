@@ -1,26 +1,19 @@
-export interface IDataSources extends ISources {
-    sources: ISources[];
-}
-
 export interface INews {
+    source: {
+        id: string | null;
+        name: string;
+    };
     author: string;
     title: string;
     description: string;
     publishedAt: string;
     url: string;
     urlToImage: string;
-    content?: string;
+    content: string;
 }
 
-export interface ISource {
-    source: {
-        id: string | null;
-        name: string;
-    };
-}
-
-export interface IArticles extends INews, ISource {
-    articles: [INews, ISource];
+export interface IFinalyNews extends INews {
+    articles: [INews];
 }
 
 export interface ISources {
@@ -28,4 +21,8 @@ export interface ISources {
     name: string;
     description: string;
     url: string;
+}
+
+export interface IFinalySources extends ISources {
+    sources: [ISources];
 }
