@@ -26,3 +26,10 @@ export interface ISources {
 export interface IFinalySources extends ISources {
     sources: [ISources];
 }
+
+export interface Iloader {
+    baseLink: string;
+    options: { apiKey: string };
+}
+
+export type Callback<T> = (data: T) => void;
