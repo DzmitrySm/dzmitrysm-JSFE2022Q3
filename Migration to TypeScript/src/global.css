@@ -28,8 +28,32 @@ footer .copyright a {
     color: #444;
 }
 footer .copyright a:hover {
-    color: #555;
+    color: #BDAE82;
+    transition: .5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 footer .copyright:before {
     content: '©';
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.git-link {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.git-link:hover {
+  color: #BDAE82;
+  transition: .5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+.wrapper-logo-img:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(
+    7deg
+    ) brightness(92%) contrast(87%);
+    transition: .5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
