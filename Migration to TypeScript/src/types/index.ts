@@ -33,3 +33,8 @@ export interface Iloader {
 }
 
 export type Callback<T> = (data: T) => void;
+
+export enum ErrorEnum {
+    Error401 = 401,
+    Error404 = 404,
+}
