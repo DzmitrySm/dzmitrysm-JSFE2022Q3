@@ -8,7 +8,7 @@
         "build": "webpack --config ./webpack.config.js --env mode=prod",
         "lint": "eslint . --ext .ts,.js",
         "lint:fix": "eslint --fix --ext .js,.jsx,.ts .",
-        "deploy": "gh-pages -d ../dist -e migration-to-typescript"
+        "deploy": "gh-pages -d ../dist -e Migration to TypeScript"
     },
     "repository": {
         "type": "git",
