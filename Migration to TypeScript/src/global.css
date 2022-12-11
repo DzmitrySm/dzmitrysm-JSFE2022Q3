@@ -38,6 +38,7 @@ footer .copyright:before {
 .footer {
   display: flex;
   justify-content: space-between;
+  padding: 10px 30px;
 }
 
 .git-link {
@@ -56,4 +57,33 @@ footer .copyright:before {
     7deg
     ) brightness(92%) contrast(87%);
     transition: .5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+.source__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 660px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer .copyright {
+   padding-bottom: 10px;
+}
+}
+
+@media screen and (max-width: 410px) {
+  
+  .source__item {
+    width: 50%;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
 }
