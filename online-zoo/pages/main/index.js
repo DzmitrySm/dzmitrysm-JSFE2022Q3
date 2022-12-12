@@ -1,0 +1,141 @@
+(function () {
+  const burgerMenu = document.querySelector('.burger-menu')  ;
+  const navItems = document.querySelector('.navigation')
+  const NavItems = document.querySelector('.nav-list')
+  const closeMenuByLink = document.querySelectorAll('.nav-link')
+  const designeVisible = document.querySelector('.text-design-burger')
+  const scrollBehaviour = document.querySelector('.body')
+  const logoVisible = document.querySelector('.logo-burger-menu')
+  const overlay = document.querySelector('.overlay-blackout')
+  burgerMenu.addEventListener('click', () => {
+      navItems.classList.toggle('navigation-active')
+      burgerMenu.classList.toggle('burger-menu-active')
+      overlay.classList.toggle('overlay-blackout-active')
+      designeVisible.classList.toggle('text-design-burger-active')
+      logoVisible.classList.toggle('logo-burger-menu-active')
+      let paddingOfset = window.innerWidth - document.body.offsetWidth + 'px'
+      document.body.style.paddingRight = paddingOfset
+      scrollBehaviour.classList.toggle('overlay')
+
+  });
+  overlay.addEventListener('click', () => {
+    overlay.classList.remove('overlay-blackout-active')
+    burgerMenu.classList.remove('burger-menu-active')
+    navItems.classList.remove('navigation-active')
+    document.body.style.paddingRight = 0;
+    scrollBehaviour.classList.remove('overlay')
+    designeVisible.classList.remove('text-design-burger-active')
+    logoVisible.classList.remove('logo-burger-menu-active')
+
+  } )
+
+}());
+
+
+//Pop-up
+const scrollBehaviour = document.querySelector('.body')
+const overlay = document.querySelector('.overlay-blackout')
+const CardOscar = document.querySelector('.card-Oscar')
+const CardUser = document.querySelector('.card-user')
+const CardFrederica = document.querySelector('.card-Frederica')
+const VisiblePopUpUser = document.querySelector('.comment-card-modal')
+const cross = document.querySelector('.cross')
+CardUser.addEventListener('click', () => {
+  VisiblePopUpUser.classList.add('comment-card-modal-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+})
+
+cross.addEventListener('click', () => {
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+  overlay.classList.remove('overlay-blackout-active')
+  scrollBehaviour.classList.remove('overlay')
+})
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('overlay-blackout-active')
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+
+})
+
+CardOscar.addEventListener('click', () => {
+  VisiblePopUpUser.classList.add('comment-card-modal-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+})
+
+cross.addEventListener('click', () => {
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+  overlay.classList.remove('overlay-blackout-active')
+  scrollBehaviour.classList.remove('overlay')
+})
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('overlay-blackout-active')
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+
+})
+
+CardFrederica.addEventListener('click', () => {
+  VisiblePopUpUser.classList.add('comment-card-modal-active')
+  overlay.classList.toggle('overlay-blackout-active')
+  scrollBehaviour.classList.toggle('overlay')
+})
+
+cross.addEventListener('click', () => {
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+  overlay.classList.remove('overlay-blackout-active')
+  scrollBehaviour.classList.remove('overlay')
+})
+
+overlay.addEventListener('click', () => {
+  overlay.classList.remove('overlay-blackout-active')
+  VisiblePopUpUser.classList.remove('comment-card-modal-active')
+
+})
+
+
+
+
+//Testimonials carousel
+const range = document.querySelector('.scroll')
+const firstCard = document.querySelector('.carousel')
+const commentCard = document.querySelector('.comment-card')
+const mediaQuery = window.matchMedia('(max-width: 1000px)')
+range.addEventListener('input', () => {
+  firstCard.style.transform = `translateX(${range.value * (-296)}px)`
+  firstCard.style.transition = '2s ease-in-out'
+  if (mediaQuery.matches) {
+    firstCard.style.transform = `translateX(${range.value * (-317)}px)`
+  }
+})
+
+//Carousel pets
+
+const btnLeft = document.querySelector('.button-lft')
+const btnRight = document.querySelector('.button-rgt')
+const AllPets = document.querySelectorAll('.card')
+const wrapperCards = document.querySelector('.wrapper-cards')
+
+
+
+function newContainer() {
+ let arr = [0, 1, 2, 3, 4, 5, 6]
+let shufleArr = arr.sort(() => Math.random() - 0.5)
+  let div = document.createElement('div')
+  div.className = ('wrapper-new-cards')
+  wrapperCards.append(div)
+  const wrapperNewCards = document.querySelector('.wrapper-new-cards')
+  for (let i = 0; i < shufleArr.length; i++)
+  wrapperNewCards.append(AllPets[shufleArr[i]])
+}
+
+
+btnRight.addEventListener('click', () => {
+  newContainer()
+})
+
+btnLeft.addEventListener('click', () => {
+  newContainer()
+})
+
