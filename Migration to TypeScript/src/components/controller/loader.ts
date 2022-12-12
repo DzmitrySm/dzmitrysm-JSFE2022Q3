@@ -9,7 +9,7 @@ class Loader implements Iloader {
         this.options = options;
     }
 
-    getResp<T>(
+    public getResp<T>(
         { endpoint = '', options = {} },
         callback: Callback<T> = (): void => {
             console.error('No callback for GET response');
@@ -18,7 +18,7 @@ class Loader implements Iloader {
         this.load('GET', endpoint, callback, options);
     }
 
-    errorHandler(res: Response) {
+    private errorHandler(res: Response) {
         if (!res.ok) {
             if (res.status === ErrorEnum.Error401 || res.status === ErrorEnum.Error404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -28,7 +28,7 @@ class Loader implements Iloader {
         return res;
     }
 
-    makeUrl(options = {}, endpoint: string) {
+    private makeUrl(options = {}, endpoint: string) {
         const urlOptions: { [index: string]: string } = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -39,12 +39,12 @@ class Loader implements Iloader {
         return url.slice(0, -1);
     }
 
-    load<T>(method: string, endpoint: string, callback: Callback<T>, options = {}): void {
+    private load<T>(method: string, endpoint: string, callback: Callback<T>, options = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
-            .then((res) => res.json())
-            .then((data) => callback(data))
-            .catch((err) => console.error(err));
+            .then((res: Response) => res.json())
+            .then((data: T) => callback(data))
+            .catch((err: Error) => console.error(err));
     }
 }
 

@@ -4,7 +4,7 @@ import { IFinalySources } from '../../types/index';
 import { Callback } from '../../types/index';
 
 class AppController extends AppLoader {
-    getSources(callback: Callback<IFinalySources>) {
+    public getSources(callback: Callback<IFinalySources>) {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -13,7 +13,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e: Event, callback: Callback<IFinalyNews>) {
+    public getNews(e: Event, callback: Callback<IFinalyNews>) {
         let target = e.target as HTMLElement;
         const newsContainer = e.currentTarget as HTMLElement;
 
