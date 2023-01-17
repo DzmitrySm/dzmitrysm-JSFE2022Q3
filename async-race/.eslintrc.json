@@ -2,6 +2,13 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["prettier", "import", "@typescript-eslint"],
   "extends": ["airbnb/base"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   "parserOptions": {
       "ecmaVersion": 2020,
       "sourceType": "module"
@@ -15,7 +22,17 @@
       "no-debugger": "off",
       "no-console": 0,
       "class-methods-use-this": "off",
-      "@typescript-eslint/no-explicit-any": 2
+      "@typescript-eslint/no-explicit-any": 2,
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+     ]
   }
   
 }
