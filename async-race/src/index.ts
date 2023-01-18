@@ -6,5 +6,7 @@ function init() {
   garageView.createBtnsCreateCar();
   garageView.createBtnsUpdateCar();
   garageView.createBtnsRaceResetGenerate();
+  garageView.createGarage();
+  garageView.renderCar();
 }
 init();

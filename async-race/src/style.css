@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper-car-svg {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px dashed black;
+}
+
+.choice-view {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.wrapper-create-btns {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.wrapper-update-btns {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.wrapper-btns-rrg {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+.wrapper-garage-count {
+  margin-bottom: 10px;
+}
+
+.wrapper-page-number {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.wrapper-select-remove {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.car-controls-btns {
+  display: flex;
+  gap: 5px;
+}
