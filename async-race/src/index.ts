@@ -1,12 +1,15 @@
 import GarageView from './view/garageView';
+import GarageModel from './model/garageModel';
+import GarageComponent from './components/garageComponent';
 
-function init() {
+async function init() {
   const garageView = new GarageView();
+  const garageModel = new GarageModel();
+  const garageComponent = new GarageComponent(garageView, garageModel);
   garageView.createBtnToGarage();
   garageView.createBtnsCreateCar();
   garageView.createBtnsUpdateCar();
   garageView.createBtnsRaceResetGenerate();
-  garageView.createGarage();
-  garageView.renderCar();
+  await garageComponent.renderAllCars();
 }
 init();
