@@ -1,12 +1,12 @@
 export interface ICar {
   name: string;
   color: string;
-  id?: number | string;
+  id?: number;
 }
 
 export type ICars = ICar[];
 
 export interface IRespCars {
-  items: ICars;
-  count?: number | string;
+  cars: ICars;
+  number?: number | string;
 }
