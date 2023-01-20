@@ -44,7 +44,7 @@ body {
 .wrapper-page-number {
   display: flex;
   gap: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .wrapper-select-remove {
@@ -56,4 +56,8 @@ body {
 .car-controls-btns {
   display: flex;
   gap: 5px;
+}
+
+.wrapper-car-svg {
+  margin-bottom: 10px;
 }
