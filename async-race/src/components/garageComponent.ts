@@ -44,4 +44,13 @@ export default class GarageComponent {
     runGetCarBtn(id: number) {
       this.getCar(id);
     }
+
+    async deleteCar(id: number) {
+      this.garageModel.deleteCar(id);
+      this.renderAllCars();
+    }
+
+    runDeleteCarBtn(id: number) {
+      this.deleteCar(id);
+    }
 }

@@ -191,4 +191,16 @@ export default class GarageView {
     (nameUpdateCar as HTMLInputElement).value = '';
     nameUpdateCar.disabled = true;
   }
+
+  // eslint-disable-next-line no-unused-vars
+  runDeleteCarBtn(handler: (id: number) => void) {
+    const wrapperCars = document.querySelector('.wrapper-cars');
+    (wrapperCars as HTMLDivElement).addEventListener('click', (event) => {
+      if ((event.target as HTMLButtonElement).classList.contains('btn-remove')) {
+        const CarForDelete = (event.target as HTMLButtonElement).closest('.race-block-items');
+        const id = Number((CarForDelete as HTMLDivElement).getAttribute('id'));
+        handler(id);
+      }
+    });
+  }
 }
