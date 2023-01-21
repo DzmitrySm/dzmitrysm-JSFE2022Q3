@@ -12,5 +12,7 @@ async function init() {
   garageView.createBtnsRaceResetGenerate();
   garageView.addCarToPage(garageComponent.runAddCarBtn.bind(garageComponent));
   await garageComponent.renderAllCars();
+  garageView.runUpdateCar(garageComponent.runUpdateCarBtn.bind(garageComponent));
+  garageView.runSelectCarBtn(garageComponent.runGetCarBtn.bind(garageComponent));
 }
 init();

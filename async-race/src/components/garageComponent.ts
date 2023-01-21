@@ -25,4 +25,23 @@ export default class GarageComponent {
     runAddCarBtn(props: ICar) {
       this.createCar(props);
     }
+
+    async getCar(id: number) {
+      const response = await this.garageModel.getCar(id);
+      this.garageView.select(response);
+      this.renderAllCars();
+    }
+
+    async updateCar(id: number, body: ICar) {
+      this.garageModel.updateCar(id, body);
+      this.renderAllCars();
+    }
+
+    runUpdateCarBtn(id: number, body: ICar) {
+      this.updateCar(id, body);
+    }
+
+    runGetCarBtn(id: number) {
+      this.getCar(id);
+    }
 }

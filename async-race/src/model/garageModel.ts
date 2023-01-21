@@ -23,4 +23,16 @@ export default class GarageModel {
   async getCar(id: number) {
     return (await fetch(`http://127.0.0.1:3000/garage/${id}`)).json();
   }
+
+  async updateCar(id: number, body: ICar) {
+    (
+      await fetch(`http://127.0.0.1:3000/garage/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify(body),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+    ).json();
+  }
 }

@@ -38,6 +38,7 @@ export default class GarageView {
     const inputRenameCar = document.createElement('input');
     inputRenameCar.classList.add('input-rename-car');
     inputRenameCar.setAttribute('type', 'text');
+    inputRenameCar.disabled = true;
     const inputUpdateColorCar = document.createElement('input');
     inputUpdateColorCar.classList.add('input-update-color-car');
     inputUpdateColorCar.setAttribute('type', 'color');
@@ -134,6 +135,7 @@ export default class GarageView {
     wrapperCarSvg.classList.add('wrapper-car-svg');
     wrapperBtnsSecondRow.append(btnsAB, wrapperCarSvg);
     raceBlockItem.setAttribute('id', `${car.id}`);
+    raceBlockItem.setAttribute('name', `${car.name}`);
     raceBlockItem.append(wrapperBtnsSelectRemove, wrapperBtnsSecondRow);
     document.body.append(raceBlockItem);
     return raceBlockItem;
@@ -148,5 +150,45 @@ export default class GarageView {
       run({ name: nameCar.value, color: colorCar.value });
       nameCar.value = '';
     });
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  runUpdateCar(handler: (id: number, props: ICar) => void) {
+    const btnUpdate = document.querySelector('.btn-update-car') as HTMLButtonElement;
+    const nameUpdateCar = document.querySelector('.input-rename-car') as HTMLInputElement;
+    (btnUpdate as HTMLButtonElement).addEventListener('click', () => {
+      const blockRace = Array.from(document.querySelectorAll('.race-block-items'));
+      const filteredUpdate = blockRace.filter((x) => x.getAttribute('name') === (nameUpdateCar as HTMLInputElement).value.trim());
+      console.log(filteredUpdate, (document.querySelector('.input-rename-car') as HTMLInputElement).value);
+      const updateName = (document.querySelector('.input-rename-car') as HTMLInputElement).value;
+      const updateColor = (document.querySelector('.input-update-color-car') as HTMLInputElement).value;
+      handler(Number((filteredUpdate[0] as HTMLDivElement).getAttribute('id')), { name: updateName, color: updateColor });
+      nameUpdateCar.value = '';
+      nameUpdateCar.disabled = true;
+    });
+  }
+
+  select(response: ICar) {
+    const updateName = document.querySelector('.input-rename-car') as HTMLInputElement;
+    const updateColor = document.querySelector('.input-update-color-car') as HTMLInputElement;
+    updateName.value = response.name;
+    updateColor.value = response.color;
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  runSelectCarBtn(handler: (id: number) => void) {
+    const wrapperCars = document.querySelector('.wrapper-cars');
+    const nameUpdateCar = document.querySelector('.input-rename-car') as HTMLInputElement;
+    (wrapperCars as HTMLDivElement).addEventListener('click', (event) => {
+      if ((event.target as HTMLButtonElement).classList.contains('btn-select')) {
+        nameUpdateCar.disabled = false;
+        (event.target as HTMLButtonElement).classList.add('active-select-btn');
+        const selectCarForUpdate = (event.target as HTMLButtonElement).closest('.race-block-items');
+        const id = Number((selectCarForUpdate as HTMLDivElement).getAttribute('id'));
+        handler(id);
+      }
+    });
+    (nameUpdateCar as HTMLInputElement).value = '';
+    nameUpdateCar.disabled = true;
   }
 }
