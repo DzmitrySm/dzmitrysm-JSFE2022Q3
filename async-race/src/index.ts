@@ -10,6 +10,7 @@ async function init() {
   garageView.createBtnsCreateCar();
   garageView.createBtnsUpdateCar();
   garageView.createBtnsRaceResetGenerate();
+  garageView.addCarToPage(garageComponent.runAddCarBtn.bind(garageComponent));
   await garageComponent.renderAllCars();
 }
 init();

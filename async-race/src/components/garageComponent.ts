@@ -1,6 +1,6 @@
 import GarageView from '../view/garageView';
 import GarageModel from '../model/garageModel';
-import { IRespCars } from '../types/types';
+import { IRespCars, ICar } from '../types/types';
 
 export default class GarageComponent {
     garageModel;
@@ -15,5 +15,14 @@ export default class GarageComponent {
     async renderAllCars() {
       const allCars = (await this.garageModel.getCars()) as IRespCars;
       this.garageView.createGarage(allCars);
+    }
+
+    async createCar(props: ICar) {
+      this.garageModel.createCar(props);
+      this.renderAllCars();
+    }
+
+    runAddCarBtn(props: ICar) {
+      this.createCar(props);
     }
 }
