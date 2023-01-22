@@ -226,11 +226,29 @@ export default class GarageView {
         query.status = 'drive';
         (carImg as HTMLElement).style.animation = `drive ${animationTime}ms ease-in-out 0s 1 normal forwards running`;
         try {
-          console.log(1);
           await handler(query);
         } catch (e) {
           carImg.style.animationPlayState = 'paused';
         }
+      }
+    });
+  }
+
+  runStopCarBtn(handler: (query: IQueryParams) => Promise<IDriveParams>) {
+    const carsBlock = document.querySelector('.wrapper-cars') as HTMLDivElement;
+    carsBlock.addEventListener('click', async (event: Event) => {
+      if (((event.target) as HTMLButtonElement).textContent === 'B') {
+        const btnA = ((event.target) as HTMLButtonElement).previousElementSibling;
+        (btnA as HTMLButtonElement).disabled = false;
+        ((event.target) as HTMLButtonElement).setAttribute('disabled', 'true');
+        const id = (((event.target) as HTMLButtonElement).closest('.race-block-items') as HTMLDivElement).getAttribute('id') as string;
+        const carImg = ((((event.target) as HTMLButtonElement).closest('.car-controls-btns') as HTMLDivElement).nextElementSibling as HTMLDivElement).firstChild as HTMLElement;
+        const query = {
+          id: Number(id),
+          status: 'stopped',
+        };
+        (carImg as HTMLElement).style.animation = '';
+        await handler(query);
       }
     });
   }
