@@ -10,3 +10,13 @@ export interface IRespCars {
   cars: ICars;
   number?: number | string;
 }
+
+export interface IQueryParams {
+  id: number;
+  status: string;
+}
+
+export interface IDriveParams {
+  velocity: number;
+  distance: number;
+}
