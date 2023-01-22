@@ -1,6 +1,6 @@
 import GarageView from '../view/garageView';
 import GarageModel from '../model/garageModel';
-import { IRespCars, ICar } from '../types/types';
+import { IRespCars, ICar, IQueryParams } from '../types/types';
 
 export default class GarageComponent {
     garageModel;
@@ -52,5 +52,13 @@ export default class GarageComponent {
 
     runDeleteCarBtn(id: number) {
       this.deleteCar(id);
+    }
+
+    switchEngineCar(query: IQueryParams) {
+      return this.garageModel.switchEngineCar(query);
+    }
+
+    runDriveCarBtn(query: IQueryParams) {
+      return this.switchEngineCar(query);
     }
 }

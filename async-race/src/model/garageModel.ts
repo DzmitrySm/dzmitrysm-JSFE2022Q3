@@ -1,4 +1,4 @@
-import { ICar } from '../types/types';
+import { ICar, IQueryParams } from '../types/types';
 
 const baseUrl = 'http://127.0.0.1:3000/garage';
 
@@ -38,5 +38,16 @@ export default class GarageModel {
 
   async deleteCar(id: number) {
     (await fetch(`http://127.0.0.1:3000/garage/${id}`, { method: 'DELETE' })).json();
+  }
+
+  async switchEngineCar(query: IQueryParams) {
+    const params = {
+      method: 'PATCH',
+    };
+    let url = 'http://127.0.0.1:3000/engine';
+    url += `?${new URLSearchParams(query as never).toString()}`;
+    const response = await fetch(url, params);
+    const resp = await response.json();
+    return resp;
   }
 }
