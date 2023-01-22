@@ -11,6 +11,13 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 3px dashed black;
+  position: relative;
+}
+
+.svg-flag {
+  position: absolute;
+  top:0;
+  right: 70px;
 }
 
 .choice-view {
@@ -68,4 +75,14 @@ body {
 
 .active-remove-btn {
   background-color: brown;
+}
+
+
+@keyframes drive {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: calc(100% - 90px);
+  }
 }
