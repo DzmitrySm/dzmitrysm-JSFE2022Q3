@@ -160,12 +160,9 @@ export default class GarageView {
     (btnUpdate as HTMLButtonElement).addEventListener('click', () => {
       const updateName = (document.querySelector('.input-rename-car') as HTMLInputElement).value;
       const blockRace = Array.from(document.querySelectorAll('.race-block-items'));
-      const raceUpdBlock = document.querySelector(`[name=${updateName}]`);
-      console.log(raceUpdBlock);
       const filteredUpdate = blockRace.filter((x) => x.getAttribute('name') === (updateName.trim()));
       const updateColor = (document.querySelector('.input-update-color-car') as HTMLInputElement).value;
       if (filteredUpdate.length > 0) {
-        console.log((filteredUpdate[0] as HTMLDivElement).getAttribute('id'));
         handler(Number((filteredUpdate[0] as HTMLDivElement).getAttribute('id')), { name: updateName, color: updateColor });
         nameUpdateCar.value = '';
         nameUpdateCar.disabled = true;
@@ -222,7 +219,6 @@ export default class GarageView {
         };
         const { velocity, distance }: IDriveParams = await handler(query);
         const animationTime = distance / velocity;
-        console.log(animationTime);
         query.status = 'drive';
         (carImg as HTMLElement).style.animation = `drive ${animationTime}ms ease-in-out 0s 1 normal forwards running`;
         try {
@@ -250,6 +246,23 @@ export default class GarageView {
         (carImg as HTMLElement).style.animation = '';
         await handler(query);
       }
+    });
+  }
+
+  runResetCarBtn(handler: (query: IQueryParams) => Promise<IDriveParams>) {
+    const resetBtn = document.querySelector('.btn-reset') as HTMLButtonElement;
+    resetBtn.addEventListener('click', (event) => {
+      const allCars = Array.from(document.querySelectorAll('.car-svg'));
+      allCars.forEach(async (x) => {
+        const id = (x.closest('.race-block-items') as HTMLDivElement).getAttribute('id') as string;
+        const carImg = x as HTMLElement;
+        const query = {
+          id: Number(id),
+          status: 'stopped',
+        };
+        (carImg as HTMLElement).style.animation = '';
+        await handler(query);
+      });
     });
   }
 }

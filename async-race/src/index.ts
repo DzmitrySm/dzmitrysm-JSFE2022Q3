@@ -17,5 +17,6 @@ async function init() {
   garageView.runDeleteCarBtn(garageComponent.runDeleteCarBtn.bind(garageComponent));
   garageView.runDriveCarBtn(garageComponent.runDriveCarBtn.bind(garageComponent));
   garageView.runStopCarBtn(garageComponent.runDriveCarBtn.bind(garageComponent));
+  garageView.runResetCarBtn(garageComponent.runDriveCarBtn.bind(garageComponent));
 }
 init();
